@@ -382,6 +382,24 @@
     }
   }
 
+  /* ── Sortie rapide ───────────────────────────────────────── */
+  var quick = document.querySelector('.quickexit');
+  var leave = function () {
+    try { window.location.replace('https://www.google.com'); }
+    catch (e) { window.location.href = 'https://www.google.com'; }
+  };
+  if (quick) {
+    quick.addEventListener('click', leave);
+    var escCount = 0, escTimer = null;
+    document.addEventListener('keydown', function (e) {
+      if (e.key !== 'Escape') return;
+      escCount++;
+      window.clearTimeout(escTimer);
+      escTimer = window.setTimeout(function () { escCount = 0; }, 700);
+      if (escCount >= 2) leave();
+    });
+  }
+
   /* ── Contact form ────────────────────────────────────────── */
   var form = document.getElementById('form-contact');
   var status = document.getElementById('form-status');
@@ -397,6 +415,9 @@
       var motif = form.motif.value;
       var msg = form.message.value.trim();
       var consent = form.consent.checked;
+
+      /* pot de miel : un humain ne voit pas ce champ */
+      if (form.site && form.site.value) { status.textContent = ''; return; }
 
       [form.nom, form.tel].forEach(function (f) { f.classList.remove('invalid'); });
 

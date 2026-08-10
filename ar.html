@@ -22,10 +22,10 @@
 <meta property="og:image:alt" content="مدخل عيادة الأمل، المنزه 9، تونس">
 <meta property="og:site_name" content="عيادة الأمل النفسية">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=13">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/espoir-favicon-32.png?v=13">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/logo/espoir-favicon-192.png?v=13">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/espoir-touch-180.png?v=13">
+<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=14">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/espoir-favicon-32.png?v=14">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/logo/espoir-favicon-192.png?v=14">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/espoir-touch-180.png?v=14">
 <link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/">
 <link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html">
 <link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html">
@@ -33,8 +33,8 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolagegrotesque-4efd1a5a.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-2a392e77.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/entree.jpg" fetchpriority="high">
-<link rel="stylesheet" href="assets/fonts/fonts.css?v=13">
-<link rel="stylesheet" href="assets/css/style.css?v=13">
+<link rel="stylesheet" href="assets/fonts/fonts.css?v=14">
+<link rel="stylesheet" href="assets/css/style.css?v=14">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -113,6 +113,13 @@ FIRST VIEWPORT: Left half, display line "الانسحاب ليس ضعفًا في
 FORM: Photograph-derived blue — pinned by the client mid-build over candidate 3 of 7 grounded directions, seed key c3999b3a.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
+
+<button class="quickexit" type="button" title="Quitter ce site immédiatement (ou appuyez deux fois sur Échap)">
+  <svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+    <path d="M6 6l12 12M18 6L6 18"/>
+  </svg>
+  <span>Quitter</span>
+</button>
 
 <a class="skip" href="#contenu">انتقل إلى المحتوى</a>
 
@@ -978,6 +985,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <label for="f-msg">ما الذي يحدث</label>
           <textarea id="f-msg" name="message" rows="4" placeholder="منذ متى، وبأي كميات، وما الذي يقلقك. بضعة أسطر تكفي."></textarea>
         </div>
+        <div class="hp" aria-hidden="true">
+          <label for="f-site">Ne remplissez pas ce champ</label>
+          <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
+        </div>
         <label class="check">
           <input type="checkbox" id="f-ok" name="consent" required>
           <span>أوافق على أن يتم الاتصال بي بخصوص هذا الطلب.</span>
@@ -1007,6 +1018,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#journee">يوم</a>
       <a href="#alerte">متى تتصل</a>
       <a href="#contact">اتصل بنا</a>
+      <a href="il-refuse-de-venir.html">Il refuse de venir</a>
+      <a href="preparer-le-sejour.html">Préparer le séjour</a>
+      <a href="glossaire.html">Glossaire</a>
+      <a href="medecins.html">Espace médecins</a>
     </nav>
     <p class="foot__call">
       <a href="tel:+21600000000">+216 00 000 000</a><br>
@@ -1016,7 +1031,10 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
   <div class="wrap foot__legal">
     <p>© 2026 عيادة الأمل النفسية — المنزه 9.</p>
-    <p>محتوى إعلامي، يخضع لمصادقة الإدارة الطبية قبل النشر.</p>
+    <p class="foot__legalnav">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="confidentialite.html">Confidentialité</a>
+    </p>
   </div>
 </footer>
 
@@ -1030,6 +1048,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </a>
 </nav>
 
-<script src="assets/js/app.js?v=13"></script>
+<script src="assets/js/app.js?v=14"></script>
 </body>
 </html>

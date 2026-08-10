@@ -1171,3 +1171,78 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
   font-size:1rem; line-height:1.6; color:var(--ink-2); max-width:52ch;
 }
 @media (max-width:759px){ .evidence figcaption{ padding:0 20px 22px } }
+
+/* ── Sortie rapide : partir d'ici en un geste ──────────────── */
+.quickexit{
+  position:fixed; z-index:90; top:10px; inset-inline-end:10px;
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.5rem .85rem; min-height:40px;
+  background:var(--nuit); color:#fff;
+  border:0; border-radius:999px; cursor:pointer;
+  font-size:.84rem; font-weight:600; letter-spacing:.01em;
+  box-shadow:0 2px 6px rgba(16,34,47,.2), 0 14px 30px -18px rgba(16,34,47,.7);
+  opacity:.55; transition:opacity .2s var(--ease), transform .2s var(--ease);
+}
+.quickexit:hover,.quickexit:focus-visible{ opacity:1; transform:translateY(-1px) }
+.quickexit .ico{ width:14px; height:14px }
+@media (max-width:759px){
+  .quickexit{ top:auto; bottom:calc(96px + env(safe-area-inset-bottom)); inset-inline-end:12px; opacity:.9 }
+}
+
+/* pot de miel : invisible pour l'humain, tentant pour le robot */
+.hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden }
+
+.foot__legalnav{ display:flex; gap:1.4rem; flex-wrap:wrap }
+.foot__legalnav a{ color:rgba(169,188,198,.75); text-underline-offset:3px }
+.foot__legalnav a:hover{ color:#fff }
+
+/* ── Pages secondaires ────────────────────────────────────── */
+.doc{ padding-block:clamp(56px,7vw,104px) clamp(64px,8vw,120px) }
+.doc__back{ margin-bottom:2rem }
+.doc__back a{ font-size:.95rem; color:var(--ink-2); text-decoration:none }
+.doc__back a:hover{ color:var(--bleu) }
+.doc .h2{ max-width:22ch; margin-bottom:1.6rem }
+.doc h2{
+  font-family:var(--disp); font-weight:600; font-size:clamp(1.3rem,2.1vw,1.7rem);
+  letter-spacing:-.025em; margin:2.6rem 0 .8rem;
+}
+.doc p{ color:var(--ink-2); max-width:68ch; margin-bottom:1rem }
+.doc .lede{ color:var(--ink-2); margin-bottom:1.6rem }
+.doc a{ color:var(--bleu); text-underline-offset:3px }
+.doc strong{ color:var(--ink) }
+
+.doc__list, .doc__check{ display:grid; gap:.7rem; margin:1.1rem 0 1.4rem; max-width:68ch }
+.doc__list li, .doc__check li{
+  position:relative; padding-inline-start:1.7rem; color:var(--ink-2); line-height:1.6;
+}
+.doc__list li::before{
+  content:""; position:absolute; inset-inline-start:.15rem; top:.62em;
+  width:.5rem; height:.5rem; border-radius:999px; background:var(--bleu-pale);
+}
+.doc__check li::before{
+  content:""; position:absolute; inset-inline-start:0; top:.28em;
+  width:1.05rem; height:1.05rem; border:1.5px solid var(--bleu); border-radius:5px;
+}
+.doc__list--alert li::before{ background:var(--rouge) }
+
+.glossaire{ margin:1.6rem 0; max-width:70ch }
+.glossaire dt{
+  font-family:var(--disp); font-weight:600; font-size:1.1rem; letter-spacing:-.02em;
+  color:var(--ink); margin-top:1.5rem;
+}
+.glossaire dd{ margin:.35rem 0 0; color:var(--ink-2); line-height:1.65 }
+
+.doc__todo{
+  background:var(--bleu-wash); border:1px solid rgba(43,75,155,.22); border-radius:var(--r);
+  padding:1.1rem 1.3rem; font-size:.95rem;
+}
+.doc__call{
+  margin-top:clamp(40px,5vw,64px); padding:clamp(24px,3vw,38px);
+  background:var(--nuit); border-radius:var(--r); color:var(--sur-nuit);
+}
+.doc__call p{ color:var(--sur-nuit-2); max-width:none }
+.doc__call strong{ color:#fff }
+.doc__call .btn{ margin-top:1rem; --btn-bg:#fff; --btn-fg:var(--bleu) }
+.doc__call-alt{ margin-top:1rem; font-size:.92rem }
+.doc__call a{ color:var(--bleu-pale) }
+.doc__nav{ margin-top:2.4rem }
