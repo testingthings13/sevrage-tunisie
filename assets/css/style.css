@@ -1246,3 +1246,46 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 .doc__call-alt{ margin-top:1rem; font-size:.92rem }
 .doc__call a{ color:var(--bleu-pale) }
 .doc__nav{ margin-top:2.4rem }
+
+/* ── Formulaire sur fond clair (page rendez-vous) ──────────── */
+.form--doc{
+  background:var(--blanc); border-color:var(--trait);
+  margin:2rem 0 1rem;
+}
+.form--doc label{ color:var(--ink-2) }
+.form--doc input,.form--doc select,.form--doc textarea{
+  background-color:var(--pierre); border-color:var(--trait); color:var(--ink);
+}
+.form--doc input::placeholder,.form--doc textarea::placeholder{ color:var(--ink-3) }
+.form--doc input:hover,.form--doc select:hover,.form--doc textarea:hover{ border-color:var(--bleu-pale) }
+.form--doc input:focus,.form--doc select:focus,.form--doc textarea:focus{
+  background-color:#fff; border-color:var(--bleu); box-shadow:0 0 0 4px rgba(43,75,155,.12);
+}
+.form--doc select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%234E5D66' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+  background-repeat:no-repeat; background-position:right 1rem center; background-size:11px;
+}
+[dir="rtl"] .form--doc select{ background-position:left 1rem center }
+.form--doc .check{ color:var(--ink-2)!important }
+.form--doc .form__legal{ color:var(--ink-3) }
+.form--doc .form__status[data-state="ok"]{ color:var(--bleu) }
+.form--doc .form__status[data-state="err"]{ color:var(--rouge) }
+
+.form__set{ border:0; padding:0; margin:.4rem 0 0 }
+.form__set legend{
+  padding:0; margin-bottom:.6rem;
+  font-size:.84rem; font-weight:600; letter-spacing:.02em; color:var(--ink-2);
+}
+.chips{ display:flex; flex-wrap:wrap; gap:.5rem }
+.chips label{ cursor:pointer }
+.chips input{ position:absolute; opacity:0; width:1px; height:1px }
+.chips span{
+  display:inline-flex; align-items:center; min-height:44px;
+  padding:.5rem 1rem; border-radius:999px;
+  border:1.5px solid var(--trait); background:var(--pierre);
+  font-size:.94rem; font-weight:500; color:var(--ink-2);
+  transition:border-color .2s var(--ease), background-color .2s var(--ease), color .2s var(--ease);
+}
+.chips label:hover span{ border-color:var(--bleu-pale); color:var(--ink) }
+.chips input:checked + span{ background:var(--bleu); border-color:var(--bleu); color:#fff }
+.chips input:focus-visible + span{ outline:3px solid var(--bleu-vif); outline-offset:3px }
