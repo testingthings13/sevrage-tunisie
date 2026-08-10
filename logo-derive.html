@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Logo dérivé — Clinique Espoir</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+  :root{ --bleu:#2B4B9B; --nuit:#10222F; --pierre:#F5F7F6; --ink:#101B22; --ink2:#4E5D66; --trait:#DDE2DE;
+         --rouge:#C0392F; --teal:#0E9BA8 }
+  body{margin:0;background:var(--pierre);color:var(--ink);font:400 16px/1.6 Archivo,sans-serif;padding:40px 32px 80px}
+  h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:2rem;letter-spacing:-.03em;margin:0 0 28px}
+  .row{display:flex;align-items:center;gap:34px;flex-wrap:wrap;background:#fff;border:1px solid var(--trait);
+       border-radius:16px;padding:26px;margin-bottom:18px}
+  .row--dark{background:var(--nuit)}
+  .cap{font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink2);width:100%;margin:0 0 4px}
+  .row--dark .cap{color:#A9BCC6}
+  svg,img{display:block}
+  .s96{width:96px;height:96px}.s56{width:56px;height:56px}.s32{width:32px;height:32px}.s18{width:18px;height:18px}
+  .badge{width:72px;height:72px;border-radius:18px;background:var(--bleu);display:grid;place-items:center}
+  .badge svg{width:52px;height:52px}
+  .lock{display:flex;align-items:center;gap:14px}
+  .lock .w{display:grid;line-height:1.05}
+  .lock strong{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.5rem;letter-spacing:-.04em}
+  .lock small{font-size:.64rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink2);white-space:nowrap}
+  .row--dark .lock strong{color:#fff}.row--dark .lock small{color:#A9BCC6}
+</style>
+</head>
+<body>
+<h1>Le signe d'origine, et ce qu'on en tire</h1>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+  <!-- A · l'étreinte tient une tête de profil -->
+  <g id="m-a">
+    <circle cx="50" cy="52" r="33" fill="none" stroke="var(--bleu)" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="145 63" transform="rotate(-58 50 52)"/>
+    <path d="M14 74a44 44 0 0 0 15 15" fill="none" stroke="var(--teal)" stroke-width="7" stroke-linecap="round"/>
+    <path fill="var(--rouge)" d="M52 28C63 28 71 36 71 46c0 5-2 8-5 11l4 5c1 2 0 3-2 3l-4 1c0 3 1 6-2 8
+       -4 2-10 2-14 0-9-4-14-13-14-24 0-12 8-22 18-22z"/>
+  </g>
+
+  <!-- B · l'étreinte tient un « e » qui devient une spirale -->
+  <g id="m-b">
+    <circle cx="50" cy="52" r="33" fill="none" stroke="var(--bleu)" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="145 63" transform="rotate(-58 50 52)"/>
+    <path d="M14 74a44 44 0 0 0 15 15" fill="none" stroke="var(--teal)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M36 54h27a13 13 0 1 0-4 9" fill="none" stroke="var(--rouge)" stroke-width="10"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- C · deux étreintes : la clinique et la personne -->
+  <g id="m-c">
+    <circle cx="50" cy="52" r="33" fill="none" stroke="var(--bleu)" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="145 63" transform="rotate(-58 50 52)"/>
+    <circle cx="50" cy="52" r="17" fill="none" stroke="var(--rouge)" stroke-width="10"
+            stroke-linecap="round" stroke-dasharray="74 33" transform="rotate(122 50 52)"/>
+    <path d="M14 74a44 44 0 0 0 15 15" fill="none" stroke="var(--teal)" stroke-width="7" stroke-linecap="round"/>
+  </g>
+</defs></svg>
+
+<div class="row">
+  <p class="cap">L'original — Clinique de l'Espoir</p>
+  <img src="ref-logo.png" alt="logo d'origine" style="height:72px">
+</div>
+
+<div class="row">
+  <p class="cap">A · l'étreinte tient une tête de profil</p>
+  <svg class="s96" viewBox="0 0 100 100"><use href="#m-a"/></svg>
+  <span class="badge"><svg viewBox="0 0 100 100" style="--bleu:#fff;--rouge:#fff;--teal:#8EACC6"><use href="#m-a"/></svg></span>
+  <svg class="s56" viewBox="0 0 100 100"><use href="#m-a"/></svg>
+  <svg class="s32" viewBox="0 0 100 100"><use href="#m-a"/></svg>
+  <svg class="s18" viewBox="0 0 100 100"><use href="#m-a"/></svg>
+  <span class="lock"><svg class="s56" viewBox="0 0 100 100"><use href="#m-a"/></svg>
+    <span class="w"><strong>Espoir</strong><small>Clinique psychiatrique · El Menzah 9</small></span></span>
+</div>
+
+<div class="row">
+  <p class="cap">B · l'étreinte tient le « e », déroulé en spirale</p>
+  <svg class="s96" viewBox="0 0 100 100"><use href="#m-b"/></svg>
+  <span class="badge"><svg viewBox="0 0 100 100" style="--bleu:#fff;--rouge:#fff;--teal:#8EACC6"><use href="#m-b"/></svg></span>
+  <svg class="s56" viewBox="0 0 100 100"><use href="#m-b"/></svg>
+  <svg class="s32" viewBox="0 0 100 100"><use href="#m-b"/></svg>
+  <svg class="s18" viewBox="0 0 100 100"><use href="#m-b"/></svg>
+  <span class="lock"><svg class="s56" viewBox="0 0 100 100"><use href="#m-b"/></svg>
+    <span class="w"><strong>Espoir</strong><small>Clinique psychiatrique · El Menzah 9</small></span></span>
+</div>
+
+<div class="row">
+  <p class="cap">C · deux étreintes emboîtées</p>
+  <svg class="s96" viewBox="0 0 100 100"><use href="#m-c"/></svg>
+  <span class="badge"><svg viewBox="0 0 100 100" style="--bleu:#fff;--rouge:#fff;--teal:#8EACC6"><use href="#m-c"/></svg></span>
+  <svg class="s56" viewBox="0 0 100 100"><use href="#m-c"/></svg>
+  <svg class="s32" viewBox="0 0 100 100"><use href="#m-c"/></svg>
+  <svg class="s18" viewBox="0 0 100 100"><use href="#m-c"/></svg>
+  <span class="lock"><svg class="s56" viewBox="0 0 100 100"><use href="#m-c"/></svg>
+    <span class="w"><strong>Espoir</strong><small>Clinique psychiatrique · El Menzah 9</small></span></span>
+</div>
+
+<div class="row row--dark">
+  <p class="cap">En réserve</p>
+  <svg class="s96" viewBox="0 0 100 100" style="--bleu:#fff;--rouge:#F2A79E;--teal:#5FD3DE"><use href="#m-a"/></svg>
+  <svg class="s96" viewBox="0 0 100 100" style="--bleu:#fff;--rouge:#F2A79E;--teal:#5FD3DE"><use href="#m-b"/></svg>
+  <svg class="s96" viewBox="0 0 100 100" style="--bleu:#fff;--rouge:#F2A79E;--teal:#5FD3DE"><use href="#m-c"/></svg>
+</div>
+</body>
+</html>

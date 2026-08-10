@@ -1,0 +1,5 @@
+.deploy.env
+dist/
+*.zip
+.DS_Store
+ref-logo.png

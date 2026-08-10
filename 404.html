@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page introuvable — Sevrage et soins psychiatriques, Tunis</title>
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#2B4B9B">
+<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .lost{ min-height:78vh; display:grid; place-items:center; text-align:center; padding:clamp(40px,8vw,90px) var(--pad) }
+  .lost__in{ max-width:56ch }
+  .lost__mark{ width:74px; height:74px; margin:0 auto 2rem; background:#fff; border-radius:20px;
+               display:grid; place-items:center; box-shadow:var(--sh-1);
+               --m-ring:var(--bleu); --m-head:var(--rouge); --m-tail:var(--teal) }
+  .lost__mark svg{ width:82%; height:82% }
+  .lost .h2{ max-width:none; margin-inline:auto }
+  .lost .lede{ margin-inline:auto }
+  .lost__acts{ display:flex; flex-wrap:wrap; gap:.8rem; justify-content:center; margin-top:2.2rem }
+</style>
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" width="0" height="0"><defs>
+  <g id="mark">
+    <circle class="mark__ring" cx="50" cy="52" r="33" fill="none" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="145 63" transform="rotate(-58 50 52)"/>
+    <path class="mark__tail" d="M14 74a44 44 0 0 0 15 15" fill="none" stroke-width="7" stroke-linecap="round"/>
+    <path class="mark__head" d="M52 28C63 28 71 36 71 46c0 5-2 8-5 11l4 5c1 2 0 3-2 3l-4 1c0 3 1 6-2 8
+       -4 2-10 2-14 0-9-4-14-13-14-24 0-12 8-22 18-22z"/>
+  </g>
+  <g id="i-phone" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5.5 3.5h4l2 4.5-2.4 1.6a12 12 0 0 0 5.3 5.3l1.6-2.4 4.5 2v4a1.5 1.5 0 0 1-1.6 1.5C10.6 19.4 4.6 13.4 4 4.9a1.5 1.5 0 0 1 1.5-1.4Z"/>
+  </g>
+</defs></svg>
+
+<main class="lost">
+  <div class="lost__in">
+    <span class="lost__mark" aria-hidden="true"><svg viewBox="0 0 100 100"><use href="#mark"/></svg></span>
+    <h1 class="h2">Cette page n'existe pas.</h1>
+    <p class="lede">Elle a peut-être changé d'adresse. Si vous cherchiez une information sur le sevrage ou une prise de rendez-vous, tout se trouve sur la page d'accueil — ou au téléphone, à toute heure.</p>
+    <div class="lost__acts">
+      <a class="btn btn--call btn--lg" href="tel:+21600000000">
+        <svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-phone"/></svg>
+        <span>Appeler le +216 00 000 000</span>
+      </a>
+      <a class="btn btn--ghost btn--lg" href="/">Retour à l'accueil</a>
+    </div>
+    <p class="note" style="margin-inline:auto;text-align:start;display:inline-block">
+      Urgence vitale : composez le 190 (SAMU).
+    </p>
+  </div>
+</main>
+</body>
+</html>

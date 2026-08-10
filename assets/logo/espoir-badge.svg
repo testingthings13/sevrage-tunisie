@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="512" height="512" role="img" aria-label="Clinique Espoir">
+  <title>Clinique Espoir — le signe sur sa plaque</title>
+  <rect width="128" height="128" rx="30" fill="#FFFFFF"/>
+  <g transform="translate(12 10) scale(1.04)">
+    <circle cx="50" cy="52" r="33" fill="none" stroke="#2B4B9B" stroke-width="12"
+            stroke-linecap="round" stroke-dasharray="145 63" transform="rotate(-58 50 52)"/>
+    <path d="M14 74a44 44 0 0 0 15 15" fill="none" stroke="#0E9BA8" stroke-width="7" stroke-linecap="round"/>
+    <path fill="#C0392F" d="M52 28C63 28 71 36 71 46c0 5-2 8-5 11l4 5c1 2 0 3-2 3l-4 1c0 3 1 6-2 8-4 2-10 2-14 0-9-4-14-13-14-24 0-12 8-22 18-22z"/>
+  </g>
+</svg>

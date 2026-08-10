@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /logos.html
+Disallow: /logo-derive.html
+
+Sitemap: https://sevrage-tunisie.com/sitemap.xml
