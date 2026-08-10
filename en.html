@@ -22,10 +22,10 @@
 <meta property="og:image:alt" content="The entrance of Clinique Espoir, El Menzah 9, Tunis">
 <meta property="og:site_name" content="Espoir Psychiatric Clinic">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=14">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/espoir-favicon-32.png?v=14">
-<link rel="icon" type="image/png" sizes="192x192" href="assets/logo/espoir-favicon-192.png?v=14">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/espoir-touch-180.png?v=14">
+<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=15">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/logo/espoir-favicon-32.png?v=15">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/logo/espoir-favicon-192.png?v=15">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/logo/espoir-touch-180.png?v=15">
 <link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/">
 <link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html">
 <link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html">
@@ -33,8 +33,8 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/bricolagegrotesque-4efd1a5a.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-2a392e77.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/entree.jpg" fetchpriority="high">
-<link rel="stylesheet" href="assets/fonts/fonts.css?v=14">
-<link rel="stylesheet" href="assets/css/style.css?v=14">
+<link rel="stylesheet" href="assets/fonts/fonts.css?v=15">
+<link rel="stylesheet" href="assets/css/style.css?v=15">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -951,7 +951,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         </div>
       </div>
 
-      <form class="form" id="form-contact" novalidate>
+      <form class="form" id="form-contact" action="envoi.php" method="post" novalidate>
+        <input type="hidden" name="page" value="accueil">
         <div class="form__row">
           <label for="f-nom">Your name</label>
           <input id="f-nom" name="nom" type="text" autocomplete="name" required>
@@ -1048,6 +1049,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </a>
 </nav>
 
-<script src="assets/js/app.js?v=14"></script>
+<script src="assets/js/app.js?v=15"></script>
 </body>
 </html>

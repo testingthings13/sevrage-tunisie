@@ -400,57 +400,44 @@
     });
   }
 
-  /* ── Contact form ────────────────────────────────────────── */
-  var form = document.getElementById('form-contact');
-  var status = document.getElementById('form-status');
-  var MAIL = 'contact@sevrage-tunisie.com';
-
-  if (form && status) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var nom = form.nom.value.trim();
-      var tel = form.tel.value.trim();
-      var mail = form.email.value.trim();
-      var motif = form.motif.value;
-      var msg = form.message.value.trim();
-      var consent = form.consent.checked;
-
-      /* pot de miel : un humain ne voit pas ce champ */
-      if (form.site && form.site.value) { status.textContent = ''; return; }
-
-      [form.nom, form.tel].forEach(function (f) { f.classList.remove('invalid'); });
-
-      if (!nom) { fail('Indiquez votre nom pour que nous sachions qui rappeler.', form.nom); return; }
-      if (!tel) { fail('Un numéro de téléphone est nécessaire : c’est par là que nous répondons.', form.tel); return; }
-      if (!consent) { fail('Cochez la case pour que nous puissions vous recontacter.', form.consent); return; }
-
-      var body =
-        'Nom : ' + nom + '\n' +
-        'Téléphone : ' + tel + '\n' +
-        'E-mail : ' + (mail || '—') + '\n' +
-        'Demande : ' + motif + '\n\n' +
-        (msg || '(aucun message)');
-
-      var href = 'mailto:' + MAIL +
-        '?subject=' + encodeURIComponent('Demande — ' + motif + ' — ' + nom) +
-        '&body=' + encodeURIComponent(body);
-
-      status.dataset.state = 'ok';
-      status.innerHTML = 'Votre messagerie s’ouvre avec la demande prête à envoyer. ' +
-        'Si rien ne s’ouvre, écrivez à <a href="mailto:' + MAIL + '">' + MAIL + '</a> ' +
-        'ou appelez le <a href="tel:+21600000000">+216 00 000 000</a>.';
-
-      window.location.href = href;
-    });
-
-    function fail(message, field) {
-      status.dataset.state = 'err';
-      status.textContent = message;
-      if (field && field.classList) field.classList.add('invalid');
-      if (field && field.focus) field.focus();
-    }
+  /* ── Page de remerciement : cas où l'e-mail n'est pas parti ─ */
+  var alerte = document.getElementById('merci-alerte');
+  if (alerte && /[?&]envoi=differe/.test(window.location.search)) {
+    alerte.dataset.state = 'err';
+    alerte.textContent = 'Votre demande a bien été enregistrée, mais notre serveur d\u2019e-mail '
+      + 'n\u2019a pas répondu. Si vous n\u2019avez pas de retour d\u2019ici deux heures, appelez le +216 00 000 000.';
   }
+
+  /* ── Formulaires : on valide, le serveur envoie ──────────── */
+  Array.prototype.forEach.call(document.querySelectorAll('form[action="envoi.php"]'), function (form) {
+    var status = form.querySelector('.form__status');
+
+    form.addEventListener('submit', function (e) {
+      var nom = form.nom, tel = form.tel, consent = form.consent;
+
+      [nom, tel].forEach(function (f) { if (f) f.classList.remove('invalid'); });
+
+      function stop(msg, field) {
+        e.preventDefault();
+        if (status) { status.dataset.state = 'err'; status.textContent = msg; }
+        if (field) { field.classList.add('invalid'); field.focus(); }
+      }
+
+      if (nom && !nom.value.trim()) {
+        return stop('Indiquez votre nom, pour que nous sachions qui rappeler.', nom);
+      }
+      if (tel && !tel.value.trim()) {
+        return stop('Un numéro de téléphone est nécessaire : c\u2019est par là que nous répondons.', tel);
+      }
+      if (consent && !consent.checked) {
+        return stop('Cochez la case pour que nous puissions vous recontacter.', consent);
+      }
+
+      if (status) { status.dataset.state = 'ok'; status.textContent = 'Envoi en cours…'; }
+      var btn = form.querySelector('button[type="submit"]');
+      if (btn) { btn.disabled = true; }
+    });
+  });
 
   /* ── Active section in the nav ───────────────────────────── */
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));

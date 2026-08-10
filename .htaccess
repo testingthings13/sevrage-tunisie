@@ -57,3 +57,8 @@ AddType image/svg+xml .svg
 <FilesMatch "^(logos|logo-derive)\.html$">
   Require all denied
 </FilesMatch>
+
+# Le journal des demandes contient des données personnelles.
+<FilesMatch "^demandes\.log$">
+  Require all denied
+</FilesMatch>

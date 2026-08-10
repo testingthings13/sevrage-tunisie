@@ -12,7 +12,7 @@ import pathlib
 
 HERE = pathlib.Path(__file__).parent
 SITE = "https://sevrage-tunisie.com"
-V = "?v=14"
+V = "?v=15"
 TEL, TELH = "+216 00 000 000", "+21600000000"
 MAIL = "contact@sevrage-tunisie.com"
 
@@ -315,12 +315,128 @@ PAGES = [
 """,
     },
     {
+        "slug": "rendez-vous",
+        "title": "Demander un rendez-vous",
+        "h1": "Demander un rendez-vous.",
+        "desc": "Demandez un rendez-vous à la Clinique psychiatrique Espoir, El Menzah 9 à Tunis : "
+                "consultation, sevrage programmé, hôpital de jour. Réponse le jour même, urgences 24 h/24.",
+        "body": """
+    <p class="lede">Remplissez ces quelques lignes&nbsp;: nous vous rappelons pour fixer l'heure.
+    Si c'est urgent, n'attendez pas — appelez le
+    <a href="tel:+21600000000">+216 00 000 000</a>, quelqu'un décroche à toute heure.</p>
+
+    <form class="form form--doc" id="form-rdv" action="envoi.php" method="post" novalidate>\n      <input type="hidden" name="page" value="rendez-vous">
+      <div class="form__row">
+        <label for="r-pour">Le rendez-vous est pour</label>
+        <select id="r-pour" name="pour">
+          <option>Moi-même</option>
+          <option>Un proche</option>
+          <option>Mon patient (je suis médecin)</option>
+        </select>
+      </div>
+
+      <div class="form__row">
+        <label for="r-nom">Votre nom</label>
+        <input id="r-nom" name="nom" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="form__row form__row--two">
+        <div>
+          <label for="r-tel">Téléphone</label>
+          <input id="r-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required>
+        </div>
+        <div>
+          <label for="r-mail">E-mail (facultatif)</label>
+          <input id="r-mail" name="email" type="email" autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form__row">
+        <label for="r-motif">Motif</label>
+        <select id="r-motif" name="motif">
+          <option>Consultation psychiatrique</option>
+          <option>Sevrage programmé — alcool</option>
+          <option>Sevrage programmé — benzodiazépines ou somnifères</option>
+          <option>Sevrage programmé — opiacés</option>
+          <option>Sevrage programmé — cannabis, cocaïne ou stimulants</option>
+          <option>Sevrage programmé — prégabaline ou médicament détourné</option>
+          <option>Addiction sans produit (jeu, écrans)</option>
+          <option>Hôpital de jour</option>
+          <option>Consultation de suivi après une hospitalisation</option>
+        </select>
+      </div>
+
+      <fieldset class="form__set">
+        <legend>Quels jours vous conviennent&nbsp;?</legend>
+        <div class="chips">
+          <label><input type="checkbox" name="jours" value="lundi"><span>Lundi</span></label>
+          <label><input type="checkbox" name="jours" value="mardi"><span>Mardi</span></label>
+          <label><input type="checkbox" name="jours" value="mercredi"><span>Mercredi</span></label>
+          <label><input type="checkbox" name="jours" value="jeudi"><span>Jeudi</span></label>
+          <label><input type="checkbox" name="jours" value="vendredi"><span>Vendredi</span></label>
+          <label><input type="checkbox" name="jours" value="samedi"><span>Samedi</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form__set">
+        <legend>À quel moment&nbsp;?</legend>
+        <div class="chips">
+          <label><input type="radio" name="creneau" value="matin" checked><span>Matin (8 h – 12 h)</span></label>
+          <label><input type="radio" name="creneau" value="apres-midi"><span>Après-midi (14 h – 18 h)</span></label>
+          <label><input type="radio" name="creneau" value="indifferent"><span>Indifférent</span></label>
+        </div>
+      </fieldset>
+
+      <div class="form__row">
+        <label for="r-delai">Dans quel délai&nbsp;?</label>
+        <select id="r-delai" name="delai">
+          <option>Dès que possible</option>
+          <option>Cette semaine</option>
+          <option>La semaine prochaine</option>
+          <option>Dans le mois</option>
+        </select>
+      </div>
+
+      <div class="form__row">
+        <label for="r-msg">Ce que vous souhaitez nous dire (facultatif)</label>
+        <textarea id="r-msg" name="message" rows="3"
+          placeholder="Quelques lignes suffisent. N'écrivez pas de données médicales détaillées ici."></textarea>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="r-site">Ne remplissez pas ce champ</label>
+        <input id="r-site" name="site" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label class="check">
+        <input type="checkbox" name="consent" required>
+        <span>J'accepte d'être recontacté à propos de cette demande.</span>
+      </label>
+
+      <button class="btn btn--call btn--lg btn--block" type="submit">Envoyer la demande</button>
+      <p class="form__status" role="status" aria-live="polite"></p>
+      <p class="form__legal">Vos informations ne servent qu'à fixer le rendez-vous. Aucun dossier
+      médical ne transite par ce formulaire.</p>
+    </form>
+
+    <h2>Ce qui se passe ensuite</h2>
+    <ul class="doc__list">
+      <li>Nous vous rappelons pour confirmer le jour et l'heure — en journée, sous deux heures.</li>
+      <li>La première consultation dure environ quarante-cinq minutes.</li>
+      <li>Apportez vos ordonnances en cours et vos derniers examens, s'il y en a.</li>
+      <li>Un proche peut vous accompagner&nbsp;; il peut aussi rester en salle d'attente.</li>
+    </ul>
+""",
+    },
+    {
         "slug": "merci",
         "title": "Demande envoyée",
         "h1": "Votre demande est partie.",
         "robots": "noindex,follow",
         "desc": "Confirmation d'envoi. Un soignant de la Clinique Espoir vous rappelle.",
         "body": """
+    <p class="form__status" id="merci-alerte" role="status"></p>
+
     <p class="lede">Un soignant vous rappelle. En journée, comptez moins de deux heures&nbsp;;
     la nuit, nous rappelons au plus tôt le matin — sauf si vous avez signalé une urgence,
     auquel cas c'est immédiat.</p>
