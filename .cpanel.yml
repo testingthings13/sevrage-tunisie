@@ -1,0 +1,50 @@
+---
+# Déploiement automatique cPanel — sevrage-tunisie.com
+#
+# cPanel lit ce fichier après chaque « Deploy HEAD Commit » et copie
+# les fichiers du dépôt vers public_html. Les sources (scripts de
+# génération, documentation, pages de travail) restent dans le dépôt
+# et ne sont jamais publiées.
+#
+# Si votre chemin d'accueil n'est pas /home/sevromox, corrigez-le
+# ci-dessous : cPanel → Server Information → Home Directory.
+
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sevromox/public_html
+
+    # ── les pages ──────────────────────────────────────────────
+    - /bin/cp index.html            $DEPLOYPATH/
+    - /bin/cp ar.html               $DEPLOYPATH/
+    - /bin/cp en.html               $DEPLOYPATH/
+    - /bin/cp 404.html              $DEPLOYPATH/
+    - /bin/cp merci.html            $DEPLOYPATH/
+    - /bin/cp rendez-vous.html      $DEPLOYPATH/
+    - /bin/cp medecins.html         $DEPLOYPATH/
+    - /bin/cp glossaire.html        $DEPLOYPATH/
+    - /bin/cp il-refuse-de-venir.html   $DEPLOYPATH/
+    - /bin/cp preparer-le-sejour.html   $DEPLOYPATH/
+    - /bin/cp mentions-legales.html $DEPLOYPATH/
+    - /bin/cp confidentialite.html  $DEPLOYPATH/
+
+    # ── le traitement du formulaire ────────────────────────────
+    - /bin/cp envoi.php             $DEPLOYPATH/
+
+    # ── configuration serveur et référencement ─────────────────
+    - /bin/cp .htaccess             $DEPLOYPATH/
+    - /bin/cp robots.txt            $DEPLOYPATH/
+    - /bin/cp sitemap.xml           $DEPLOYPATH/
+
+    # ── les ressources ─────────────────────────────────────────
+    - /bin/mkdir -p $DEPLOYPATH/assets
+    - /bin/cp -R assets/css     $DEPLOYPATH/assets/
+    - /bin/cp -R assets/js      $DEPLOYPATH/assets/
+    - /bin/cp -R assets/img     $DEPLOYPATH/assets/
+    - /bin/cp -R assets/logo    $DEPLOYPATH/assets/
+    - /bin/cp -R assets/fonts   $DEPLOYPATH/assets/
+
+    # ── ménage : ce qui ne doit jamais être servi ──────────────
+    - /bin/rm -f $DEPLOYPATH/assets/fonts/all.css
+    - /bin/rm -f $DEPLOYPATH/assets/logo/README.md
+    - /bin/rm -f $DEPLOYPATH/sevrage-tunisie-site.zip
+    - /bin/rm -f $DEPLOYPATH/default.html
