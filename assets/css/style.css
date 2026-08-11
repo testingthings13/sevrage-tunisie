@@ -28,7 +28,7 @@
   --ink-2:       #4E5D66;
   --ink-3:       #76858C;
   --sur-nuit:    #EDF1F3;
-  --sur-nuit-2:  #A9BCC6;
+  --sur-nuit-2:  #C9D7DF;
 
   --sans: "Archivo", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --disp: "Bricolage Grotesque", "Archivo", ui-sans-serif, system-ui, sans-serif;
@@ -109,7 +109,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 }
 .note{
   margin-top:2.25rem;
-  font-size:.86rem;
+  font-size:.95rem;
   line-height:1.6;
   color:var(--ink-3);
   max-width:72ch;
@@ -181,6 +181,7 @@ section[id], main[id]{ scroll-margin-top:96px }
   --btn-bg:var(--bleu);
   --btn-fg:#fff;
   display:inline-flex; align-items:center; gap:.6em;
+  min-height:48px;
   padding:.85em 1.35em;
   background:var(--btn-bg); color:var(--btn-fg);
   border:1px solid transparent; border-radius:999px;
@@ -352,6 +353,65 @@ section[id], main[id]{ scroll-margin-top:96px }
   margin-top:.85rem; font-size:.82rem; letter-spacing:.01em; color:var(--ink-3);
 }
 
+/* ── Chooser : deux portes, une même maison ───────────────── */
+.chooser__grid{
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:clamp(14px,2vw,28px);
+  margin-top:2rem;
+}
+@media (max-width:768px){ .chooser__grid{ grid-template-columns:1fr } }
+.chooser__card{
+  display:flex; flex-direction:column; gap:.55rem;
+  padding:clamp(1.6rem,3vw,2.6rem);
+  border-radius:var(--r);
+  color:#fff; text-decoration:none;
+  position:relative; overflow:hidden;
+  min-height:230px;
+  box-shadow:var(--sh-blue);
+  transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+  isolation:isolate;
+}
+.chooser__card--sevrage{ background:linear-gradient(135deg,#2B4B9B 0%,#3F6BD4 55%,#0E9BA8 130%) }
+.chooser__card--psy{ background:linear-gradient(135deg,#17303F 0%,#2B4B9B 60%,#3F6BD4 130%) }
+.chooser__card::before{
+  content:""; position:absolute; inset:-40%;
+  background:radial-gradient(circle at 30% 30%, rgba(255,255,255,.14), transparent 55%);
+  z-index:-1;
+  animation:chooserGlow 9s var(--ease-soft) infinite alternate;
+}
+@keyframes chooserGlow{
+  from{ transform:translate3d(0,0,0) scale(1) }
+  to  { transform:translate3d(18%,12%,0) scale(1.15) }
+}
+.chooser__card:hover,
+.chooser__card:focus-visible{
+  transform:translateY(-6px);
+  box-shadow:0 4px 10px rgba(43,75,155,.28), 0 30px 56px -26px rgba(43,75,155,.75);
+}
+.chooser__card:hover .chooser__cta,
+.chooser__card:focus-visible .chooser__cta{ text-decoration:underline }
+@media (hover:none){
+  .chooser__card:hover{ transform:none }
+}
+.chooser__kicker{
+  font-size:.85rem; letter-spacing:.04em; text-transform:uppercase;
+  color:rgba(255,255,255,.85);
+}
+.chooser__title{
+  font-family:var(--disp); font-weight:700;
+  font-size:clamp(1.9rem,3vw,2.6rem); line-height:1;
+}
+.chooser__desc{
+  font-size:1.05rem; line-height:1.55;
+  color:rgba(255,255,255,.95); max-width:36ch;
+}
+.chooser__cta{ margin-top:auto; font-weight:600; font-size:1.02rem }
+@media (prefers-reduced-motion:reduce){
+  .chooser__card::before{ animation:none }
+  .chooser__card:hover,
+  .chooser__card:focus-visible{ transform:none }
+}
+
 /* ── Urgence strip ────────────────────────────────────────── */
 .urgence{
   position:relative; overflow:hidden;
@@ -454,15 +514,17 @@ section[id], main[id]{ scroll-margin-top:96px }
 @media (min-width:700px){ .glaze{ grid-template-columns:repeat(2,minmax(0,1fr)) } }
 @media (min-width:1040px){ .glaze{ grid-template-columns:repeat(4,minmax(0,1fr)) } }
 .glaze__t{
-  background:rgba(255,255,255,.055);
-  border:1px solid rgba(237,241,243,.16);
-  border-radius:var(--r);
+  background:var(--blanc);
+  border:1px solid var(--trait);
+  border-radius:var(--r-sm);
   padding:1.6rem 1.4rem 1.7rem;
-  transition:background-color .3s var(--ease), border-color .3s var(--ease), transform .3s var(--ease);
+  box-shadow:var(--sh-1);
+  transition:border-color .3s var(--ease), box-shadow .3s var(--ease), transform .3s var(--ease);
 }
-.glaze__t:hover{ background:rgba(255,255,255,.1); border-color:rgba(143,172,198,.55); transform:translateY(-3px) }
+.glaze__t:hover{ border-color:var(--bleu-pale); box-shadow:var(--sh-2); transform:translateY(-3px) }
 .glaze__t h3{
   font-family:var(--disp); font-weight:600; font-size:1.12rem; letter-spacing:-.02em;
+  color:var(--bleu);
   margin-bottom:.55rem; padding-inline-start:1.45rem; position:relative;
 }
 .glaze__t h3::before{
@@ -475,10 +537,7 @@ section[id], main[id]{ scroll-margin-top:96px }
   /* the mark's sun, reduced to a bullet */
   --star:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='34' fill='none' stroke='%23000' stroke-width='20' stroke-linecap='round' stroke-dasharray='150 64' transform='rotate(-58 50 50)'/%3E%3C/svg%3E");
 }
-.glaze__t p{ font-size:.94rem; color:var(--sur-nuit-2) }
-.glaze__t--call{ background:linear-gradient(135deg, rgba(63,107,212,.28), rgba(143,172,198,.12)); border-color:rgba(143,172,198,.5) }
-.glaze__t--call .btn{ margin-top:1.1rem }
-@media (min-width:700px){ .glaze__t--call{ grid-column:span 2 } }
+.glaze__t p{ font-size:1rem; color:var(--ink-2) }
 
 /* ── Day timeline ─────────────────────────────────────────── */
 .day{ display:grid; align-self:start }
@@ -543,7 +602,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 }
 .coords .ico{ color:var(--bleu-pale); grid-row:span 2; align-self:start; margin-top:.22rem; width:1.2rem; height:1.2rem }
 .coords a{ text-decoration-thickness:1px; text-underline-offset:3px }
-.coords__sub{ font-size:.86rem; font-weight:400; color:var(--sur-nuit-2) }
+.coords__sub{ font-size:.95rem; font-weight:400; color:var(--sur-nuit-2) }
 
 .map{
   margin-top:2.2rem; border:1px solid rgba(237,241,243,.2); border-radius:var(--r);
@@ -562,7 +621,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 .form__row--two{ grid-template-columns:minmax(0,1fr); gap:1.1rem }
 @media (min-width:560px){ .form__row--two{ grid-template-columns:1fr 1fr } }
 .form__row--two > div{ display:grid; gap:.45rem }
-.form label{ font-size:.84rem; font-weight:600; letter-spacing:.02em; color:var(--sur-nuit-2) }
+.form label{ font-size:.95rem; font-weight:600; letter-spacing:.02em; color:var(--sur-nuit-2) }
 .form input,.form select,.form textarea{
   width:100%;
   background:rgba(255,255,255,.07);
@@ -591,7 +650,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 .form__status{ font-size:.92rem; min-height:1.2em }
 .form__status[data-state="ok"]{ color:#B7D8F0 }
 .form__status[data-state="err"]{ color:#F3C1B4 }
-.form__legal{ font-size:.79rem; color:rgba(169,188,198,.72) }
+.form__legal{ font-size:.95rem; color:rgba(169,188,198,.72) }
 .form .invalid{ border-color:#E08F76; box-shadow:0 0 0 4px rgba(224,143,118,.14) }
 
 /* ── Footer ───────────────────────────────────────────────── */
@@ -735,7 +794,7 @@ section[id], main[id]{ scroll-margin-top:96px }
   border-color:transparent; color:#fff;
 }
 .subs__c--call h3{ border-bottom-color:rgba(255,255,255,.28) }
-.subs__c--call p{ color:rgba(255,255,255,.86); font-size:.98rem }
+.subs__c--call p{ color:rgba(255,255,255,.86); font-size:1rem }
 .subs__c--call .btn{ margin-top:1.2rem; --btn-bg:#fff; --btn-fg:var(--bleu); box-shadow:0 16px 34px -22px rgba(0,0,0,.9) }
 
 /* ── Pairs ────────────────────────────────────────────────── */
@@ -1172,23 +1231,6 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 }
 @media (max-width:759px){ .evidence figcaption{ padding:0 20px 22px } }
 
-/* ── Sortie rapide : partir d'ici en un geste ──────────────── */
-.quickexit{
-  position:fixed; z-index:90; top:10px; inset-inline-end:10px;
-  display:inline-flex; align-items:center; gap:.4rem;
-  padding:.5rem .85rem; min-height:40px;
-  background:var(--nuit); color:#fff;
-  border:0; border-radius:999px; cursor:pointer;
-  font-size:.84rem; font-weight:600; letter-spacing:.01em;
-  box-shadow:0 2px 6px rgba(16,34,47,.2), 0 14px 30px -18px rgba(16,34,47,.7);
-  opacity:.55; transition:opacity .2s var(--ease), transform .2s var(--ease);
-}
-.quickexit:hover,.quickexit:focus-visible{ opacity:1; transform:translateY(-1px) }
-.quickexit .ico{ width:14px; height:14px }
-@media (max-width:759px){
-  .quickexit{ top:auto; bottom:calc(96px + env(safe-area-inset-bottom)); inset-inline-end:12px; opacity:.9 }
-}
-
 /* pot de miel : invisible pour l'humain, tentant pour le robot */
 .hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden }
 
@@ -1274,7 +1316,7 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 .form__set{ border:0; padding:0; margin:.4rem 0 0 }
 .form__set legend{
   padding:0; margin-bottom:.6rem;
-  font-size:.84rem; font-weight:600; letter-spacing:.02em; color:var(--ink-2);
+  font-size:.95rem; font-weight:600; letter-spacing:.02em; color:var(--ink-2);
 }
 .chips{ display:flex; flex-wrap:wrap; gap:.5rem }
 .chips label{ cursor:pointer }
@@ -1459,7 +1501,9 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
   animation: shimmer 3.5s infinite;
 }
 
-.split__text {
+/* Carte translucide : réservée aux blocs services (fond clair).
+   Surtout pas sur le .split__text de #contact, posé sur le fond nuit. */
+.service .split__text {
   animation: slideInRight 0.9s var(--ease) both;
   padding: 2rem;
   background: rgba(255,255,255,0.6);
@@ -1548,7 +1592,7 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 }
 
 @media (max-width: 768px) {
-  .split__text {
+  .service .split__text {
     padding: 1.5rem;
   }
 
@@ -1683,5 +1727,53 @@ a:not([class]):hover::after { width: 100%; }
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Triage « Que faire, là, maintenant ? » ────────────────── */
+.triage__box{
+  background:var(--blanc); border:1px solid var(--trait); border-radius:var(--r);
+  padding:clamp(1.5rem,3vw,2.2rem); box-shadow:var(--sh-1); max-width:720px;
+}
+.triage__num{
+  font-size:.78rem; font-weight:600; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:.7rem;
+}
+.triage__q{
+  font-family:var(--disp); font-weight:600; font-size:clamp(1.2rem,1.6vw,1.35rem);
+  letter-spacing:-.02em; line-height:1.25; margin-block:.2rem .4rem; max-width:32ch;
+}
+.triage__btns{ display:flex; flex-wrap:wrap; gap:.75rem; margin-top:1.2rem }
+.triage__result p{ font-size:1.1rem; line-height:1.55; max-width:44ch }
+.triage__result--danger strong{ color:var(--rouge) }
+.triage__restart{
+  border:0; background:none; padding:0; margin-top:1rem;
+  font:inherit; font-size:.92rem; color:var(--ink-2); cursor:pointer;
+}
+.triage__restart:hover,
+.triage__restart:focus-visible{ text-decoration:underline }
+
+/* ── « Avant d'appeler » — carte posée sur le fond nuit ─────── */
+.prep{
+  background:rgba(255,255,255,.08); border:1px solid rgba(237,241,243,.16);
+  border-radius:var(--r-sm); padding:1.2rem 1.4rem; margin-top:1.6rem;
+}
+.prep__title{ font-weight:600 }
+.prep__list{ display:grid; gap:.4rem; margin-top:.65rem }
+.prep__list li{ position:relative; padding-inline-start:1.1rem; color:inherit; line-height:1.55 }
+.prep__list li::before{
+  content:"·"; position:absolute; inset-inline-start:0; top:-.08em;
+  font-size:1.5em; line-height:1; font-weight:700; color:var(--teal);
+}
+.prep__note{ font-size:.92rem; color:inherit; opacity:.85; margin-top:.6rem }
+
+/* ── Impression : la liste se coche au stylo, la page se tait ─ */
+@media print{
+  .callbar, .doc__call, .foot, .doc__back, [data-print]{ display:none !important }
+  body{ background:#fff; color:#000 }
+  .doc__list li{ break-inside:avoid }
+  .doc--print .doc__list li::before{
+    content:"☐"; background:none; border-radius:0; width:auto; height:auto;
+    top:0; inset-inline-start:0; font-size:1.05em; line-height:1.5; color:#000;
   }
 }

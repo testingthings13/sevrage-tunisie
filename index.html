@@ -34,7 +34,7 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-2a392e77.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/entree.jpg" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
-<link rel="stylesheet" href="assets/css/style.css?v=16">
+<link rel="stylesheet" href="assets/css/style.css?v=18">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -113,13 +113,6 @@ FIRST VIEWPORT: Left half, display line "Le manque n'est pas un manque de volont
 FORM: Photograph-derived blue — pinned by the client mid-build over candidate 3 of 7 grounded directions, seed key c3999b3a.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
 -->
-
-<button class="quickexit" type="button" title="Quitter ce site immédiatement (ou appuyez deux fois sur Échap)">
-  <svg class="ico" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-    <path d="M6 6l12 12M18 6L6 18"/>
-  </svg>
-  <span>Quitter</span>
-</button>
 
 <a class="skip" href="#contenu">Aller au contenu</a>
 
@@ -225,6 +218,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </div>
 
   <div class="navdrawer" id="nav-mobile" hidden>
+    <a href="#orientation">Sevrage ou psychiatrie&nbsp;?</a>
     <a href="#comprendre">Comprendre le manque</a>
     <a href="#substances">Substance par substance</a>
     <a href="#protocole">Le protocole de sevrage</a>
@@ -235,6 +229,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <a href="#therapies">Les thérapies</a>
     <a href="#journee">Une journée, heure par heure</a>
     <a href="#alerte">Quand consulter</a>
+    <a href="#maintenant">Que faire maintenant&nbsp;?</a>
     <a href="#ou">Où se déroulent les soins</a>
     <a href="#questions">Questions</a>
     <a href="#equipe">L'équipe</a>
@@ -275,6 +270,31 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <img src="assets/img/entree.jpg" fetchpriority="high" decoding="async" alt="Façade blanche de la Clinique de l'Espoir, enseigne bleue au-dessus d'une porte vitrée." width="1400" height="892">
       <figcaption>Le service est assuré à la Clinique Espoir, El Menzah 9.</figcaption>
     </figure>
+  </section>
+
+
+  <!-- ── Orientation ────────────────────────────────────────── -->
+  <section class="section chooser" id="orientation" aria-label="Choisir votre parcours">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <h2 class="h2">Deux portes, une même maison.</h2>
+        <p class="lede">La clinique soigne le sevrage et les troubles psychiatriques. Dites-nous ce qui vous amène&nbsp;: le reste suit.</p>
+      </div>
+      <div class="chooser__grid">
+        <a class="chooser__card chooser__card--sevrage reveal" href="#comprendre">
+          <span class="chooser__kicker">Alcool, drogues, médicaments, jeu</span>
+          <span class="chooser__title">Sevrage</span>
+          <span class="chooser__desc">Le manque a une physiologie&nbsp;: elle se surveille et se traite. Hospitalisation, hôpital de jour, suivi.</span>
+          <span class="chooser__cta">Comprendre le sevrage&nbsp;→</span>
+        </a>
+        <a class="chooser__card chooser__card--psy reveal" href="psychiatrie.html">
+          <span class="chooser__kicker">Dépression, bipolarité, schizophrénie, anxiété</span>
+          <span class="chooser__title">Soins psychiatriques</span>
+          <span class="chooser__desc">Les troubles se soignent pour eux-mêmes, pas seulement sous une addiction. Consultation, hôpital de jour, hospitalisation.</span>
+          <span class="chooser__cta">Voir les soins psychiatriques&nbsp;→</span>
+        </a>
+      </div>
+    </div>
   </section>
 
 
@@ -724,7 +744,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </section>
 
   <!-- ── Thérapies ──────────────────────────────────────────── -->
-  <section class="field field--blue" id="therapies">
+  <section class="section section--pale" id="therapies">
     <div class="wrap">
       <div class="section__head">
         <h2 class="h2">Ce qu'on fait des journées.</h2>
@@ -823,6 +843,64 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <li><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-check"/></svg>Des propos étranges, de la méfiance inhabituelle, un retrait brutal.</li>
         <li class="signs__hot"><svg class="ico" aria-hidden="true" viewBox="0 0 24 24"><use href="#i-siren"/></svg>Des idées de mort, un scénario, ou un passage à l'acte évité de peu.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ── Que faire maintenant ───────────────────────────────── -->
+  <section class="section triage" id="maintenant">
+    <div class="wrap">
+      <div class="section__head reveal">
+        <h2 class="h2">Que faire, là, maintenant&nbsp;?</h2>
+        <p class="lede">Trois questions, trente secondes — et une marche à suivre claire.</p>
+      </div>
+      <div class="triage__box" data-triage>
+        <div class="triage__step" data-step="1">
+          <p class="triage__num">Question 1 sur 3</p>
+          <p class="triage__q">Y a-t-il un danger immédiat&nbsp;— perte de connaissance, convulsion, propos suicidaires, geste violent&nbsp;?</p>
+          <div class="triage__btns">
+            <button type="button" class="btn btn--ghost" data-answer="danger">Oui</button>
+            <button type="button" class="btn btn--ghost" data-answer="next">Non</button>
+          </div>
+        </div>
+        <div class="triage__step" data-step="2" hidden>
+          <p class="triage__num">Question 2 sur 3</p>
+          <p class="triage__q">Depuis quelques heures&nbsp;: confusion, hallucinations, tremblements marqués, fièvre, ou refus de boire et de manger&nbsp;?</p>
+          <div class="triage__btns">
+            <button type="button" class="btn btn--ghost" data-answer="urgent">Oui</button>
+            <button type="button" class="btn btn--ghost" data-answer="next">Non</button>
+          </div>
+        </div>
+        <div class="triage__step" data-step="3" hidden>
+          <p class="triage__num">Question 3 sur 3</p>
+          <p class="triage__q">La situation dure depuis des jours ou des semaines, sans danger cette nuit&nbsp;?</p>
+          <div class="triage__btns">
+            <button type="button" class="btn btn--ghost" data-answer="planifier">Oui</button>
+            <button type="button" class="btn btn--ghost" data-answer="urgent">Je ne sais pas</button>
+          </div>
+        </div>
+        <div class="triage__result triage__result--danger" data-result="danger" hidden>
+          <p><strong>Composez le 190 (SAMU) maintenant.</strong> Puis appelez-nous&nbsp;: nous préparons l'arrivée.</p>
+          <div class="triage__btns">
+            <a class="btn btn--call" href="tel:190">Appeler le 190</a>
+            <a class="btn btn--ghost" href="tel:+21600000000">Puis la clinique</a>
+          </div>
+        </div>
+        <div class="triage__result" data-result="urgent" hidden>
+          <p><strong>Appelez-nous maintenant.</strong> Un soignant décroche à toute heure, il vous dit quoi faire d'ici l'arrivée.</p>
+          <div class="triage__btns">
+            <a class="btn btn--call" href="tel:+21600000000">Appeler — 24 h/24</a>
+          </div>
+        </div>
+        <div class="triage__result" data-result="planifier" hidden>
+          <p><strong>Une admission se prépare.</strong> Demandez un rendez-vous&nbsp;: nous vous rappelons en journée, sous deux heures. Et si cette nuit bascule, appelez.</p>
+          <div class="triage__btns">
+            <a class="btn btn--call" href="rendez-vous.html">Demander un rendez-vous</a>
+            <a class="btn btn--ghost" href="tel:+21600000000">Appeler</a>
+          </div>
+        </div>
+        <button type="button" class="triage__restart" data-restart hidden>← Recommencer</button>
+      </div>
+      <p class="note">Cet outil oriente, il ne remplace ni un avis médical ni le SAMU. En cas de doute, appelez&nbsp;: c'est fait pour ça.</p>
     </div>
   </section>
 
@@ -1038,6 +1116,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           </li>
         </ul>
 
+        <div class="prep reveal">
+          <p class="prep__title">Avant d'appeler, ayez sous la main&nbsp;:</p>
+          <ul class="prep__list">
+            <li>Depuis quand, et quel produit — ou quels signes.</li>
+            <li>Les traitements en cours, si vous les connaissez.</li>
+            <li>Son âge, et son état ce soir&nbsp;: boit-il, mange-t-il, dort-il&nbsp;?</li>
+          </ul>
+          <p class="prep__note">Vous ne savez pas tout&nbsp;? Appelez quand même — c'est le soignant qui pose les questions.</p>
+        </div>
+
         <div class="map">
           <iframe title="Plan d'accès — El Menzah 9, Tunis" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=10.1300%2C36.8360%2C10.1720%2C36.8600&amp;layer=mapnik&amp;marker=36.8480%2C10.1510"></iframe>
         </div>
@@ -1136,6 +1224,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#alerte">Quand consulter</a>
       <a href="#contact">Contact</a>
       <a href="il-refuse-de-venir.html">Il refuse de venir</a>
+      <a href="crise-psychiatrique.html">Crise psychiatrique&nbsp;: que faire</a>
       <a href="preparer-le-sejour.html">Préparer le séjour</a>
       <a href="glossaire.html">Glossaire</a>
       <a href="medecins.html">Espace médecins</a>
@@ -1167,6 +1256,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </a>
 </nav>
 
-<script src="assets/js/app.js?v=16"></script>
+<script src="assets/js/app.js?v=18"></script>
 </body>
 </html>

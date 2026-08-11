@@ -25,6 +25,7 @@ deployment:
     - /bin/cp glossaire.html        $DEPLOYPATH/
     - /bin/cp il-refuse-de-venir.html   $DEPLOYPATH/
     - /bin/cp preparer-le-sejour.html   $DEPLOYPATH/
+    - /bin/cp crise-psychiatrique.html  $DEPLOYPATH/
     - /bin/cp mentions-legales.html $DEPLOYPATH/
     - /bin/cp confidentialite.html  $DEPLOYPATH/
 

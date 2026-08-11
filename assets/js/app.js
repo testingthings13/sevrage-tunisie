@@ -382,24 +382,6 @@
     }
   }
 
-  /* ── Sortie rapide ───────────────────────────────────────── */
-  var quick = document.querySelector('.quickexit');
-  var leave = function () {
-    try { window.location.replace('https://www.google.com'); }
-    catch (e) { window.location.href = 'https://www.google.com'; }
-  };
-  if (quick) {
-    quick.addEventListener('click', leave);
-    var escCount = 0, escTimer = null;
-    document.addEventListener('keydown', function (e) {
-      if (e.key !== 'Escape') return;
-      escCount++;
-      window.clearTimeout(escTimer);
-      escTimer = window.setTimeout(function () { escCount = 0; }, 700);
-      if (escCount >= 2) leave();
-    });
-  }
-
   /* ── Page de remerciement : cas où l'e-mail n'est pas parti ─ */
   var alerte = document.getElementById('merci-alerte');
   if (alerte && /[?&]envoi=differe/.test(window.location.search)) {
@@ -555,4 +537,56 @@
       if (opt.text === wanted) { opt.selected = true; }
     });
   } catch (e) { /* jamais bloquant : la sélection par défaut reste */ }
+})();
+
+/* ── Triage « Que faire, là, maintenant ? » ────────────────── */
+(function () {
+  'use strict';
+  var box = document.querySelector('[data-triage]');
+
+  if (box) {
+    var steps = Array.prototype.slice.call(box.querySelectorAll('.triage__step'));
+    var results = Array.prototype.slice.call(box.querySelectorAll('.triage__result'));
+    var restart = box.querySelector('[data-restart]');
+
+    box.addEventListener('click', function (e) {
+      var btn = e.target.closest ? e.target.closest('[data-answer]') : null;
+
+      if (btn) {
+        var answer = btn.getAttribute('data-answer');
+
+        if (answer === 'next') {
+          /* on passe à la question suivante, dans l'ordre des data-step */
+          var current = btn.closest('.triage__step');
+          var i = steps.indexOf(current);
+          if (i > -1 && steps[i + 1]) {
+            current.hidden = true;
+            steps[i + 1].hidden = false;
+          }
+          return;
+        }
+
+        /* danger / urgent / planifier : la marche à suivre s'affiche */
+        steps.forEach(function (s) { s.hidden = true; });
+        results.forEach(function (r) {
+          r.hidden = r.getAttribute('data-result') !== answer;
+        });
+        if (restart) restart.hidden = false;
+        return;
+      }
+
+      if (e.target.closest && e.target.closest('[data-restart]')) {
+        results.forEach(function (r) { r.hidden = true; });
+        if (restart) restart.hidden = true;
+        steps.forEach(function (s) {
+          s.hidden = s.getAttribute('data-step') !== '1';
+        });
+      }
+    });
+  }
+
+  /* ── Bouton « Imprimer » : tout [data-print], sur toute page ─ */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-print]'), function (b) {
+    b.addEventListener('click', function () { window.print(); });
+  });
 })();
