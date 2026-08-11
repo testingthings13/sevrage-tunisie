@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>https://sevrage-tunisie.com/</loc><lastmod>2026-08-10</lastmod><priority>1.0</priority>
+  <url><loc>https://sevrage-tunisie.com/</loc><lastmod>2026-08-11</lastmod><priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
   </url>
   <url><loc>https://sevrage-tunisie.com/il-refuse-de-venir.html</loc><lastmod>2026-08-10</lastmod><priority>0.8</priority></url>
-  <url><loc>https://sevrage-tunisie.com/crise-psychiatrique.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://sevrage-tunisie.com/preparer-le-sejour.html</loc><lastmod>2026-08-10</lastmod><priority>0.8</priority></url>
   <url><loc>https://sevrage-tunisie.com/glossaire.html</loc><lastmod>2026-08-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://sevrage-tunisie.com/medecins.html</loc><lastmod>2026-08-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://sevrage-tunisie.com/psychiatrie.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
   <url><loc>https://sevrage-tunisie.com/rendez-vous.html</loc><lastmod>2026-08-11</lastmod><priority>0.9</priority></url>
-  <url><loc>https://sevrage-tunisie.com/ar.html</loc><lastmod>2026-08-10</lastmod><priority>0.8</priority>
+  <url><loc>https://sevrage-tunisie.com/ar.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
   </url>
-  <url><loc>https://sevrage-tunisie.com/en.html</loc><lastmod>2026-08-10</lastmod><priority>0.8</priority>
+  <url><loc>https://sevrage-tunisie.com/en.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>

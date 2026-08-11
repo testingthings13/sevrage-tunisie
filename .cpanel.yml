@@ -21,11 +21,9 @@ deployment:
     - /bin/cp merci.html            $DEPLOYPATH/
     - /bin/cp rendez-vous.html      $DEPLOYPATH/
     - /bin/cp medecins.html         $DEPLOYPATH/
-    - /bin/cp psychiatrie.html      $DEPLOYPATH/
     - /bin/cp glossaire.html        $DEPLOYPATH/
     - /bin/cp il-refuse-de-venir.html   $DEPLOYPATH/
     - /bin/cp preparer-le-sejour.html   $DEPLOYPATH/
-    - /bin/cp crise-psychiatrique.html  $DEPLOYPATH/
     - /bin/cp mentions-legales.html $DEPLOYPATH/
     - /bin/cp confidentialite.html  $DEPLOYPATH/
 
@@ -50,3 +48,5 @@ deployment:
     - /bin/rm -f $DEPLOYPATH/assets/logo/README.md
     - /bin/rm -f $DEPLOYPATH/sevrage-tunisie-site.zip
     - /bin/rm -f $DEPLOYPATH/default.html
+    - /bin/rm -f $DEPLOYPATH/psychiatrie.html
+    - /bin/rm -f $DEPLOYPATH/crise-psychiatrique.html

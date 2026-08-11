@@ -759,8 +759,17 @@ def build(lang, idx):
     src = src.replace('<meta property="og:url" content="https://sevrage-tunisie.com/">',
                       f'<meta property="og:url" content="https://sevrage-tunisie.com/{lang}.html">')
 
-    # l'onglet de langue actif
-    src = src.replace(' class="is-on" aria-current="page"', "").replace(' class="is-on"', "")
+    # lien FR du tiroir mobile : absent de index.html (page FR courante),
+    # on l'injecte pour que le français reste joignable depuis ar/en
+    src = src.replace(
+        '<a href="ar.html" hreflang="ar" lang="ar">العربية</a>',
+        '<a href="index.html" hreflang="fr" lang="fr">Français</a>\n'
+        '    <a href="ar.html" hreflang="ar" lang="ar">العربية</a>')
+
+    # l'onglet de langue actif (retirer aussi l'aria-current nu du lien FR)
+    src = (src.replace(' class="is-on" aria-current="page"', "")
+              .replace(' aria-current="page"', "")
+              .replace(' class="is-on"', ""))
     src = re.sub(rf'(<a href="{ "index" if lang == "fr" else lang }\.html" hreflang="{lang}"[^>]*?)>',
                  r'\1 class="is-on" aria-current="page">', src)
 

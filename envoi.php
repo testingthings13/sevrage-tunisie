@@ -71,7 +71,16 @@ $consent = !empty($_POST['consent']);
 
 /* ── Validation minimale ────────────────────────────────── */
 if ($nom === '' || $tel === '' || !$consent) {
-    header('Location: ' . ACCUEIL . '?erreur=champs#contact', true, 303);
+    /* Retour vers le formulaire d'origine (parcours sans JS) :
+       app.js affiche le message ?erreur=champs dans la langue de la page. */
+    $retours = [
+        'accueil'     => ACCUEIL . '?erreur=champs#contact',
+        'accueil-ar'  => '/ar.html?erreur=champs#contact',
+        'accueil-en'  => '/en.html?erreur=champs#contact',
+        'rendez-vous' => '/rendez-vous.html?erreur=champs#form-rdv',
+    ];
+    $retour = $retours[clean('page', 200)] ?? ACCUEIL . '?erreur=champs#contact';
+    header('Location: ' . $retour, true, 303);
     exit;
 }
 @touch($lock);   /* la limite de débit ne s'arme qu'après une demande valide */

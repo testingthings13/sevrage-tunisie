@@ -12,7 +12,7 @@ import pathlib
 
 HERE = pathlib.Path(__file__).parent
 SITE = "https://sevrage-tunisie.com"
-V = "?v=16"
+V = "?v=25"
 TEL, TELH = "+216 00 000 000", "+21600000000"
 MAIL = "contact@sevrage-tunisie.com"
 

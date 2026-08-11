@@ -1357,7 +1357,9 @@ html[lang="ar"] .glaze__t h3{ letter-spacing:0; line-height:1.5 }
 /* Carte translucide : réservée aux blocs services (fond clair).
    Surtout pas sur le .split__text de #contact, posé sur le fond nuit. */
 .service .split__text {
-  animation: slideInRight 0.9s var(--ease) both;
+  /* backwards (pas both) : voir la note sur .split__img — un fill "both"
+     épinglerait transform et écraserait l'élévation au survol */
+  animation: slideInRight 0.9s var(--ease) backwards;
   padding: 2rem;
   background: rgba(255,255,255,0.6);
   backdrop-filter: blur(10px);
@@ -1368,13 +1370,15 @@ html[lang="ar"] .glaze__t h3{ letter-spacing:0; line-height:1.5 }
 }
 
 .service--psychiatrie .split__text {
-  animation: slideInLeft 0.9s var(--ease) both;
+  animation: slideInLeft 0.9s var(--ease) backwards;
 }
 
 .service:hover .split__text {
   background: rgba(255,255,255,0.8);
   box-shadow: 0 16px 48px rgba(43,75,155,0.12);
-  transform: translateY(-4px);
+  /* propriété translate (et non transform) : insensible au transform:none
+     posé par .js .reveal--left.is-set comme au fill de l'animation */
+  translate: 0 -4px;
 }
 
 .service__desc {
@@ -1765,4 +1769,15 @@ a:not([class]):hover::after { width: 100%; }
   .photo3d:hover img{
     transform:translate(var(--pmx,0px), var(--pmy,0px)) scale(1.05);
   }
+}
+
+/* ── Illustrations des pages doc (psychiatrie, crise) ──────── */
+.doc__illu{
+  margin:2.2rem 0; border-radius:var(--r); overflow:hidden;
+  box-shadow:var(--sh-1);
+}
+.doc__illu svg{ display:block; width:100%; height:auto }
+.doc__illu figcaption{
+  padding:.7rem 1.1rem; font-size:.88rem; color:var(--ink-3);
+  background:var(--blanc); border-top:1px solid var(--trait);
 }
