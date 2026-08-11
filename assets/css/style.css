@@ -1777,3 +1777,30 @@ a:not([class]):hover::after { width: 100%; }
     top:0; inset-inline-start:0; font-size:1.05em; line-height:1.5; color:#000;
   }
 }
+
+/* ── Chooser : relief 3D (survol précis, HD) ──────────────── */
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .chooser__card,
+  .js .chooser__card.reveal.is-set{
+    transform-style:preserve-3d;
+    transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));
+    transition:transform .16s var(--ease-soft), box-shadow .35s var(--ease);
+  }
+  .chooser__card:hover,
+  .chooser__card:focus-visible,
+  .js .chooser__card.reveal.is-set:hover,
+  .js .chooser__card.reveal.is-set:focus-visible{
+    transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-8px);
+    box-shadow:0 6px 14px rgba(43,75,155,.28), 0 38px 64px -26px rgba(43,75,155,.8);
+  }
+  .chooser__kicker{ transform:translateZ(22px) }
+  .chooser__title{ transform:translateZ(38px) }
+  .chooser__desc{ transform:translateZ(16px) }
+  .chooser__cta{ transform:translateZ(28px) }
+  .chooser__card::after{
+    content:''; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+    background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%), rgba(255,255,255,.2), transparent 70%);
+    opacity:0; transition:opacity .3s var(--ease);
+  }
+  .chooser__card:hover::after{ opacity:1 }
+}

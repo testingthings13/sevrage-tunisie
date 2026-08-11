@@ -590,3 +590,28 @@
     b.addEventListener('click', function () { window.print(); });
   });
 })();
+
+/* ── Chooser : inclinaison 3D au pointeur ──────────────────── */
+(function () {
+  'use strict';
+  if (!window.matchMedia) return;
+  if (!window.matchMedia('(hover:hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+
+  Array.prototype.forEach.call(document.querySelectorAll('.chooser__card'), function (card) {
+    card.addEventListener('pointermove', function (e) {
+      var r = card.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      var px = (e.clientX - r.left) / r.width;
+      var py = (e.clientY - r.top) / r.height;
+      card.style.setProperty('--ry', ((px - 0.5) * 10).toFixed(2) + 'deg');
+      card.style.setProperty('--rx', ((0.5 - py) * 8).toFixed(2) + 'deg');
+      card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+    });
+    card.addEventListener('pointerleave', function () {
+      card.style.setProperty('--rx', '0deg');
+      card.style.setProperty('--ry', '0deg');
+    });
+  });
+})();
