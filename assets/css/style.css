@@ -1556,3 +1556,132 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
     font-size: 1.5rem;
   }
 }
+
+/* ── Advanced Animations ──────────────────────────────────────── */
+
+/* Scroll Reveal Animation */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal { opacity: 0; transform: translateY(40px); }
+.reveal.in-view { animation: revealUp 0.7s var(--ease) forwards; }
+.reveal:nth-child(2).in-view { animation-delay: 0.1s; }
+.reveal:nth-child(3).in-view { animation-delay: 0.2s; }
+.reveal:nth-child(4).in-view { animation-delay: 0.3s; }
+.reveal:nth-child(5).in-view { animation-delay: 0.4s; }
+
+/* Emergency Button Pulse */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(43, 75, 155, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(43, 75, 155, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(43, 75, 155, 0); }
+}
+
+.btn--call-urgent { animation: pulse 2s infinite; }
+
+/* FAQ Expand Animation */
+details { overflow: hidden; }
+details summary {
+  cursor: pointer; user-select: none;
+  transition: color 0.3s var(--ease);
+  position: relative; padding-right: 30px;
+}
+details summary::after {
+  content: '▼'; position: absolute; right: 0; top: 50%;
+  transform: translateY(-50%) rotateZ(0deg);
+  transition: transform 0.3s var(--ease);
+  font-size: 0.8em;
+}
+details[open] summary::after { transform: translateY(-50%) rotateZ(-180deg); }
+details summary:hover { color: var(--bleu); }
+details > *:not(summary) { animation: revealUp 0.4s var(--ease) forwards; }
+
+/* Form Field Animations */
+.form__row input, .form__row select, .form__row textarea,
+.form--doc input, .form--doc select, .form--doc textarea {
+  transition: all 0.3s var(--ease); position: relative;
+}
+.form__row input:focus, .form__row select:focus, .form__row textarea:focus,
+.form--doc input:focus, .form--doc select:focus, .form--doc textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(43, 75, 155, 0.15)!important;
+}
+
+/* Form Submission Loading State */
+.form__status[data-state="loading"]::after {
+  content: ''; display: inline-block; width: 12px; height: 12px;
+  border: 2px solid var(--bleu); border-right-color: transparent;
+  border-radius: 50%; animation: spin 0.8s linear infinite;
+  margin-left: 8px;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.form__status[data-state="ok"]::before { content: '✓ '; color: var(--teal); font-weight: 700; }
+.form__status[data-state="err"]::before { content: '✕ '; color: var(--rouge); font-weight: 700; }
+
+/* Animated Gradient Background for Services */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.section--services {
+  background: linear-gradient(-45deg, #f5f7f6, #ffffff, #edf2fa, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Staggered List Animation */
+.service__features li {
+  animation: revealUp 0.6s var(--ease) backwards;
+}
+.service__features li:nth-child(1) { animation-delay: 0.1s; }
+.service__features li:nth-child(2) { animation-delay: 0.2s; }
+.service__features li:nth-child(3) { animation-delay: 0.3s; }
+.service__features li:nth-child(4) { animation-delay: 0.4s; }
+.service__features li:nth-child(5) { animation-delay: 0.5s; }
+
+/* FAQ Items Stagger */
+details {
+  animation: revealUp 0.6s var(--ease) backwards;
+}
+details:nth-of-type(1) { animation-delay: 0s; }
+details:nth-of-type(2) { animation-delay: 0.1s; }
+details:nth-of-type(3) { animation-delay: 0.2s; }
+details:nth-of-type(4) { animation-delay: 0.3s; }
+details:nth-of-type(5) { animation-delay: 0.4s; }
+details:nth-of-type(6) { animation-delay: 0.5s; }
+
+/* Chip/Button Scale Animation */
+.chips span {
+  transition: all 0.3s var(--ease); transform: scale(1);
+}
+.chips label:hover span { transform: scale(1.05); }
+.chips input:checked + span { transform: scale(1.08); }
+
+/* Link Hover Underline Animation */
+a:not([class]) {
+  position: relative; text-decoration: none;
+}
+a:not([class])::after {
+  content: ''; position: absolute; bottom: -2px; left: 0;
+  width: 0; height: 2px; background: var(--bleu);
+  transition: width 0.4s var(--ease);
+}
+a:not([class]):hover::after { width: 100%; }
+
+/* Section Title Animation */
+.h2 { animation: revealUp 0.8s var(--ease) backwards; }
+.h3 { animation: revealUp 0.7s var(--ease) backwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
