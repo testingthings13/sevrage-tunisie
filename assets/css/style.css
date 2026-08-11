@@ -1339,6 +1339,14 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 .section--services {
   padding: var(--pad) 0;
   background: linear-gradient(135deg, #f5f7f6 0%, #ffffff 100%);
+  position: relative;
+  z-index: 1;
+}
+
+.section--services .wrap {
+  max-width: 100%;
+  padding: 0 var(--pad);
+  margin: 0 auto;
 }
 
 .section__title {
@@ -1350,6 +1358,12 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 .service {
   margin-bottom: 3rem;
   animation: fadeInUp 0.8s var(--ease) both;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 var(--pad);
+  box-sizing: border-box;
 }
 
 .service:nth-child(2) {
