@@ -195,6 +195,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#protocole">Protocol</a>
       <a href="#changement">Six weeks</a>
       <a href="#journee">A day</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -234,6 +235,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <a href="#alerte">When to call</a>
     <a href="#ou">Where the care happens</a>
     <a href="#questions">Questions</a>
+    <a href="#services">Services</a>
     <a href="#contact">Contact</a>
     <a href="ar.html" hreflang="ar" lang="ar">العربية</a>
     <a href="en.html" hreflang="en" lang="en" class="is-on" aria-current="page">English</a>
@@ -922,6 +924,55 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <p class="urgence__note">Immediate danger to life: also dial <a href="tel:190">190</a> (ambulance service).</p>
   </aside>
 
+  <!-- ── Our services ───────────────────────────────────────── -->
+  <section class="section section--services" id="services">
+    <div class="wrap">
+      <h2 class="h2 section__title">Our services</h2>
+    </div>
+
+    <!-- Detox service -->
+    <div class="service service--sevrage">
+      <div class="wrap wrap--split">
+        <div class="split__img">
+          <img src="assets/img/consultation.jpg" alt="Detox and withdrawal service" loading="lazy" class="service__img">
+        </div>
+        <div class="split__text">
+          <h3 class="h3">Detox and Withdrawal</h3>
+          <p class="service__desc">Medically supervised care for addiction and withdrawal, for every substance: alcohol, benzodiazepines, opioids, cannabis, cocaine, pregabalin and other diverted medicines. Behavioural addictions too (gambling, screens).</p>
+          <ul class="service__features">
+            <li>Inpatient stays and planned withdrawal</li>
+            <li>Day hospital</li>
+            <li>Medical treatment and 24/7 monitoring</li>
+            <li>Stabilising sleep and appetite</li>
+            <li>Support with craving and relapse</li>
+          </ul>
+          <a href="#contact" class="btn btn--call">Request a consultation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Psychiatry service -->
+    <div class="service service--psychiatrie">
+      <div class="wrap wrap--split wrap--split-reverse">
+        <div class="split__img">
+          <img src="assets/img/soin-consult.jpg" alt="Psychiatric consultations and treatment of mental disorders" loading="lazy" class="service__img">
+        </div>
+        <div class="split__text">
+          <h3 class="h3">Psychiatry and Mental Health</h3>
+          <p class="service__desc">Treatment of psychiatric and mental health disorders: schizophrenia, bipolar disorders, depression, anxiety disorders, sleep disorders, and other psychiatric conditions. General consultations and follow-up after an inpatient stay.</p>
+          <ul class="service__features">
+            <li>Specialised psychiatric consultations</li>
+            <li>Treatment of bipolar disorders and schizophrenia</li>
+            <li>Care for depression and anxiety</li>
+            <li>Follow-up after an inpatient stay</li>
+            <li>Psychiatric day hospital</li>
+          </ul>
+          <a href="#contact" class="btn btn--call">Request a consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Contact ────────────────────────────────────────────── -->
   <section class="field field--deep" id="contact">
     <div class="wrap wrap--split wrap--contact">
@@ -986,6 +1037,30 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <label for="f-msg">What is happening</label>
           <textarea id="f-msg" name="message" rows="4" placeholder="How long, what quantities, what worries you. A few lines are enough."></textarea>
         </div>
+        <fieldset class="form__set">
+          <legend>Your doctor (optional)</legend>
+          <p class="form__legal">If a doctor is already following you — a psychiatrist, an addiction specialist or a GP — tell us: with your consent, we coordinate the admission with them.</p>
+          <div class="form__row form__row--two">
+            <div>
+              <label for="en-med-nom">Doctor's name</label>
+              <input id="en-med-nom" name="medecin_nom" type="text">
+            </div>
+            <div>
+              <label for="en-med-spec">Speciality</label>
+              <select id="en-med-spec" name="medecin_specialite">
+                <option value="" selected>—</option>
+                <option value="Psychiatre">Psychiatrist</option>
+                <option value="Addictologue">Addiction specialist</option>
+                <option value="Médecin généraliste">General practitioner</option>
+                <option value="Autre">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <label for="en-med-contact">City or practice phone number</label>
+            <input id="en-med-contact" name="medecin_contact" type="text">
+          </div>
+        </fieldset>
         <div class="hp" aria-hidden="true">
           <label for="f-site">Ne remplissez pas ce champ</label>
           <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
@@ -1018,6 +1093,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#therapies">Therapies</a>
       <a href="#journee">A day</a>
       <a href="#alerte">When to call</a>
+      <a href="#services">Services</a>
       <a href="#contact">Contact</a>
       <a href="il-refuse-de-venir.html">Il refuse de venir</a>
       <a href="preparer-le-sejour.html">Préparer le séjour</a>

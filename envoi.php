@@ -56,6 +56,9 @@ $pour    = clean('pour', 80);
 $jours   = clean('jours', 160);
 $creneau = clean('creneau', 40);
 $delai   = clean('delai', 60);
+$med_nom     = clean('medecin_nom', 120);
+$med_spec    = clean('medecin_specialite', 120);
+$med_contact = clean('medecin_contact', 160);
 $message = bloc('message');
 $consent = !empty($_POST['consent']);
 
@@ -81,6 +84,9 @@ if ($motif   !== '') { $lignes[] = 'Motif         : ' . $motif; }
 if ($jours   !== '') { $lignes[] = 'Jours         : ' . $jours; }
 if ($creneau !== '') { $lignes[] = 'Créneau       : ' . $creneau; }
 if ($delai   !== '') { $lignes[] = 'Délai         : ' . $delai; }
+if ($med_nom !== '' || $med_spec !== '' || $med_contact !== '') {
+    $lignes[] = 'Médecin réf.  : ' . implode(' — ', array_filter([$med_nom, $med_spec, $med_contact]));
+}
 
 $lignes[] = '';
 $lignes[] = 'Message :';

@@ -101,6 +101,31 @@
         </select>
       </div>
 
+      <fieldset class="form__set">
+        <legend>Votre médecin (facultatif)</legend>
+        <p class="form__legal">Si un médecin vous suit déjà — psychiatre, addictologue ou généraliste — indiquez-le&nbsp;: avec votre accord, nous coordonnons l'admission avec lui.</p>
+        <div class="form__row form__row--two">
+          <div>
+            <label for="r-med-nom">Nom du médecin</label>
+            <input id="r-med-nom" name="medecin_nom" type="text">
+          </div>
+          <div>
+            <label for="r-med-spec">Spécialité</label>
+            <select id="r-med-spec" name="medecin_specialite">
+              <option value="" selected>—</option>
+              <option>Psychiatre</option>
+              <option>Addictologue</option>
+              <option>Médecin généraliste</option>
+              <option>Autre</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row">
+          <label for="r-med-contact">Ville ou téléphone du cabinet</label>
+          <input id="r-med-contact" name="medecin_contact" type="text">
+        </div>
+      </fieldset>
+
       <div class="form__row">
         <label for="r-msg">Ce que vous souhaitez nous dire (facultatif)</label>
         <textarea id="r-msg" name="message" rows="3"

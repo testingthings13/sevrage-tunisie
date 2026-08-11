@@ -21,6 +21,7 @@ deployment:
     - /bin/cp merci.html            $DEPLOYPATH/
     - /bin/cp rendez-vous.html      $DEPLOYPATH/
     - /bin/cp medecins.html         $DEPLOYPATH/
+    - /bin/cp psychiatrie.html      $DEPLOYPATH/
     - /bin/cp glossaire.html        $DEPLOYPATH/
     - /bin/cp il-refuse-de-venir.html   $DEPLOYPATH/
     - /bin/cp preparer-le-sejour.html   $DEPLOYPATH/

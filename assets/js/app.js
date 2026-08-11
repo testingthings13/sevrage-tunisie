@@ -537,3 +537,22 @@
     }, 4000);
   }
 })();
+
+/* ── Motif présélectionné par l'URL (?motif=…) ─────────────── */
+(function () {
+  'use strict';
+  var select = document.getElementById('r-motif');
+  if (!select) return;
+  try {
+    var motif = new URLSearchParams(window.location.search).get('motif');
+    var map = {
+      psychiatrie: 'Consultation psychiatrique',
+      suivi: 'Consultation de suivi après une hospitalisation'
+    };
+    if (!motif || !Object.prototype.hasOwnProperty.call(map, motif)) return;
+    var wanted = map[motif];
+    Array.prototype.forEach.call(select.options, function (opt) {
+      if (opt.text === wanted) { opt.selected = true; }
+    });
+  } catch (e) { /* jamais bloquant : la sélection par défaut reste */ }
+})();

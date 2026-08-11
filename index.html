@@ -195,6 +195,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#protocole">Protocole</a>
       <a href="#changement">Six semaines</a>
       <a href="#journee">Une journée</a>
+      <a href="psychiatrie.html">Psychiatrie</a>
+      <a href="rendez-vous.html">Rendez-vous</a>
       <a href="#contact">Contact</a>
     </nav>
 
@@ -228,13 +230,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <a href="#protocole">Le protocole de sevrage</a>
     <a href="#changement">Avant / après</a>
     <a href="#double">Addiction et trouble psychiatrique</a>
+    <a href="psychiatrie.html">Psychiatrie</a>
     <a href="#troubles">Les troubles pris en charge</a>
     <a href="#therapies">Les thérapies</a>
     <a href="#journee">Une journée, heure par heure</a>
     <a href="#alerte">Quand consulter</a>
     <a href="#ou">Où se déroulent les soins</a>
     <a href="#questions">Questions</a>
+    <a href="#equipe">L'équipe</a>
     <a href="#contact">Contact</a>
+    <a href="rendez-vous.html">Demander un rendez-vous</a>
     <a href="ar.html" hreflang="ar" lang="ar">العربية</a>
     <a href="en.html" hreflang="en" lang="en">English</a>
   </div>
@@ -945,7 +950,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <li>Stabilisation du sommeil et de l'appétit</li>
             <li>Accompagnement du craving et de la rechute</li>
           </ul>
-          <a href="#contact" class="btn btn--call">Demander une consultation</a>
+          <a href="rendez-vous.html" class="btn btn--call">Demander une consultation</a>
         </div>
       </div>
     </div>
@@ -966,8 +971,45 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
             <li>Suivi après hospitalisation</li>
             <li>Hôpital de jour en psychiatrie</li>
           </ul>
-          <a href="#contact" class="btn btn--call">Demander une consultation</a>
+          <a href="rendez-vous.html?motif=psychiatrie" class="btn btn--call">Demander une consultation</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── L'équipe ───────────────────────────────────────────── -->
+  <section class="section" id="equipe">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="h2">Une équipe qui répond par son métier.</h2>
+        <p class="lede">Psychiatres, médecin addictologue, équipe infirmière 24 h/24 et psychologues travaillent ensemble autour du même patient. Par discrétion, les noms des praticiens sont communiqués dès le premier appel téléphonique.</p>
+      </div>
+
+      <div class="subs">
+        <article class="subs__c reveal">
+          <h3>Psychiatres</h3>
+          <p>Diagnostic, conduite du protocole de sevrage et traitement des troubles pris en charge — dépression, trouble bipolaire, troubles anxieux, troubles psychotiques. Le même médecin conduit la désintoxication et prend en charge le trouble qui apparaît derrière, une fois le produit retiré.</p>
+          <p class="equipe__nom" hidden></p>
+          <!-- Remplacer par le nom réel du praticien, avec son accord, puis retirer 'hidden' -->
+        </article>
+        <article class="subs__c reveal">
+          <h3>Médecin addictologue</h3>
+          <p>Bilan somatique à l'entrée — examen clinique, bilan biologique, hépatique et cardiaque — puis surveillance du sevrage&nbsp;: protocole propre à la substance, doses dégressives, prévention des convulsions et du delirium.</p>
+          <p class="equipe__nom" hidden></p>
+          <!-- Remplacer par le nom réel du praticien, avec son accord, puis retirer 'hidden' -->
+        </article>
+        <article class="subs__c reveal">
+          <h3>Équipe infirmière 24 h/24</h3>
+          <p>Prise des constantes plusieurs fois par jour — tension, pouls, température —, administration des traitements et présence de nuit&nbsp;: la clinique est ouverte 24 h/24, 7 j/7, toute l'année.</p>
+          <p class="equipe__nom" hidden></p>
+          <!-- Remplacer par le nom réel du praticien, avec son accord, puis retirer 'hidden' -->
+        </article>
+        <article class="subs__c reveal">
+          <h3>Psychologues</h3>
+          <p>Thérapie cognitivo-comportementale, entretiens individuels et groupes de parole&nbsp;: repérer les pensées et les situations qui précèdent la consommation ou la crise, et construire une autre réponse, à l'avance et par écrit.</p>
+          <p class="equipe__nom" hidden></p>
+          <!-- Remplacer par le nom réel du praticien, avec son accord, puis retirer 'hidden' -->
+        </article>
       </div>
     </div>
   </section>
@@ -1036,6 +1078,30 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <label for="f-msg">Ce qui se passe</label>
           <textarea id="f-msg" name="message" rows="4" placeholder="Depuis quand, quelles quantités, ce qui vous inquiète. Quelques lignes suffisent."></textarea>
         </div>
+        <fieldset class="form__set">
+          <legend>Votre médecin (facultatif)</legend>
+          <p class="form__legal">Si un médecin vous suit déjà — psychiatre, addictologue ou généraliste — indiquez-le&nbsp;: avec votre accord, nous coordonnons l'admission avec lui.</p>
+          <div class="form__row form__row--two">
+            <div>
+              <label for="f-med-nom">Nom du médecin</label>
+              <input id="f-med-nom" name="medecin_nom" type="text">
+            </div>
+            <div>
+              <label for="f-med-spec">Spécialité</label>
+              <select id="f-med-spec" name="medecin_specialite">
+                <option value="" selected>—</option>
+                <option>Psychiatre</option>
+                <option>Addictologue</option>
+                <option>Médecin généraliste</option>
+                <option>Autre</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <label for="f-med-contact">Ville ou téléphone du cabinet</label>
+            <input id="f-med-contact" name="medecin_contact" type="text">
+          </div>
+        </fieldset>
         <div class="hp" aria-hidden="true">
           <label for="f-site">Ne remplissez pas ce champ</label>
           <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
@@ -1073,6 +1139,8 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="preparer-le-sejour.html">Préparer le séjour</a>
       <a href="glossaire.html">Glossaire</a>
       <a href="medecins.html">Espace médecins</a>
+      <a href="psychiatrie.html">Psychiatrie</a>
+      <a href="rendez-vous.html">Rendez-vous</a>
     </nav>
     <p class="foot__call">
       <a href="tel:+21600000000">+216 00 000 000</a><br>

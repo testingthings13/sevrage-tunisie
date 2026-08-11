@@ -195,6 +195,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#protocole">البروتوكول</a>
       <a href="#changement">ستة أسابيع</a>
       <a href="#journee">يوم</a>
+      <a href="#services">خدماتنا</a>
       <a href="#contact">اتصل بنا</a>
     </nav>
 
@@ -234,6 +235,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <a href="#alerte">متى تتصل</a>
     <a href="#ou">أين تُقدَّم الرعاية</a>
     <a href="#questions">أسئلة</a>
+    <a href="#services">خدماتنا</a>
     <a href="#contact">اتصل بنا</a>
     <a href="ar.html" hreflang="ar" lang="ar" class="is-on" aria-current="page">العربية</a>
     <a href="en.html" hreflang="en" lang="en">English</a>
@@ -922,6 +924,55 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <p class="urgence__note">خطر مباشر على الحياة: اتصل أيضًا بـ <a href="tel:190">190</a> (الإسعاف).</p>
   </aside>
 
+  <!-- ── خدماتنا ────────────────────────────────────────────── -->
+  <section class="section section--services" id="services">
+    <div class="wrap">
+      <h2 class="h2 section__title">خدماتنا</h2>
+    </div>
+
+    <!-- خدمة السحب -->
+    <div class="service service--sevrage">
+      <div class="wrap wrap--split">
+        <div class="split__img">
+          <img src="assets/img/consultation.jpg" alt="خدمة السحب وإزالة السموم" loading="lazy" class="service__img">
+        </div>
+        <div class="split__text">
+          <h3 class="h3">السحب وإزالة السموم</h3>
+          <p class="service__desc">رعاية طبية للإدمان والسحب لجميع المواد: الكحول، والبنزوديازيبينات، والمواد الأفيونية، والقنّب، والكوكايين، والبريغابالين وغيرها من الأدوية المحوَّلة. وكذلك الإدمان السلوكي (القمار، الشاشات).</p>
+          <ul class="service__features">
+            <li>إقامة كاملة وسحب مبرمج</li>
+            <li>مستشفى نهاري</li>
+            <li>علاج طبي ومتابعة على مدار الساعة</li>
+            <li>استقرار النوم والشهية</li>
+            <li>مرافقة في الاشتهاء والانتكاس</li>
+          </ul>
+          <a href="#contact" class="btn btn--call">اطلب استشارة</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- خدمة الطب النفسي -->
+    <div class="service service--psychiatrie">
+      <div class="wrap wrap--split wrap--split-reverse">
+        <div class="split__img">
+          <img src="assets/img/soin-consult.jpg" alt="استشارات نفسية وعلاج الاضطرابات النفسية" loading="lazy" class="service__img">
+        </div>
+        <div class="split__text">
+          <h3 class="h3">الطب النفسي والصحة النفسية</h3>
+          <p class="service__desc">علاج الاضطرابات النفسية والصحة النفسية: الفصام، والاضطراب ثنائي القطب، والاكتئاب، واضطرابات القلق، واضطرابات النوم، وغيرها من الحالات النفسية. استشارات عامة ومتابعة بعد الإقامة في المستشفى.</p>
+          <ul class="service__features">
+            <li>استشارات نفسية متخصصة</li>
+            <li>علاج الاضطراب ثنائي القطب والفصام</li>
+            <li>رعاية الاكتئاب والقلق</li>
+            <li>متابعة بعد الإقامة في المستشفى</li>
+            <li>مستشفى نهاري في الطب النفسي</li>
+          </ul>
+          <a href="#contact" class="btn btn--call">اطلب استشارة</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── اتصل بنا ────────────────────────────────────────────── -->
   <section class="field field--deep" id="contact">
     <div class="wrap wrap--split wrap--contact">
@@ -986,6 +1037,30 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <label for="f-msg">ما الذي يحدث</label>
           <textarea id="f-msg" name="message" rows="4" placeholder="منذ متى، وبأي كميات، وما الذي يقلقك. بضعة أسطر تكفي."></textarea>
         </div>
+        <fieldset class="form__set">
+          <legend>طبيبك (اختياري)</legend>
+          <p class="form__legal">إذا كان طبيب يتابعك بالفعل — طبيب نفسي أو مختص في علاج الإدمان أو طبيب عام — فاذكره: وبموافقتك، ننسّق الإدخال معه.</p>
+          <div class="form__row form__row--two">
+            <div>
+              <label for="ar-med-nom">اسم الطبيب</label>
+              <input id="ar-med-nom" name="medecin_nom" type="text">
+            </div>
+            <div>
+              <label for="ar-med-spec">التخصص</label>
+              <select id="ar-med-spec" name="medecin_specialite">
+                <option value="" selected>—</option>
+                <option value="Psychiatre">طبيب نفسي</option>
+                <option value="Addictologue">مختص في علاج الإدمان</option>
+                <option value="Médecin généraliste">طبيب عام</option>
+                <option value="Autre">آخر</option>
+              </select>
+            </div>
+          </div>
+          <div class="form__row">
+            <label for="ar-med-contact">المدينة أو هاتف العيادة</label>
+            <input id="ar-med-contact" name="medecin_contact" type="text">
+          </div>
+        </fieldset>
         <div class="hp" aria-hidden="true">
           <label for="f-site">Ne remplissez pas ce champ</label>
           <input id="f-site" name="site" type="text" tabindex="-1" autocomplete="off">
@@ -1018,6 +1093,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#therapies">العلاجات</a>
       <a href="#journee">يوم</a>
       <a href="#alerte">متى تتصل</a>
+      <a href="#services">خدماتنا</a>
       <a href="#contact">اتصل بنا</a>
       <a href="il-refuse-de-venir.html">Il refuse de venir</a>
       <a href="preparer-le-sejour.html">Préparer le séjour</a>
