@@ -34,7 +34,7 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-2a392e77.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/entree.jpg" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
-<link rel="stylesheet" href="assets/css/style.css?v=19">
+<link rel="stylesheet" href="assets/css/style.css?v=20">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -995,7 +995,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
 
       <form class="form" id="form-contact" action="envoi.php" method="post" novalidate>
-        <input type="hidden" name="page" value="accueil">
+        <input type="hidden" name="page" value="accueil-en">
         <div class="form__row">
           <label for="f-nom">Your name</label>
           <input id="f-nom" name="nom" type="text" autocomplete="name" required>
@@ -1013,16 +1013,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <div class="form__row">
           <label for="f-motif">Your request</label>
           <select id="f-motif" name="motif">
-            <option>Withdrawal — alcohol</option>
-            <option>Withdrawal — benzodiazepines or sleeping pills</option>
-            <option>Withdrawal — opioids</option>
-            <option>Withdrawal — cannabis (zatla), cocaine or stimulants</option>
-            <option>Withdrawal — pregabalin or a diverted medicine</option>
-            <option>Withdrawal — another drug</option>
-            <option>Behavioural addiction (gambling, screens)</option>
-            <option>Psychiatric disorder — consultation</option>
-            <option>Emergency — I need an answer today</option>
-            <option>Referral letter (doctor)</option>
+            <option value="Sevrage — alcool">Withdrawal — alcohol</option>
+            <option value="Sevrage — benzodiazépines ou somnifères">Withdrawal — benzodiazepines or sleeping pills</option>
+            <option value="Sevrage — opiacés">Withdrawal — opioids</option>
+            <option value="Sevrage — cannabis (zatla), cocaïne ou stimulants">Withdrawal — cannabis (zatla), cocaine or stimulants</option>
+            <option value="Sevrage — prégabaline ou médicament détourné">Withdrawal — pregabalin or a diverted medicine</option>
+            <option value="Sevrage — autre drogue">Withdrawal — another drug</option>
+            <option value="Addiction sans produit (jeu, écrans)">Behavioural addiction (gambling, screens)</option>
+            <option value="Trouble psychiatrique — consultation">Psychiatric disorder — consultation</option>
+            <option value="Urgence — besoin d'une réponse aujourd'hui">Emergency — I need an answer today</option>
+            <option value="Lettre d'admission (médecin)">Referral letter (doctor)</option>
           </select>
         </div>
         <div class="form__row">
@@ -1088,9 +1088,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
       <a href="il-refuse-de-venir.html">Il refuse de venir</a>
+      <a href="crise-psychiatrique.html">Crise psychiatrique&nbsp;: que faire</a>
       <a href="preparer-le-sejour.html">Préparer le séjour</a>
       <a href="glossaire.html">Glossaire</a>
       <a href="medecins.html">Espace médecins</a>
+      <a href="psychiatrie.html">Psychiatrie</a>
+      <a href="rendez-vous.html">Rendez-vous</a>
     </nav>
     <p class="foot__call">
       <a href="tel:+21600000000">+216 00 000 000</a><br>
@@ -1117,6 +1120,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </a>
 </nav>
 
-<script src="assets/js/app.js?v=19"></script>
+<script src="assets/js/app.js?v=20"></script>
 </body>
 </html>

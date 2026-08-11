@@ -34,7 +34,7 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-2a392e77.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/entree.jpg" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
-<link rel="stylesheet" href="assets/css/style.css?v=19">
+<link rel="stylesheet" href="assets/css/style.css?v=20">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -995,7 +995,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       </div>
 
       <form class="form" id="form-contact" action="envoi.php" method="post" novalidate>
-        <input type="hidden" name="page" value="accueil">
+        <input type="hidden" name="page" value="accueil-ar">
         <div class="form__row">
           <label for="f-nom">اسمك</label>
           <input id="f-nom" name="nom" type="text" autocomplete="name" required>
@@ -1013,16 +1013,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <div class="form__row">
           <label for="f-motif">طلبك</label>
           <select id="f-motif" name="motif">
-            <option>سحب — كحول</option>
-            <option>سحب — بنزوديازيبينات أو منوّمات</option>
-            <option>سحب — مواد أفيونية</option>
-            <option>سحب — قنّب (زطلة) أو كوكايين أو منشّطات</option>
-            <option>سحب — بريغابالين أو دواء محوَّل</option>
-            <option>سحب — مخدر آخر</option>
-            <option>إدمان سلوكي (قمار، شاشات)</option>
-            <option>اضطراب نفسي — استشارة</option>
-            <option>طارئ — أحتاج ردًّا اليوم</option>
-            <option>رسالة إحالة (طبيب)</option>
+            <option value="Sevrage — alcool">سحب — كحول</option>
+            <option value="Sevrage — benzodiazépines ou somnifères">سحب — بنزوديازيبينات أو منوّمات</option>
+            <option value="Sevrage — opiacés">سحب — مواد أفيونية</option>
+            <option value="Sevrage — cannabis (zatla), cocaïne ou stimulants">سحب — قنّب (زطلة) أو كوكايين أو منشّطات</option>
+            <option value="Sevrage — prégabaline ou médicament détourné">سحب — بريغابالين أو دواء محوَّل</option>
+            <option value="Sevrage — autre drogue">سحب — مخدر آخر</option>
+            <option value="Addiction sans produit (jeu, écrans)">إدمان سلوكي (قمار، شاشات)</option>
+            <option value="Trouble psychiatrique — consultation">اضطراب نفسي — استشارة</option>
+            <option value="Urgence — besoin d'une réponse aujourd'hui">طارئ — أحتاج ردًّا اليوم</option>
+            <option value="Lettre d'admission (médecin)">رسالة إحالة (طبيب)</option>
           </select>
         </div>
         <div class="form__row">
@@ -1088,9 +1088,12 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <a href="#services">خدماتنا</a>
       <a href="#contact">اتصل بنا</a>
       <a href="il-refuse-de-venir.html">Il refuse de venir</a>
+      <a href="crise-psychiatrique.html">Crise psychiatrique&nbsp;: que faire</a>
       <a href="preparer-le-sejour.html">Préparer le séjour</a>
       <a href="glossaire.html">Glossaire</a>
       <a href="medecins.html">Espace médecins</a>
+      <a href="psychiatrie.html">Psychiatrie</a>
+      <a href="rendez-vous.html">Rendez-vous</a>
     </nav>
     <p class="foot__call">
       <a href="tel:+21600000000">+216 00 000 000</a><br>
@@ -1117,6 +1120,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </a>
 </nav>
 
-<script src="assets/js/app.js?v=19"></script>
+<script src="assets/js/app.js?v=20"></script>
 </body>
 </html>

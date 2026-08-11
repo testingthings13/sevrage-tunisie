@@ -9,11 +9,19 @@
   var burger = document.querySelector('.burger');
   var drawer = document.getElementById('nav-mobile');
 
+  /* Libellés du bouton, dans la langue de la page. */
+  var NAV_LABELS = {
+    fr: { open: 'Ouvrir le menu', close: 'Fermer le menu' },
+    ar: { open: 'افتح القائمة', close: 'أغلق القائمة' },
+    en: { open: 'Open the menu', close: 'Close the menu' }
+  };
+  var navLabel = NAV_LABELS[(root.lang || 'fr').split('-')[0]] || NAV_LABELS.fr;
+
   function closeDrawer() {
     if (!drawer) return;
     drawer.hidden = true;
     burger.setAttribute('aria-expanded', 'false');
-    burger.querySelector('.visually-hidden').textContent = 'Ouvrir le menu';
+    burger.querySelector('.visually-hidden').textContent = navLabel.open;
   }
 
   if (burger && drawer) {
@@ -22,7 +30,7 @@
       if (open) { closeDrawer(); return; }
       drawer.hidden = false;
       burger.setAttribute('aria-expanded', 'true');
-      burger.querySelector('.visually-hidden').textContent = 'Fermer le menu';
+      burger.querySelector('.visually-hidden').textContent = navLabel.close;
     });
     drawer.addEventListener('click', function (e) {
       if (e.target.tagName === 'A') closeDrawer();
@@ -183,8 +191,8 @@
 
   /* ── Avant / après: drag to compare ──────────────────────── */
   var compare = document.querySelector('.compare');
-  if (compare) {
-    var range = compare.querySelector('.compare__range');
+  var range = compare ? compare.querySelector('.compare__range') : null;
+  if (compare && range) {
     var setX = function () { compare.style.setProperty('--x', range.value + '%'); };
     range.addEventListener('input', setX);
     setX();
@@ -391,6 +399,32 @@
   }
 
   /* ── Formulaires : on valide, le serveur envoie ──────────── */
+  /* Messages dans la langue de la page (repli : français). */
+  var FORM_MSG = {
+    fr: {
+      nom: 'Indiquez votre nom, pour que nous sachions qui rappeler.',
+      tel: 'Un numéro de téléphone est nécessaire : c’est par là que nous répondons.',
+      consent: 'Cochez la case pour que nous puissions vous recontacter.',
+      envoi: 'Envoi en cours…',
+      champs: 'Votre demande n’est pas partie : il manque le nom, le téléphone ou la case de consentement. Merci de compléter puis de renvoyer.'
+    },
+    ar: {
+      nom: 'يرجى ذكر اسمك حتى نعرف بمن نتصل.',
+      tel: 'رقم الهاتف ضروري: فهو وسيلتنا للرد عليك.',
+      consent: 'يرجى تحديد الخانة حتى نتمكن من معاودة الاتصال بك.',
+      envoi: 'جارٍ الإرسال…',
+      champs: 'لم يتم إرسال الطلب: الاسم أو رقم الهاتف أو خانة الموافقة ناقصة. يرجى إكمال النموذج وإعادة الإرسال.'
+    },
+    en: {
+      nom: 'Please enter your name, so we know who to call back.',
+      tel: 'A phone number is required: that is how we get back to you.',
+      consent: 'Please tick the box so we can call you back.',
+      envoi: 'Sending…',
+      champs: 'Your request was not sent: the name, phone number or consent box is missing. Please complete the form and send it again.'
+    }
+  };
+  var formMsg = FORM_MSG[(root.lang || 'fr').split('-')[0]] || FORM_MSG.fr;
+
   Array.prototype.forEach.call(document.querySelectorAll('form[action="envoi.php"]'), function (form) {
     var status = form.querySelector('.form__status');
 
@@ -406,20 +440,31 @@
       }
 
       if (nom && !nom.value.trim()) {
-        return stop('Indiquez votre nom, pour que nous sachions qui rappeler.', nom);
+        return stop(formMsg.nom, nom);
       }
       if (tel && !tel.value.trim()) {
-        return stop('Un numéro de téléphone est nécessaire : c\u2019est par là que nous répondons.', tel);
+        return stop(formMsg.tel, tel);
       }
       if (consent && !consent.checked) {
-        return stop('Cochez la case pour que nous puissions vous recontacter.', consent);
+        return stop(formMsg.consent, consent);
       }
 
-      if (status) { status.dataset.state = 'ok'; status.textContent = 'Envoi en cours…'; }
+      if (status) { status.dataset.state = 'ok'; status.textContent = formMsg.envoi; }
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; }
     });
   });
+
+  /* ── Retour d'envoi.php : champs manquants (parcours sans JS) ─ */
+  if (/[?&]erreur=champs/.test(window.location.search)) {
+    var errForm = document.querySelector('form[action="envoi.php"]');
+    var errStatus = errForm && errForm.querySelector('.form__status');
+    if (errStatus) {
+      errStatus.dataset.state = 'err';
+      errStatus.textContent = formMsg.champs;
+      (document.getElementById('contact') || errForm).scrollIntoView();
+    }
+  }
 
   /* ── Active section in the nav ───────────────────────────── */
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
@@ -445,9 +490,10 @@
   'use strict';
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  /* Services & Features: Add reveal class for scroll animations */
-  document.querySelectorAll('.service, .service__features li, .section__title, details')
-    .forEach(function (el) { 
+  /* Services & Features: Add reveal class for scroll animations.
+     Scoped to main so the language switcher (details.lang) reste intact. */
+  document.querySelectorAll('main .service, main .service__features li, main .section__title, main details')
+    .forEach(function (el) {
       if (!el.classList.contains('reveal')) {
         el.classList.add('reveal');
       }
@@ -490,8 +536,11 @@
 
   /* Scroll reveal trigger for new elements */
   var targets = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  if (targets.length && !reduce.matches) {
-    var pending = targets.filter(function (el) { 
+  if (targets.length && reduce.matches) {
+    /* mirror the first IIFE: nothing stays hidden under reduced motion */
+    targets.forEach(function (el) { el.classList.add('is-set'); });
+  } else if (targets.length) {
+    var pending = targets.filter(function (el) {
       return !el.classList.contains('is-set'); 
     });
 

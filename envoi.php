@@ -30,10 +30,17 @@ if (!empty($_POST['site'])) {
 $ip   = preg_replace('/[^0-9a-f:.]/i', '', $_SERVER['REMOTE_ADDR'] ?? 'x');
 $lock = sys_get_temp_dir() . '/rdv_' . md5($ip);
 if (is_file($lock) && (time() - filemtime($lock)) < 30) {
+    /* On garde quand même une trace : la demande n'est pas perdue. */
+    @file_put_contents(
+        __DIR__ . '/demandes.log',
+        '[DOUBLON] ' . date('c') . "\n"
+            . mb_substr((string) json_encode($_POST, JSON_UNESCAPED_UNICODE), 0, 4000, 'UTF-8')
+            . "\n\n" . str_repeat('=', 60) . "\n\n",
+        FILE_APPEND | LOCK_EX
+    );
     header('Location: ' . MERCI, true, 303);
     exit;
 }
-@touch($lock);
 
 /* ── Nettoyage ──────────────────────────────────────────── */
 function clean(string $k, int $max = 500): string {
@@ -64,9 +71,10 @@ $consent = !empty($_POST['consent']);
 
 /* ── Validation minimale ────────────────────────────────── */
 if ($nom === '' || $tel === '' || !$consent) {
-    header('Location: ' . ACCUEIL . '?erreur=champs', true, 303);
+    header('Location: ' . ACCUEIL . '?erreur=champs#contact', true, 303);
     exit;
 }
+@touch($lock);   /* la limite de débit ne s'arme qu'après une demande valide */
 if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $email = '';
 }
