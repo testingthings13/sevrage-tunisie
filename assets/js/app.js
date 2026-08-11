@@ -333,6 +333,8 @@
       weeks.style.setProperty('--a', String(Math.max(0, 1 - i / 3.2)));
       weeks.style.setProperty('--b', String(Math.min(1, Math.max(0, (i - 2) / 2.4))));
       weeks.style.setProperty('--plant', String(Math.min(1, Math.max(0, (i - 3) / 2))));
+      weeks.style.setProperty('--moon', String(Math.max(0, 1 - i / 2.5)));
+      weeks.style.setProperty('--sun', String(Math.min(1, Math.max(0, (i - 3) / 2.5))));
 
       BARS[i].forEach(function (h, k) { if (bars[k]) bars[k].style.setProperty('--h', String(h)); });
 
@@ -662,5 +664,26 @@
       card.style.setProperty('--rx', '0deg');
       card.style.setProperty('--ry', '0deg');
     });
+  });
+})();
+
+/* ── Six semaines : parallaxe 3D de la scène ───────────────── */
+(function () {
+  'use strict';
+  if (!window.matchMedia) return;
+  if (!window.matchMedia('(hover:hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  var stage = document.querySelector('.weeks__stage');
+  var weeks = document.querySelector('.weeks');
+  if (!stage || !weeks) return;
+  stage.addEventListener('pointermove', function (e) {
+    var r = stage.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    weeks.style.setProperty('--px', (((e.clientX - r.left) / r.width) * 2 - 1).toFixed(3));
+    weeks.style.setProperty('--py', (((e.clientY - r.top) / r.height) * 2 - 1).toFixed(3));
+  });
+  stage.addEventListener('pointerleave', function () {
+    weeks.style.setProperty('--px', '0');
+    weeks.style.setProperty('--py', '0');
   });
 })();

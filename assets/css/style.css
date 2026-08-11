@@ -1623,3 +1623,63 @@ a:not([class]):hover::after { width: 100%; }
   }
   .masthead__call{ padding:.7rem .85rem; min-width:48px; justify-content:center }
 }
+
+/* ── Six semaines : scène 3D HQ ───────────────────────────── */
+/* Lune, étoiles, soleil — pilotés par --moon/--sun (app.js, par semaine) */
+.sc-night, .sc-day{ pointer-events:none }
+.sc-moon{
+  fill:#EDF1F3; opacity:var(--moon,1);
+  filter:drop-shadow(0 0 10px rgba(237,241,243,.55));
+  transition:opacity .9s var(--ease);
+}
+.sc-star{ fill:#C9D7DF; opacity:calc(var(--moon,1) * .9); transition:opacity .9s var(--ease) }
+.sc-sun{
+  fill:#E8B84B; opacity:var(--sun,0);
+  filter:drop-shadow(0 0 16px rgba(232,184,75,.6));
+  transition:opacity .9s var(--ease);
+}
+.sc-rays{
+  stroke:#E8B84B; opacity:var(--sun,0);
+  transition:opacity .9s var(--ease);
+  transform-origin:560px 162px;
+}
+
+/* Profondeur permanente : ombres portées par couche */
+.sc-clock{ filter:drop-shadow(0 3px 6px rgba(0,0,0,.28)) }
+.sc-a, .sc-b{ filter:drop-shadow(0 6px 12px rgba(0,0,0,.24)) }
+.sc-bed{ filter:drop-shadow(0 5px 9px rgba(0,0,0,.22)) }
+
+/* Panneau texte : entrée en bascule 3D */
+.weeks__panel{ perspective:900px }
+@keyframes weekIn3d{
+  from{ opacity:0; transform:rotateX(-14deg) translateY(18px) }
+  to{ opacity:1; transform:none }
+}
+.weeks__t.is-on{ animation:weekIn3d .6s var(--ease) both; transform-origin:top center }
+
+/* Mouvement : inclinaison de la scène + parallaxe par couche + scintillement */
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  .weeks__stage{
+    transform:perspective(1100px) rotateX(calc(var(--py,0) * -3.5deg)) rotateY(calc(var(--px,0) * 5deg));
+    transition:transform .25s var(--ease-soft), box-shadow .35s var(--ease);
+    will-change:transform;
+  }
+  .weeks__stage:hover{
+    box-shadow:0 10px 24px rgba(16,34,47,.2), 0 48px 84px -30px rgba(16,34,47,.65);
+  }
+  .scene .sc-clock{ transform:translate(calc(var(--px,0)*10px), calc(var(--py,0)*7px)) }
+  .scene .sc-a, .scene .sc-b{ transform:translate(calc(var(--px,0)*7px), calc(var(--py,0)*5px)) }
+  .scene .sc-bed, .scene .sc-bed-legs{ transform:translate(calc(var(--px,0)*5px), calc(var(--py,0)*3px)) }
+  .scene .sc-night, .scene .sc-day{ transform:translate(calc(var(--px,0)*-4px), calc(var(--py,0)*-3px)) }
+  .scene .sc-bars{ transform:translate(calc(var(--px,0)*3px), 0) }
+  .scene .sc-clock, .scene .sc-a, .scene .sc-b, .scene .sc-bed, .scene .sc-bed-legs,
+  .scene .sc-night, .scene .sc-day, .scene .sc-bars{ transition:transform .25s var(--ease-soft) }
+
+  @keyframes scTwinkle{ 0%,100%{ opacity:calc(var(--moon,1) * .9) } 50%{ opacity:calc(var(--moon,1) * .2) } }
+  .sc-star{ animation:scTwinkle 3.4s ease-in-out infinite }
+  .sc-star--2{ animation-delay:1.1s }
+  .sc-star--3{ animation-delay:2.2s }
+  .sc-star--4{ animation-delay:.6s }
+  @keyframes scRays{ to{ transform:rotate(360deg) } }
+  .sc-rays{ animation:scRays 36s linear infinite }
+}

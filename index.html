@@ -34,7 +34,7 @@
 <link rel="preload" as="font" type="font/woff2" href="assets/fonts/archivo-2a392e77.woff2" crossorigin>
 <link rel="preload" as="image" href="assets/img/entree.jpg" fetchpriority="high">
 <link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
-<link rel="stylesheet" href="assets/css/style.css?v=20">
+<link rel="stylesheet" href="assets/css/style.css?v=21">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -570,6 +570,20 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
                aria-label="La même chambre, semaine après semaine : la nuit s'allonge, l'heure du réveil recule, la personne se redresse.">
             <rect class="sc-bg" width="800" height="560"/>
             <rect class="sc-sky" x="470" y="70" width="220" height="220" rx="10"/>
+            <g class="sc-night" aria-hidden="true">
+              <circle class="sc-moon" cx="640" cy="122" r="18"/>
+              <circle class="sc-star" cx="510" cy="112" r="3"/>
+              <circle class="sc-star sc-star--2" cx="546" cy="152" r="2.4"/>
+              <circle class="sc-star sc-star--3" cx="602" cy="96" r="2"/>
+              <circle class="sc-star sc-star--4" cx="662" cy="182" r="2.6"/>
+            </g>
+            <g class="sc-day" aria-hidden="true">
+              <circle class="sc-sun" cx="560" cy="162" r="22"/>
+              <g class="sc-rays" stroke-width="5" stroke-linecap="round" fill="none">
+                <path d="M560 124v-14"/><path d="M560 200v14"/><path d="M522 162h-14"/><path d="M598 162h14"/>
+                <path d="M533 135l-10-10"/><path d="M587 135l10-10"/><path d="M533 189l-10 10"/><path d="M587 189l10 10"/>
+              </g>
+            </g>
             <path class="sc-line" d="M470 220h220M580 70v220" stroke-width="4"/>
             <rect class="sc-frame" x="470" y="70" width="220" height="220" rx="10" fill="none" stroke-width="5"/>
             <path class="sc-plant" d="M600 290v-26a26 26 0 0 1 52 0v26"/>
@@ -1253,6 +1267,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   </a>
 </nav>
 
-<script src="assets/js/app.js?v=20"></script>
+<script src="assets/js/app.js?v=21"></script>
 </body>
 </html>
