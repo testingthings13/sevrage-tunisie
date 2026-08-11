@@ -344,10 +344,20 @@ section[id], main[id]{ scroll-margin-top:96px }
 .hero__facts .ico{ color:var(--bleu); opacity:.85 }
 
 .hero__figure{ position:relative }
+/* Le cadre porte l'ombre, l'arrondi et le rognage : la légende, elle,
+   reste en dehors (un overflow:hidden sur le <figure> rognerait l'ombre
+   de la photo et les coins de la légende). */
+.hero__ph{
+  position:relative;
+  border-radius:var(--r); overflow:hidden;
+  box-shadow:var(--sh-2);
+  /* la dérive est portée par le <figure> : ne pas l'hériter ici,
+     sinon le module .photo3d la doublerait */
+  --drift:0px;
+}
 .hero__figure img{
   width:100%; aspect-ratio:4/3; object-fit:cover;
   border-radius:var(--r);
-  box-shadow:var(--sh-2);
 }
 .hero__figure figcaption{
   margin-top:.85rem; font-size:.82rem; letter-spacing:.01em; color:var(--ink-3);
@@ -452,6 +462,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 .tile:hover img{ transform:scale(1.05) }
 .tile figcaption{
   position:absolute; left:0; bottom:0; right:0;
+  z-index:3; /* au-dessus du reflet .photo3d::after (z-index:2) : la légende reste lisible au survol */
   padding:2.2rem .95rem .8rem;
   font-size:.82rem; font-weight:600; color:#fff;
   background:linear-gradient(to top, rgba(16,34,47,.86), rgba(16,34,47,.35) 45%, transparent);
@@ -822,7 +833,9 @@ section[id], main[id]{ scroll-margin-top:96px }
   .js .hero__text > *:nth-child(2){ animation-delay:.30s }
   .js .hero__text > *:nth-child(3){ animation-delay:.40s }
   .js .hero__text > *:nth-child(4){ animation-delay:.50s }
-  .js .hero__figure img{ animation:zoomIn 1.4s var(--ease) both .12s }
+  /* backwards : un fill "both" garderait transform:scale(1) pour toujours
+     et bloquerait le contre-mouvement --pmx/--pmy du module .photo3d */
+  .js .hero__figure img{ animation:zoomIn 1.4s var(--ease) backwards .12s }
 
   /* headline, word by word */
   .js .display .w{ display:inline-block; opacity:0; transform:translateY(.5em) rotate(1.5deg);
@@ -1311,11 +1324,13 @@ html[lang="ar"] .glaze__t h3{ letter-spacing:0; line-height:1.5 }
   height: 420px;
   background: linear-gradient(135deg, #3F6BD4 0%, #2B4B9B 50%, #0E9BA8 100%);
   box-shadow: var(--sh-blue), inset 0 1px 0 rgba(255,255,255,0.1);
-  animation: slideInLeft 0.9s var(--ease) both;
+  /* backwards (pas both) : un fill "both" épinglerait transform à l'état
+     final pour toujours et tuerait l'inclinaison 3D du module .photo3d */
+  animation: slideInLeft 0.9s var(--ease) backwards;
 }
 
 .service--psychiatrie .split__img {
-  animation: slideInRight 0.9s var(--ease) both;
+  animation: slideInRight 0.9s var(--ease) backwards;
 }
 
 .split__img img {
@@ -1325,9 +1340,7 @@ html[lang="ar"] .glaze__t h3{ letter-spacing:0; line-height:1.5 }
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.service:hover .split__img img {
-  transform: scale(1.05);
-}
+/* (zoom au survol : géré par le module .photo3d en fin de fichier) */
 
 /* Gradient placeholder for Sevrage (visible en attendant l'image) */
 .service--sevrage .split__img {
@@ -1701,4 +1714,55 @@ a:not([class]):hover::after { width: 100%; }
   @keyframes scBreatheTall{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-3px) } }
   .sc-a .sc-breathe{ animation:scBreatheLow 3.2s ease-in-out infinite }
   .sc-b .sc-breathe{ animation:scBreatheTall 4.8s ease-in-out infinite }
+}
+
+/* ── Photos : relief 3D HQ ────────────────────────────────── */
+/* app.js tague .photo3d sur .hero__ph (le cadre de la photo du héros),
+   .service .split__img et chaque .tile (les conteneurs, jamais les
+   <img>) et pilote --prx/--pry (inclinaison), --pgx/--pgy (reflet),
+   --pmx/--pmy (contre-mouvement de l'image) et --drift (dérive au
+   scroll, posée sur .hero__figure). */
+
+/* La dérive remplace l'ancien style inline : tous les appareils.
+   Double sélecteur : « .js .reveal.is-set{transform:none} » (0,3,0)
+   écraserait la règle nue en silence. */
+.hero__figure,
+.js .hero__figure.reveal.is-set{ transform:translate3d(0, var(--drift, 0px), 0) }
+
+@media (hover:hover) and (prefers-reduced-motion:no-preference){
+  /* même parade de spécificité que pour .chooser__card */
+  .photo3d,
+  .js .photo3d.reveal.is-set{
+    position:relative;
+    transform:perspective(1050px) rotateX(var(--prx,0deg)) rotateY(var(--pry,0deg)) translate3d(0, var(--drift,0px), 0);
+    transform-style:preserve-3d;
+    will-change:transform;
+    /* opacité + clip-path : ce raccourci gagne aussi la guerre de
+       spécificité contre « .js .tile.reveal.is-set » — sans eux, le
+       fondu et le volet des tuiles claqueraient d'un coup. Le délai
+       --d (cascade du reveal) est retiré par app.js une fois l'entrée
+       jouée, pour que l'inclinaison réponde sans retard. */
+    transition:transform .18s var(--ease-soft), box-shadow .35s var(--ease),
+               opacity .6s var(--ease), clip-path .9s var(--ease);
+    transition-delay:var(--d,0ms);
+  }
+  .photo3d:hover{
+    box-shadow:0 8px 18px rgba(16,34,47,.22), 0 42px 80px -34px rgba(16,34,47,.7);
+  }
+  /* reflet : une lumière qui suit le pointeur */
+  .photo3d::after{
+    content:''; position:absolute; inset:0; border-radius:inherit;
+    pointer-events:none; z-index:2;
+    background:radial-gradient(320px circle at var(--pgx,50%) var(--pgy,50%), rgba(255,255,255,.25), transparent 60%);
+    opacity:0; transition:opacity .3s var(--ease);
+  }
+  .photo3d:hover::after{ opacity:1 }
+  /* profondeur « fenêtre » : l'image glisse à contre-sens du cadre */
+  .photo3d img{
+    transform:translate(var(--pmx,0px), var(--pmy,0px));
+    transition:transform .25s var(--ease-soft);
+  }
+  .photo3d:hover img{
+    transform:translate(var(--pmx,0px), var(--pmy,0px)) scale(1.05);
+  }
 }

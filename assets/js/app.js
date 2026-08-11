@@ -82,6 +82,9 @@
       due.forEach(function (el, i) {
         el.style.setProperty('--d', Math.min(i, 6) * 70 + 'ms');
         el.classList.add('is-set');
+        /* l'entrée jouée, on retire le délai : sinon la transition
+           .photo3d (transition-delay:var(--d)) répondrait en retard */
+        window.setTimeout(function () { el.style.removeProperty('--d'); }, 1600);
       });
     };
 
@@ -118,7 +121,7 @@
       window.requestAnimationFrame(function () {
         var y = window.scrollY;
         if (y < window.innerHeight * 1.2) {
-          heroImg.style.transform = 'translate3d(0,' + (y * 0.06).toFixed(1) + 'px,0)';
+          heroImg.style.setProperty('--drift', (y * 0.06).toFixed(1) + 'px');
         }
         ticking = false;
       });
@@ -557,6 +560,9 @@
       due.forEach(function (el, i) {
         el.style.setProperty('--d', Math.min(i, 6) * 70 + 'ms');
         el.classList.add('is-set');
+        /* même nettoyage que la première passe : le délai ne doit pas
+           survivre à l'entrée (transition-delay du module .photo3d) */
+        window.setTimeout(function () { el.style.removeProperty('--d'); }, 1600);
       });
     };
 
@@ -686,4 +692,39 @@
     weeks.style.setProperty('--px', '0');
     weeks.style.setProperty('--py', '0');
   });
+})();
+
+/* ── Photos : relief 3D HQ au pointeur ─────────────────────── */
+(function () {
+  'use strict';
+  if (!window.matchMedia) return;
+  if (!window.matchMedia('(hover:hover)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+
+  Array.prototype.forEach.call(
+    document.querySelectorAll('.hero__ph, .service .split__img, .tile'),
+    function (el) {
+      el.classList.add('photo3d');
+
+      el.addEventListener('pointermove', function (e) {
+        var r = el.getBoundingClientRect();
+        if (!r.width || !r.height) return;
+        var px = (e.clientX - r.left) / r.width;
+        var py = (e.clientY - r.top) / r.height;
+        el.style.setProperty('--prx', ((0.5 - py) * 6).toFixed(2) + 'deg');
+        el.style.setProperty('--pry', ((px - 0.5) * 8).toFixed(2) + 'deg');
+        el.style.setProperty('--pgx', (px * 100).toFixed(1) + '%');
+        el.style.setProperty('--pgy', (py * 100).toFixed(1) + '%');
+        el.style.setProperty('--pmx', ((0.5 - px) * 8).toFixed(1) + 'px');
+        el.style.setProperty('--pmy', ((0.5 - py) * 6).toFixed(1) + 'px');
+      });
+
+      el.addEventListener('pointerleave', function () {
+        el.style.setProperty('--prx', '0deg');
+        el.style.setProperty('--pry', '0deg');
+        el.style.setProperty('--pmx', '0px');
+        el.style.setProperty('--pmy', '0px');
+      });
+    }
+  );
 })();
