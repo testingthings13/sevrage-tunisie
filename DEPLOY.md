@@ -7,6 +7,23 @@ Comptez **une heure**, plus le temps de propagation DNS (de 30 minutes à 24 heu
 
 ---
 
+## 0 · Avant de publier — obligatoire
+
+- [ ] **Remplacer le numéro de téléphone provisoire.** Tous les liens `tel:+21600000000`
+      et tous les textes `+216 00 000 000` sont des valeurs de remplacement — un appelant
+      tomberait sur un numéro invalide. Remplacez-les par le vrai numéro de la clinique
+      dans **tous** les fichiers HTML (ils apparaissent dans une quarantaine de fichiers) :
+
+      ```
+      grep -rl 'tel:+21600000000' *.html          # liste les fichiers concernés
+      ```
+
+- [ ] **Compléter `mentions-legales.html`** (section « Éditeur du site ») : dénomination
+      sociale exacte, forme juridique, numéro du registre national des entreprises,
+      matricule fiscal, adresse postale complète, nom du directeur de la publication et
+      numéro d'inscription au Conseil national de l'ordre des médecins du médecin
+      responsable.
+
 ## 1 · Le domaine
 
 Si `sevrage-tunisie.com` n'est pas encore acheté : achetez-le chez **Namecheap**, même

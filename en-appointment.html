@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Psychiatrist Appointment in Tunis — Espoir Clinic, El Menzah 9</title>
+<meta name="description" content="Psychiatric consultation, planned withdrawal or day hospital: request an appointment at Espoir Clinic, El Menzah 9, Tunis. We call back the same day.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#2B4B9B">
+<link rel="canonical" href="https://sevrage-tunisie.com/en-appointment.html">
+<meta property="og:title" content="Request an appointment — Espoir Clinic">
+<meta property="og:description" content="Request an appointment at the Espoir Psychiatric Clinic, El Menzah 9, Tunis: consultation, planned withdrawal, day hospital. Same-day reply, emergencies 24/7.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sevrage-tunisie.com/en-appointment.html">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://sevrage-tunisie.com/assets/img/entree.jpg?v=28">
+<link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/rendez-vous.html">
+<link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rendez-vous.html">
+<link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-appointment.html">
+<link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/rendez-vous.html">
+<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=16">
+<link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
+<link rel="stylesheet" href="assets/css/style.css?v=28">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalWebPage","@id":"https://sevrage-tunisie.com/en-appointment.html","url":"https://sevrage-tunisie.com/en-appointment.html","name":"Request an appointment — Espoir Clinic","inLanguage":"en","about":{"@id":"https://sevrage-tunisie.com/#clinique"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sevrage-tunisie.com/en.html"},{"@type":"ListItem","position":2,"name":"Request an appointment","item":"https://sevrage-tunisie.com/en-appointment.html"}]}]}</script>
+</head>
+<body>
+
+<main class="doc">
+  <div class="wrap wrap--narrow">
+    <p class="doc__back"><a href="en.html">← Back to the home page</a> · <a href="rendez-vous.html" lang="fr" hreflang="fr">Français</a> · <a href="ar-rendez-vous.html" lang="ar" hreflang="ar" dir="rtl">العربية</a></p>
+    <h1 class="h2">Request an appointment.</h1>
+
+    <p class="lede">Fill in these few lines: we call you back to set the time.
+    If it is urgent, don't wait — call
+    <a href="tel:+21600000000">+216 00 000 000</a>, someone answers at any hour.</p>
+
+    <form class="form form--doc" id="form-rdv" action="envoi.php" method="post" novalidate>
+      <input type="hidden" name="page" value="rendez-vous-en">
+      <div class="form__row">
+        <label for="r-pour">The appointment is for</label>
+        <select id="r-pour" name="pour">
+          <option value="Moi-même">Myself</option>
+          <option value="Un proche">A relative</option>
+          <option value="Mon patient (je suis médecin)">My patient (I am a doctor)</option>
+        </select>
+      </div>
+
+      <div class="form__row">
+        <label for="r-nom">Your name</label>
+        <input id="r-nom" name="nom" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="form__row form__row--two">
+        <div>
+          <label for="r-tel">Phone</label>
+          <input id="r-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" required>
+        </div>
+        <div>
+          <label for="r-mail">Email (optional)</label>
+          <input id="r-mail" name="email" type="email" autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form__row">
+        <label for="r-motif">Reason</label>
+        <select id="r-motif" name="motif">
+          <option value="Consultation psychiatrique">Psychiatric consultation</option>
+          <option value="Sevrage programmé — alcool">Planned withdrawal — alcohol</option>
+          <option value="Sevrage programmé — benzodiazépines ou somnifères">Planned withdrawal — benzodiazepines or sleeping pills</option>
+          <option value="Sevrage programmé — opiacés">Planned withdrawal — opioids</option>
+          <option value="Sevrage programmé — cannabis, cocaïne ou stimulants">Planned withdrawal — cannabis, cocaine or stimulants</option>
+          <option value="Sevrage programmé — prégabaline ou médicament détourné">Planned withdrawal — pregabalin or a diverted medicine</option>
+          <option value="Addiction sans produit (jeu, écrans)">Behavioural addiction (gambling, screens)</option>
+          <option value="Hôpital de jour">Day hospital</option>
+          <option value="Consultation de suivi après une hospitalisation">Follow-up consultation after an inpatient stay</option>
+        </select>
+      </div>
+
+      <fieldset class="form__set">
+        <legend>Availability</legend>
+        <p class="form__note"><strong>We are open 24 hours a day, 7 days a week</strong></p>
+      </fieldset>
+
+      <fieldset class="form__set">
+        <legend>Preferred time of day</legend>
+        <div class="chips">
+          <label><input type="radio" name="creneau" value="matin"><span>Morning</span></label>
+          <label><input type="radio" name="creneau" value="apres-midi"><span>Afternoon</span></label>
+          <label><input type="radio" name="creneau" value="indifferent" checked><span>No preference</span></label>
+        </div>
+      </fieldset>
+
+      <div class="form__row">
+        <label for="r-delai">How soon?</label>
+        <select id="r-delai" name="delai">
+          <option value="Dès que possible">As soon as possible</option>
+          <option value="Cette semaine">This week</option>
+          <option value="La semaine prochaine">Next week</option>
+          <option value="Dans le mois">Within the month</option>
+        </select>
+      </div>
+
+      <fieldset class="form__set">
+        <legend>Your doctor (optional)</legend>
+        <p class="form__legal">If a doctor is already following you — a psychiatrist, an addiction specialist or a GP — tell us: with your consent, we coordinate the admission with them.</p>
+        <div class="form__row form__row--two">
+          <div>
+            <label for="r-med-nom">Doctor's name</label>
+            <input id="r-med-nom" name="medecin_nom" type="text">
+          </div>
+          <div>
+            <label for="r-med-spec">Speciality</label>
+            <select id="r-med-spec" name="medecin_specialite">
+              <option value="" selected>—</option>
+              <option value="Psychiatre">Psychiatrist</option>
+              <option value="Addictologue">Addiction specialist</option>
+              <option value="Médecin généraliste">General practitioner</option>
+              <option value="Autre">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="form__row">
+          <label for="r-med-contact">City or practice phone number</label>
+          <input id="r-med-contact" name="medecin_contact" type="text">
+        </div>
+      </fieldset>
+
+      <div class="form__row">
+        <label for="r-msg">What you would like to tell us (optional)</label>
+        <textarea id="r-msg" name="message" rows="3"
+          placeholder="A few lines are enough. Do not write detailed medical information here."></textarea>
+      </div>
+
+      <div class="hp" aria-hidden="true">
+        <label for="r-site">Ne remplissez pas ce champ</label>
+        <input id="r-site" name="site" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <label class="check">
+        <input type="checkbox" name="consent" required>
+        <span>I agree to be contacted about this request.</span>
+      </label>
+
+      <button class="btn btn--call btn--lg btn--block" type="submit">Send the request</button>
+      <p class="form__status" role="status" aria-live="polite"></p>
+      <p class="form__legal">Your details are used only to arrange the appointment. No medical
+      records travel through this form.</p>
+    </form>
+
+    <h2>What happens next</h2>
+    <ul class="doc__list">
+      <li>We call you back to confirm the day and the time — during the day, within two hours.</li>
+      <li>The first consultation lasts about forty-five minutes.</li>
+      <li>Bring your current prescriptions and your most recent test results, if there are any.</li>
+      <li>A relative can come with you; they can also stay in the waiting room.</li>
+    </ul>
+
+    <aside class="doc__call" aria-label="Call the clinic">
+      <p><strong>A question, a doubt, an emergency?</strong> A caregiver answers at any hour.</p>
+      <a class="btn btn--call btn--lg" href="tel:+21600000000">Call +216 00 000 000</a>
+      <p class="doc__call-alt">or write to <a href="mailto:contact@sevrage-tunisie.com">contact@sevrage-tunisie.com</a></p>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__legal">
+    <p>© 2026 Clinique psychiatrique Espoir — El Menzah 9.</p>
+    <p class="foot__legalnav">
+      <a href="en.html">Home</a>
+      <a href="mentions-legales.html">Legal notice</a>
+      <a href="confidentialite.html">Privacy</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* Pre-selects the reason passed in the address (?motif=…). Option values stay in French: envoi.php reads them. */
+(function () {
+  var motifs = {
+    'psychiatrie':         'Consultation psychiatrique',
+    'sevrage-alcool':      'Sevrage programmé — alcool',
+    'sevrage-benzos':      'Sevrage programmé — benzodiazépines ou somnifères',
+    'sevrage-opiaces':     'Sevrage programmé — opiacés',
+    'sevrage-stimulants':  'Sevrage programmé — cannabis, cocaïne ou stimulants',
+    'sevrage-pregabaline': 'Sevrage programmé — prégabaline ou médicament détourné'
+  };
+  var wanted = motifs[new URLSearchParams(location.search).get('motif')];
+  var field = document.getElementById('r-motif');
+  if (wanted && field) { field.value = wanted; }
+})();
+</script>
+<script src="assets/js/app.js?v=28"></script>
+</body>
+</html>

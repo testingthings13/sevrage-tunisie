@@ -58,7 +58,9 @@ body{
   font:400 1.0625rem/1.65 var(--sans);
   font-synthesis-weight:none;
   -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
+  /* pas d'overflow-x:hidden ici : il ferait de <body> le conteneur de
+     défilement du sticky et casserait l'en-tête collant ; html{overflow-x:clip}
+     (dans le reset) contient déjà les débordements horizontaux */
 }
 img,svg,iframe{ display:block; max-width:100% }
 img{ height:auto }
@@ -305,10 +307,14 @@ section[id], main[id]{ scroll-margin-top:96px }
   border-top:1px solid var(--trait);
   background:rgba(245,247,246,.98);
   animation:drawer .32s var(--ease) both;
+  /* le bandeau est sticky : sans plafond ni défilement propre,
+     la fin du menu resterait hors d'atteinte sur téléphone */
+  max-height:calc(100dvh - 64px); overflow-y:auto;
+  -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
 }
 @keyframes drawer{ from{ opacity:0; transform:translateY(-8px) } to{ opacity:1; transform:none } }
 .navdrawer a{ text-decoration:none; padding:.8rem .2rem; font-weight:500; border-bottom:1px solid var(--trait) }
-@media (min-width:1080px){ .navdrawer{ display:none!important } }
+@media (min-width:1140px){ .navdrawer{ display:none!important } }
 
 /* ── Hero ─────────────────────────────────────────────────── */
 .hero{
@@ -1165,7 +1171,9 @@ html[lang="ar"] .glaze__t h3{ letter-spacing:0; line-height:1.5 }
 .doc__call strong{ color:#fff }
 .doc__call .btn{ margin-top:1rem; --btn-bg:#fff; --btn-fg:var(--bleu) }
 .doc__call-alt{ margin-top:1rem; font-size:.92rem }
-.doc__call a{ color:var(--bleu-pale) }
+.doc__call a:not(.btn){ color:var(--bleu-pale) }
+.doc__cta{ margin-top:2.4rem; font-family:var(--disp); font-weight:600; font-size:1.08rem; letter-spacing:-.02em }
+.doc__next{ font-size:.95rem }
 .doc__nav{ margin-top:2.4rem }
 
 /* ── Formulaire sur fond clair (page rendez-vous) ──────────── */
@@ -1781,3 +1789,25 @@ a:not([class]):hover::after { width: 100%; }
   padding:.7rem 1.1rem; font-size:.88rem; color:var(--ink-3);
   background:var(--blanc); border-top:1px solid var(--trait);
 }
+
+/* ── En-tête compact au défilement : suit, se resserre, reste cliquable ── */
+.masthead__in{ transition:padding .35s var(--ease) }
+.masthead.is-stuck .masthead__in{ padding-block:.4rem }
+
+.brand__loc{
+  display:block; max-height:1.3em; overflow:hidden;
+  transition:max-height .35s var(--ease), opacity .25s var(--ease);
+}
+.masthead.is-stuck .brand__loc{ max-height:0; opacity:0 }
+
+.masthead.is-stuck .btn--call{ padding-block:.55rem }
+.masthead .btn--call{ transition:padding .35s var(--ease), box-shadow .35s var(--ease), transform .3s var(--ease) }
+
+/* le filet lumineux sous l'en-tête compact */
+.masthead::after{
+  content:''; position:absolute; inset-inline:0; bottom:-1px; height:2px;
+  background:linear-gradient(90deg, transparent, var(--bleu-vif), var(--teal), transparent);
+  opacity:0; transition:opacity .45s var(--ease);
+  pointer-events:none;
+}
+.masthead.is-stuck::after{ opacity:.55 }

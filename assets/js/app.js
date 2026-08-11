@@ -39,7 +39,7 @@
       if (e.key === 'Escape') closeDrawer();
     });
     window.addEventListener('resize', function () {
-      if (window.innerWidth >= 1060) closeDrawer();
+      if (window.innerWidth >= 1140) closeDrawer();
     });
   }
 
@@ -596,7 +596,10 @@
     if (!motif || !Object.prototype.hasOwnProperty.call(map, motif)) return;
     var wanted = map[motif];
     Array.prototype.forEach.call(select.options, function (opt) {
-      if (opt.text === wanted) { opt.selected = true; }
+      /* opt.value : sur les pages ar/en les libellés sont traduits mais les
+         values restent en français ; sans attribut value (page fr), .value
+         retombe sur le texte. */
+      if (opt.value === wanted) { opt.selected = true; }
     });
   } catch (e) { /* jamais bloquant : la sélection par défaut reste */ }
 })();
@@ -611,6 +614,13 @@
     var results = Array.prototype.slice.call(box.querySelectorAll('.triage__result'));
     var restart = box.querySelector('[data-restart]');
 
+    /* Le bouton cliqué disparaît : sans déplacement du focus, lecteur
+       d'écran et clavier restent muets devant le contenu révélé. */
+    var moveFocus = function (el) {
+      if (!el.hasAttribute('tabindex')) el.setAttribute('tabindex', '-1');
+      el.focus();
+    };
+
     box.addEventListener('click', function (e) {
       var btn = e.target.closest ? e.target.closest('[data-answer]') : null;
 
@@ -624,6 +634,7 @@
           if (i > -1 && steps[i + 1]) {
             current.hidden = true;
             steps[i + 1].hidden = false;
+            moveFocus(steps[i + 1]);
           }
           return;
         }
@@ -632,6 +643,7 @@
         steps.forEach(function (s) { s.hidden = true; });
         results.forEach(function (r) {
           r.hidden = r.getAttribute('data-result') !== answer;
+          if (!r.hidden) moveFocus(r);
         });
         if (restart) restart.hidden = false;
         return;
@@ -642,6 +654,7 @@
         if (restart) restart.hidden = true;
         steps.forEach(function (s) {
           s.hidden = s.getAttribute('data-step') !== '1';
+          if (!s.hidden) moveFocus(s);
         });
       }
     });

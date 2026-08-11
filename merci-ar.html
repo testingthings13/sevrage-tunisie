@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تم إرسال الطلب — عيادة الأمل، المنزه 9</title>
+<meta name="description" content="تأكيد الإرسال. يعاود معالجٌ من عيادة الأمل الاتصال بك.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#2B4B9B">
+<link rel="canonical" href="https://sevrage-tunisie.com/merci-ar.html">
+<meta property="og:title" content="تم إرسال الطلب — عيادة الأمل">
+<meta property="og:description" content="تأكيد الإرسال. يعاود معالجٌ من عيادة الأمل الاتصال بك.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sevrage-tunisie.com/merci-ar.html">
+<meta property="og:image" content="https://sevrage-tunisie.com/assets/img/entree.jpg?v=28">
+<meta property="og:locale" content="ar_TN">
+<link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/merci.html">
+<link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/merci-ar.html">
+<link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/merci-en.html">
+<link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/merci.html">
+<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=16">
+<link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
+<link rel="stylesheet" href="assets/css/style.css?v=28">
+</head>
+<body>
+
+<main class="doc">
+  <div class="wrap wrap--narrow">
+    <p class="doc__back"><a href="ar.html">→ العودة إلى الصفحة الرئيسية</a> · <a href="merci.html" lang="fr" hreflang="fr" dir="ltr">Français</a> · <a href="merci-en.html" lang="en" hreflang="en" dir="ltr">English</a></p>
+    <h1 class="h2">تم إرسال طلبك.</h1>
+
+    <p class="form__status" id="merci-alerte-ar" role="status"></p>
+
+    <p class="lede">يعاود معالجٌ الاتصال بك. في أوقات النهار، خلال أقل من ساعتين؛
+    وفي الليل، نعاود الاتصال في أول الصباح — إلا إذا أشرت إلى حالة طارئة،
+    فيكون الرد فوريًا.</p>
+
+    <h2>إن كان الأمر عاجلًا فلا تنتظر معاودة الاتصال</h2>
+    <p>اتصل مباشرة بالرقم <a href="tel:+21600000000"><span dir="ltr">+216 00 000 000</span></a>،
+    يرد عليك أحدهم في أي ساعة. وفي حال خطر على الحياة، اتصل بالرقم
+    <a href="tel:190">190</a> (الإسعاف).</p>
+
+    <h2>في هذه الأثناء</h2>
+    <ul class="doc__list">
+      <li><a href="ar-tahdir-al-iqama.html">ما يجب إحضاره</a>، إذا كانت الإقامة في المصحة واردة.</li>
+      <li><a href="ar-rafd-al-ilaj.html">يرفض العلاج</a>، إذا كنت تتصل من أجل قريب.</li>
+      <li><a href="ar-glossaire.html">المعجم</a>، للكلمات التي ستُقال لك.</li>
+    </ul>
+    <p><strong>لا توقف أي شيء بمفردك في انتظار الاتصال.</strong> التوقف المفاجئ عن الكحول
+    أو البنزوديازيبينات يعرّض لنوبات تشنّجية.</p>
+
+    <aside class="doc__call" aria-label="اتصل بالعيادة">
+      <p><strong>سؤال، أو شك، أو حالة طارئة؟</strong> يرد عليك معالج في أي ساعة.</p>
+      <a class="btn btn--call btn--lg" href="tel:+21600000000">اتصل بالرقم <span dir="ltr">+216 00 000 000</span></a>
+      <p class="doc__call-alt">أو اكتب إلى <a href="mailto:contact@sevrage-tunisie.com">contact@sevrage-tunisie.com</a></p>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__legal">
+    <p>© 2026 عيادة الأمل النفسية — المنزه 9.</p>
+    <p class="foot__legalnav">
+      <a href="ar.html">الرئيسية</a>
+      <a href="mentions-legales.html">إشعار قانوني</a>
+      <a href="confidentialite.html">الخصوصية</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* نفس سلوك merci.html بلغة هذه الصفحة:
+   يضيف envoi.php المعامل ?envoi=differe عندما يتعذر إرسال البريد الإلكتروني. */
+(function () {
+  var alerte = document.getElementById('merci-alerte-ar');
+  if (alerte && /[?&]envoi=differe/.test(window.location.search)) {
+    alerte.dataset.state = 'err';
+    alerte.textContent = 'تم تسجيل طلبك، لكن خادم البريد الإلكتروني لدينا لم يستجب. '
+      + 'إن لم يصلك رد خلال ساعتين، فاتصل بالرقم ‎+216 00 000 000.';
+  }
+})();
+</script>
+<script src="assets/js/app.js?v=28"></script>
+</body>
+</html>

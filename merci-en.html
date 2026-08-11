@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request sent — Espoir Clinic, El Menzah 9</title>
+<meta name="description" content="Confirmation. A caregiver from the Espoir Clinic calls you back.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#2B4B9B">
+<link rel="canonical" href="https://sevrage-tunisie.com/merci-en.html">
+<meta property="og:title" content="Request sent — Espoir Clinic">
+<meta property="og:description" content="Confirmation. A caregiver from the Espoir Clinic calls you back.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://sevrage-tunisie.com/merci-en.html">
+<meta property="og:image" content="https://sevrage-tunisie.com/assets/img/entree.jpg?v=28">
+<meta property="og:locale" content="en_US">
+<link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/merci.html">
+<link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/merci-ar.html">
+<link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/merci-en.html">
+<link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/merci.html">
+<link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=16">
+<link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
+<link rel="stylesheet" href="assets/css/style.css?v=28">
+</head>
+<body>
+
+<main class="doc">
+  <div class="wrap wrap--narrow">
+    <p class="doc__back"><a href="en.html">← Back to the home page</a> · <a href="merci.html" lang="fr" hreflang="fr">Français</a> · <a href="merci-ar.html" lang="ar" hreflang="ar" dir="rtl">العربية</a></p>
+    <h1 class="h2">Your request is on its way.</h1>
+
+    <p class="form__status" id="merci-alerte-en" role="status"></p>
+
+    <p class="lede">A caregiver calls you back. During the day, expect less than two hours;
+    at night, we call back first thing in the morning — unless you flagged an emergency,
+    in which case it is immediate.</p>
+
+    <h2>If it is urgent, do not wait for the call back</h2>
+    <p>Call <a href="tel:+21600000000">+216 00 000 000</a> directly. Someone answers
+    at any hour. If there is a threat to life, dial <a href="tel:190">190</a> (SAMU).</p>
+
+    <h2>While you wait</h2>
+    <ul class="doc__list">
+      <li><a href="en-preparing-your-stay.html">What to bring</a>, if a hospital stay
+      is being considered.</li>
+      <li><a href="en-they-refuse-treatment.html">They refuse to come</a>, if you are calling for a family member.</li>
+      <li><a href="en-glossary.html">The glossary</a>, for the words you will hear.</li>
+    </ul>
+    <p><strong>Do not stop anything on your own while you wait for the call.</strong> Stopping
+    alcohol or benzodiazepines abruptly exposes you to seizures.</p>
+
+    <aside class="doc__call" aria-label="Call the clinic">
+      <p><strong>A question, a doubt, an emergency?</strong> A caregiver answers at any hour.</p>
+      <a class="btn btn--call btn--lg" href="tel:+21600000000">Call +216 00 000 000</a>
+      <p class="doc__call-alt">or write to <a href="mailto:contact@sevrage-tunisie.com">contact@sevrage-tunisie.com</a></p>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__legal">
+    <p>© 2026 Espoir psychiatric clinic — El Menzah 9.</p>
+    <p class="foot__legalnav">
+      <a href="en.html">Home</a>
+      <a href="mentions-legales.html">Legal notice</a>
+      <a href="confidentialite.html">Privacy</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+/* Same behaviour as merci.html, in the language of this page:
+   envoi.php appends ?envoi=differe when the e-mail could not be sent. */
+(function () {
+  var alert = document.getElementById('merci-alerte-en');
+  if (alert && /[?&]envoi=differe/.test(window.location.search)) {
+    alert.dataset.state = 'err';
+    alert.textContent = 'Your request has been recorded, but our e-mail server did not respond. '
+      + 'If you have no news within two hours, call +216 00 000 000.';
+  }
+})();
+</script>
+<script src="assets/js/app.js?v=28"></script>
+</body>
+</html>

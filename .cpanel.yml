@@ -35,6 +35,28 @@ deployment:
     - /bin/cp ar-rafd-al-ilaj.html  $DEPLOYPATH/
     - /bin/cp ar-tahdir-al-iqama.html   $DEPLOYPATH/
 
+    # ── les versions arabe et anglaise ─────────────────────────
+    - /bin/cp ar-rendez-vous.html   $DEPLOYPATH/
+    - /bin/cp ar-glossaire.html     $DEPLOYPATH/
+    - /bin/cp ar-medecins.html      $DEPLOYPATH/
+    - /bin/cp ar-sevrage-alcool.html   $DEPLOYPATH/
+    - /bin/cp ar-sevrage-benzodiazepines.html   $DEPLOYPATH/
+    - /bin/cp ar-sevrage-opiaces.html   $DEPLOYPATH/
+    - /bin/cp ar-sevrage-cannabis.html   $DEPLOYPATH/
+    - /bin/cp ar-sevrage-cocaine.html   $DEPLOYPATH/
+    - /bin/cp ar-sevrage-pregabaline.html   $DEPLOYPATH/
+    - /bin/cp en-appointment.html   $DEPLOYPATH/
+    - /bin/cp en-glossary.html      $DEPLOYPATH/
+    - /bin/cp en-refer-a-patient.html   $DEPLOYPATH/
+    - /bin/cp en-they-refuse-treatment.html   $DEPLOYPATH/
+    - /bin/cp en-preparing-your-stay.html   $DEPLOYPATH/
+    - /bin/cp en-alcohol-detox.html $DEPLOYPATH/
+    - /bin/cp en-benzodiazepine-withdrawal.html   $DEPLOYPATH/
+    - /bin/cp en-opiate-withdrawal.html   $DEPLOYPATH/
+    - /bin/cp en-cannabis-withdrawal.html   $DEPLOYPATH/
+    - /bin/cp en-cocaine-withdrawal.html   $DEPLOYPATH/
+    - /bin/cp en-pregabalin-withdrawal.html   $DEPLOYPATH/
+
     # ── le traitement du formulaire ────────────────────────────
     - /bin/cp envoi.php             $DEPLOYPATH/
 

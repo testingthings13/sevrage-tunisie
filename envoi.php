@@ -14,6 +14,17 @@ const EXPED   = 'contact@sevrage-tunisie.com';   // doit être sur le domaine, s
 const MERCI   = '/merci.html';
 const ACCUEIL = '/';
 
+/* Page de remerciement dans la langue du formulaire d'origine.
+   Le champ caché « page » sert déjà à localiser les retours d'erreur. */
+$page_origine = $_POST['page'] ?? '';
+$mercis = [
+    'accueil-ar'     => '/merci-ar.html',
+    'rendez-vous-ar' => '/merci-ar.html',
+    'accueil-en'     => '/merci-en.html',
+    'rendez-vous-en' => '/merci-en.html',
+];
+$merci = is_string($page_origine) ? ($mercis[$page_origine] ?? MERCI) : MERCI;
+
 /* ── Uniquement en POST ─────────────────────────────────── */
 if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     header('Location: ' . ACCUEIL, true, 303);
@@ -22,7 +33,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
 
 /* ── Pot de miel : un robot a rempli le champ caché ──────── */
 if (!empty($_POST['site'])) {
-    header('Location: ' . MERCI, true, 303);   // on le remercie et on jette
+    header('Location: ' . $merci, true, 303);   // on le remercie et on jette
     exit;
 }
 
@@ -38,7 +49,7 @@ if (is_file($lock) && (time() - filemtime($lock)) < 30) {
             . "\n\n" . str_repeat('=', 60) . "\n\n",
         FILE_APPEND | LOCK_EX
     );
-    header('Location: ' . MERCI, true, 303);
+    header('Location: ' . $merci, true, 303);
     exit;
 }
 
@@ -74,10 +85,12 @@ if ($nom === '' || $tel === '' || !$consent) {
     /* Retour vers le formulaire d'origine (parcours sans JS) :
        app.js affiche le message ?erreur=champs dans la langue de la page. */
     $retours = [
-        'accueil'     => ACCUEIL . '?erreur=champs#contact',
-        'accueil-ar'  => '/ar.html?erreur=champs#contact',
-        'accueil-en'  => '/en.html?erreur=champs#contact',
-        'rendez-vous' => '/rendez-vous.html?erreur=champs#form-rdv',
+        'accueil'        => ACCUEIL . '?erreur=champs#contact',
+        'accueil-ar'     => '/ar.html?erreur=champs#contact',
+        'accueil-en'     => '/en.html?erreur=champs#contact',
+        'rendez-vous'    => '/rendez-vous.html?erreur=champs#form-rdv',
+        'rendez-vous-ar' => '/ar-rendez-vous.html?erreur=champs#form-rdv',
+        'rendez-vous-en' => '/en-appointment.html?erreur=champs#form-rdv',
     ];
     $retour = $retours[clean('page', 200)] ?? ACCUEIL . '?erreur=champs#contact';
     header('Location: ' . $retour, true, 303);
@@ -142,5 +155,5 @@ $journal = __DIR__ . '/demandes.log';
     FILE_APPEND | LOCK_EX
 );
 
-header('Location: ' . MERCI . ($ok ? '' : '?envoi=differe'), true, 303);
+header('Location: ' . $merci . ($ok ? '' : '?envoi=differe'), true, 303);
 exit;
