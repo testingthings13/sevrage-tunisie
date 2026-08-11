@@ -1683,3 +1683,22 @@ a:not([class]):hover::after { width: 100%; }
   @keyframes scRays{ to{ transform:rotate(360deg) } }
   .sc-rays{ animation:scRays 36s linear infinite }
 }
+
+/* ── Six semaines : la personne, du repli au sourire ───────── */
+/* La bouche suit la rampe de couleurs : toujours contrastée sur la silhouette */
+.sc-mouth{ fill:none; stroke:var(--sc-bg,#10222F); stroke-width:4.5; stroke-linecap:round }
+
+/* Halo de bien-être derrière la silhouette redressée (s'allume avec --b) */
+.sc-halo{
+  fill:#FFFFFF; opacity:calc(var(--b,0) * .12);
+  filter:blur(16px);
+  transition:opacity .9s var(--ease);
+}
+
+/* Respiration : courte et basse au début, ample et calme à la fin */
+@media (prefers-reduced-motion:no-preference){
+  @keyframes scBreatheLow{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(3px) } }
+  @keyframes scBreatheTall{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-3px) } }
+  .sc-a .sc-breathe{ animation:scBreatheLow 3.2s ease-in-out infinite }
+  .sc-b .sc-breathe{ animation:scBreatheTall 4.8s ease-in-out infinite }
+}
