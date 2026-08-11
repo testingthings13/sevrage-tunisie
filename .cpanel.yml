@@ -26,6 +26,14 @@ deployment:
     - /bin/cp preparer-le-sejour.html   $DEPLOYPATH/
     - /bin/cp mentions-legales.html $DEPLOYPATH/
     - /bin/cp confidentialite.html  $DEPLOYPATH/
+    - /bin/cp sevrage-alcool.html   $DEPLOYPATH/
+    - /bin/cp sevrage-benzodiazepines.html   $DEPLOYPATH/
+    - /bin/cp sevrage-opiaces.html  $DEPLOYPATH/
+    - /bin/cp sevrage-cannabis.html $DEPLOYPATH/
+    - /bin/cp sevrage-cocaine.html  $DEPLOYPATH/
+    - /bin/cp sevrage-pregabaline.html   $DEPLOYPATH/
+    - /bin/cp ar-rafd-al-ilaj.html  $DEPLOYPATH/
+    - /bin/cp ar-tahdir-al-iqama.html   $DEPLOYPATH/
 
     # ── le traitement du formulaire ────────────────────────────
     - /bin/cp envoi.php             $DEPLOYPATH/

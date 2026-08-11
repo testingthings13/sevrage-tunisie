@@ -586,7 +586,12 @@
     var motif = new URLSearchParams(window.location.search).get('motif');
     var map = {
       psychiatrie: 'Consultation psychiatrique',
-      suivi: 'Consultation de suivi après une hospitalisation'
+      suivi: 'Consultation de suivi après une hospitalisation',
+      'sevrage-alcool': 'Sevrage programmé — alcool',
+      'sevrage-benzos': 'Sevrage programmé — benzodiazépines ou somnifères',
+      'sevrage-opiaces': 'Sevrage programmé — opiacés',
+      'sevrage-stimulants': 'Sevrage programmé — cannabis, cocaïne ou stimulants',
+      'sevrage-pregabaline': 'Sevrage programmé — prégabaline ou médicament détourné'
     };
     if (!motif || !Object.prototype.hasOwnProperty.call(map, motif)) return;
     var wanted = map[motif];

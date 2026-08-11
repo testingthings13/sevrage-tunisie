@@ -7,8 +7,16 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
   </url>
-  <url><loc>https://sevrage-tunisie.com/il-refuse-de-venir.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
-  <url><loc>https://sevrage-tunisie.com/preparer-le-sejour.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://sevrage-tunisie.com/il-refuse-de-venir.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rafd-al-ilaj.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+  </url>
+  <url><loc>https://sevrage-tunisie.com/preparer-le-sejour.html</loc><lastmod>2026-08-11</lastmod><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tahdir-al-iqama.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
+  </url>
   <url><loc>https://sevrage-tunisie.com/glossaire.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://sevrage-tunisie.com/medecins.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://sevrage-tunisie.com/rendez-vous.html</loc><lastmod>2026-08-11</lastmod><priority>0.9</priority></url>
@@ -23,6 +31,22 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
+  </url>
+  <url><loc>https://sevrage-tunisie.com/sevrage-alcool.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sevrage-tunisie.com/sevrage-benzodiazepines.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sevrage-tunisie.com/sevrage-opiaces.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sevrage-tunisie.com/sevrage-cannabis.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sevrage-tunisie.com/sevrage-cocaine.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sevrage-tunisie.com/sevrage-pregabaline.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://sevrage-tunisie.com/ar-rafd-al-ilaj.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rafd-al-ilaj.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+  </url>
+  <url><loc>https://sevrage-tunisie.com/ar-tahdir-al-iqama.html</loc><lastmod>2026-08-11</lastmod><priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tahdir-al-iqama.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
   </url>
   <url><loc>https://sevrage-tunisie.com/mentions-legales.html</loc><lastmod>2026-08-11</lastmod><priority>0.3</priority></url>
   <url><loc>https://sevrage-tunisie.com/confidentialite.html</loc><lastmod>2026-08-11</lastmod><priority>0.3</priority></url>
