@@ -1289,3 +1289,256 @@ html[lang="ar"] .changes dt{ letter-spacing:0; line-height:1.5 }
 .chips label:hover span{ border-color:var(--bleu-pale); color:var(--ink) }
 .chips input:checked + span{ background:var(--bleu); border-color:var(--bleu); color:#fff }
 .chips input:focus-visible + span{ outline:3px solid var(--bleu-vif); outline-offset:3px }
+
+/* ── Services: Modern Animations & Design ──────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  @keyframes fadeInUp { from { opacity: 1; transform: none; } to { opacity: 1; transform: none; } }
+  @keyframes slideInLeft { from { opacity: 1; transform: none; } to { opacity: 1; transform: none; } }
+  @keyframes slideInRight { from { opacity: 1; transform: none; } to { opacity: 1; transform: none; } }
+  @keyframes shimmer { from { background-position: -1000px 0; } to { background-position: -1000px 0; } }
+}
+
+.section--services {
+  padding: var(--pad) 0;
+  background: linear-gradient(135deg, #f5f7f6 0%, #ffffff 100%);
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInUp 0.8s var(--ease) both;
+}
+
+.service {
+  margin-bottom: 3rem;
+  animation: fadeInUp 0.8s var(--ease) both;
+}
+
+.service:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.service:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.service--sevrage .wrap--split,
+.service--psychiatrie .wrap--split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .service--sevrage .wrap--split,
+  .service--psychiatrie .wrap--split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.wrap--split-reverse {
+  grid-auto-flow: dense;
+}
+
+.split__img {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  height: 420px;
+  background: linear-gradient(135deg, #3F6BD4 0%, #2B4B9B 50%, #0E9BA8 100%);
+  box-shadow: var(--sh-blue), inset 0 1px 0 rgba(255,255,255,0.1);
+  animation: slideInLeft 0.9s var(--ease) both;
+}
+
+.service--psychiatrie .split__img {
+  animation: slideInRight 0.9s var(--ease) both;
+}
+
+.split__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service:hover .split__img img {
+  transform: scale(1.05);
+}
+
+/* Gradient placeholder for Sevrage */
+.service--sevrage .split__img {
+  background: linear-gradient(135deg, #3F6BD4 0%, #2B4B9B 50%, #0E9BA8 100%);
+  position: relative;
+}
+
+.service--sevrage .split__img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    transparent 30%,
+    rgba(255,255,255,0.1) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 3s infinite;
+}
+
+/* Gradient placeholder for Psychiatrie */
+.service--psychiatrie .split__img {
+  background: linear-gradient(135deg, #8EACC6 0%, #3F6BD4 50%, #2B4B9B 100%);
+  position: relative;
+}
+
+.service--psychiatrie .split__img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    -45deg,
+    transparent 30%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  animation: shimmer 3.5s infinite;
+}
+
+.split__text {
+  animation: slideInRight 0.9s var(--ease) both;
+  padding: 2rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.8);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+  transition: all 0.3s var(--ease);
+}
+
+.service--psychiatrie .split__text {
+  animation: slideInLeft 0.9s var(--ease) both;
+}
+
+.service:hover .split__text {
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 16px 48px rgba(43,75,155,0.12);
+  transform: translateY(-4px);
+}
+
+.service__desc {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 1.2rem 0 1.8rem;
+}
+
+.service__features {
+  margin: 1.5rem 0 2rem;
+  padding-left: 1.5rem;
+}
+
+.service__features li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--ink-2);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.service__features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--teal);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.service h3 {
+  font-family: var(--disp);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--bleu);
+  margin-bottom: 0.5rem;
+}
+
+.btn--call {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(135deg, var(--bleu-vif) 0%, var(--bleu) 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+  box-shadow: 0 4px 16px rgba(43, 75, 155, 0.3);
+  transform: translateY(0);
+}
+
+.btn--call:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(43, 75, 155, 0.4);
+  background: linear-gradient(135deg, var(--bleu) 0%, #1e3a6f 100%);
+}
+
+.btn--call:active {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .split__text {
+    padding: 1.5rem;
+  }
+
+  .service h3 {
+    font-size: 1.5rem;
+  }
+}
