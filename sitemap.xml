@@ -12,7 +12,7 @@
   <!-- ── Accueil (fr · ar · en) ─────────────────────────────── -->
   <url>
     <loc>https://sevrage-tunisie.com/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
@@ -70,7 +70,7 @@
   <!-- ── Sevrage, substance par substance (fr · ar · en) ────── -->
   <url>
     <loc>https://sevrage-tunisie.com/sevrage-alcool.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-alcool.html"/>
@@ -79,7 +79,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar-sevrage-alcool.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-alcool.html"/>
@@ -88,7 +88,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en-alcohol-detox.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-alcool.html"/>
@@ -97,7 +97,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/sevrage-benzodiazepines.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html"/>
@@ -106,7 +106,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html"/>
@@ -115,7 +115,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en-benzodiazepine-withdrawal.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html"/>
@@ -124,7 +124,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/sevrage-opiaces.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-opiaces.html"/>
@@ -133,7 +133,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar-sevrage-opiaces.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-opiaces.html"/>
@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en-opiate-withdrawal.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-opiaces.html"/>
@@ -151,7 +151,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/sevrage-cannabis.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cannabis.html"/>
@@ -160,7 +160,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar-sevrage-cannabis.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cannabis.html"/>
@@ -169,7 +169,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en-cannabis-withdrawal.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cannabis.html"/>
@@ -178,7 +178,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/sevrage-cocaine.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cocaine.html"/>
@@ -187,7 +187,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar-sevrage-cocaine.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cocaine.html"/>
@@ -196,7 +196,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en-cocaine-withdrawal.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cocaine.html"/>
@@ -205,7 +205,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/sevrage-pregabaline.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-pregabaline.html"/>
@@ -214,7 +214,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/ar-sevrage-pregabaline.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-pregabaline.html"/>
@@ -223,7 +223,7 @@
   </url>
   <url>
     <loc>https://sevrage-tunisie.com/en-pregabalin-withdrawal.html</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-08-14</lastmod>
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-pregabaline.html"/>

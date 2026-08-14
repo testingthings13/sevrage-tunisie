@@ -19,6 +19,8 @@ deployment:
     - /bin/cp en.html               $DEPLOYPATH/
     - /bin/cp 404.html              $DEPLOYPATH/
     - /bin/cp merci.html            $DEPLOYPATH/
+    - /bin/cp merci-ar.html         $DEPLOYPATH/
+    - /bin/cp merci-en.html         $DEPLOYPATH/
     - /bin/cp rendez-vous.html      $DEPLOYPATH/
     - /bin/cp medecins.html         $DEPLOYPATH/
     - /bin/cp glossaire.html        $DEPLOYPATH/
