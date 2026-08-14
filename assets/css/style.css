@@ -1811,3 +1811,36 @@ a:not([class]):hover::after { width: 100%; }
   pointer-events:none;
 }
 .masthead.is-stuck::after{ opacity:.55 }
+
+
+/* ── Illustrations animées : du mal-être vers l'apaisement ───
+   Les éléments « bien » sont l'état de base du SVG ; les keyframes
+   partent de l'état « mal ». Sans animation (reduced-motion, vieux
+   navigateurs), c'est donc l'état apaisé qui s'affiche. */
+.doc__illu svg .an{
+  animation-duration:5.5s; animation-timing-function:cubic-bezier(.4,0,.2,1);
+  animation-fill-mode:both; animation-delay:.6s;
+}
+.js .doc__illu.reveal:not(.is-set) svg .an{ animation-play-state:paused }
+.doc__illu svg .an-slow{ animation-duration:8s }
+.doc__illu svg .an-d1{ animation-delay:1.4s }
+.doc__illu svg .an-d2{ animation-delay:2.6s }
+.doc__illu svg .an-d3{ animation-delay:3.8s }
+.doc__illu svg .an-draw{ stroke-dasharray:1600 }
+.doc__illu svg .an-lift{ transform-origin:50% 80% }
+@keyframes an-fade   { 0%{ opacity:1 } 55%{ opacity:1 } 100%{ opacity:0 } }
+@keyframes an-appear { from{ opacity:0 } to{ opacity:1 } }
+@keyframes an-rise   { from{ transform:translateY(72px); opacity:.12 } to{ transform:none; opacity:1 } }
+@keyframes an-draw   { from{ stroke-dashoffset:1600 } to{ stroke-dashoffset:0 } }
+@keyframes an-lift   { from{ transform:translateY(24px) rotate(5deg) } to{ transform:none } }
+@keyframes an-sink   { 0%{ transform:none; opacity:1 } 100%{ transform:translateY(30px); opacity:0 } }
+.doc__illu svg .an-fade{ animation-name:an-fade }
+.doc__illu svg .an-appear{ animation-name:an-appear }
+.doc__illu svg .an-rise{ animation-name:an-rise }
+.doc__illu svg .an-draw{ animation-name:an-draw }
+.doc__illu svg .an-lift{ animation-name:an-lift }
+.doc__illu svg .an-sink{ animation-name:an-sink }
+.doc__illu--flip svg{ transform:scaleX(-1) }
+@media (prefers-reduced-motion: reduce){
+  .doc__illu svg .an{ animation:none }
+}
