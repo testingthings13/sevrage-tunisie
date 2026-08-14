@@ -591,7 +591,9 @@
       'sevrage-benzos': 'Sevrage programmé — benzodiazépines ou somnifères',
       'sevrage-opiaces': 'Sevrage programmé — opiacés',
       'sevrage-stimulants': 'Sevrage programmé — cannabis, cocaïne ou stimulants',
-      'sevrage-pregabaline': 'Sevrage programmé — prégabaline ou médicament détourné'
+      'sevrage-pregabaline': 'Sevrage programmé — prégabaline ou médicament détourné',
+      'sevrage-tabac': 'Sevrage programmé — tabac',
+      'jeu-ecrans': 'Addiction sans produit (jeu, écrans)'
     };
     if (!motif || !Object.prototype.hasOwnProperty.call(map, motif)) return;
     var wanted = map[motif];

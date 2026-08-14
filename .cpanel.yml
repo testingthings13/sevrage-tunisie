@@ -32,6 +32,21 @@ deployment:
     - /bin/cp tarifs.html           $DEPLOYPATH/
     - /bin/cp ar-tarifs.html        $DEPLOYPATH/
     - /bin/cp en-pricing.html       $DEPLOYPATH/
+    - /bin/cp depression.html             $DEPLOYPATH/
+    - /bin/cp trouble-bipolaire.html      $DEPLOYPATH/
+    - /bin/cp sevrage-tabac.html          $DEPLOYPATH/
+    - /bin/cp addiction-jeu-ecrans.html   $DEPLOYPATH/
+    - /bin/cp venir-de-letranger.html     $DEPLOYPATH/
+    - /bin/cp ar-depression.html          $DEPLOYPATH/
+    - /bin/cp ar-trouble-bipolaire.html   $DEPLOYPATH/
+    - /bin/cp ar-sevrage-tabac.html       $DEPLOYPATH/
+    - /bin/cp ar-addiction-jeu-ecrans.html$DEPLOYPATH/
+    - /bin/cp ar-alqudum-min-alkharij.html$DEPLOYPATH/
+    - /bin/cp en-depression.html          $DEPLOYPATH/
+    - /bin/cp en-bipolar-disorder.html    $DEPLOYPATH/
+    - /bin/cp en-quit-smoking.html        $DEPLOYPATH/
+    - /bin/cp en-behavioural-addictions.html$DEPLOYPATH/
+    - /bin/cp en-coming-from-abroad.html  $DEPLOYPATH/
     - /bin/cp sevrage-alcool.html   $DEPLOYPATH/
     - /bin/cp sevrage-benzodiazepines.html   $DEPLOYPATH/
     - /bin/cp sevrage-opiaces.html  $DEPLOYPATH/

@@ -289,6 +289,143 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/tarifs.html"/>
   </url>
 
+  <!-- ── Dépression, bipolarité, tabac, jeu, étranger (fr · ar · en) ── -->
+  <url>
+    <loc>https://sevrage-tunisie.com/depression.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/depression.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/ar-depression.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/depression.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/en-depression.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/depression.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/trouble-bipolaire.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-bipolar-disorder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/ar-trouble-bipolaire.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-bipolar-disorder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/en-bipolar-disorder.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-bipolar-disorder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/sevrage-tabac.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-quit-smoking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/ar-sevrage-tabac.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-quit-smoking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/en-quit-smoking.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-quit-smoking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/addiction-jeu-ecrans.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-behavioural-addictions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-behavioural-addictions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/en-behavioural-addictions.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-behavioural-addictions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/venir-de-letranger.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-coming-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-coming-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+  </url>
+  <url>
+    <loc>https://sevrage-tunisie.com/en-coming-from-abroad.html</loc>
+    <lastmod>2026-08-14</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-coming-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+  </url>
+
   <!-- ── Guides pour les familles (fr · ar · en) ────────────── -->
   <url>
     <loc>https://sevrage-tunisie.com/il-refuse-de-venir.html</loc>
