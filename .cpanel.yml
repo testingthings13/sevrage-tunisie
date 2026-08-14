@@ -29,6 +29,9 @@ deployment:
     - /bin/cp mentions-legales.html $DEPLOYPATH/
     - /bin/cp confidentialite.html  $DEPLOYPATH/
     - /bin/cp psychiatrie.html      $DEPLOYPATH/
+    - /bin/cp tarifs.html           $DEPLOYPATH/
+    - /bin/cp ar-tarifs.html        $DEPLOYPATH/
+    - /bin/cp en-pricing.html       $DEPLOYPATH/
     - /bin/cp sevrage-alcool.html   $DEPLOYPATH/
     - /bin/cp sevrage-benzodiazepines.html   $DEPLOYPATH/
     - /bin/cp sevrage-opiaces.html  $DEPLOYPATH/
