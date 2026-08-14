@@ -26,6 +26,7 @@ deployment:
     - /bin/cp preparer-le-sejour.html   $DEPLOYPATH/
     - /bin/cp mentions-legales.html $DEPLOYPATH/
     - /bin/cp confidentialite.html  $DEPLOYPATH/
+    - /bin/cp psychiatrie.html      $DEPLOYPATH/
     - /bin/cp sevrage-alcool.html   $DEPLOYPATH/
     - /bin/cp sevrage-benzodiazepines.html   $DEPLOYPATH/
     - /bin/cp sevrage-opiaces.html  $DEPLOYPATH/
@@ -36,6 +37,8 @@ deployment:
     - /bin/cp ar-tahdir-al-iqama.html   $DEPLOYPATH/
 
     # ── les versions arabe et anglaise ─────────────────────────
+    - /bin/cp ar-psychiatrie.html   $DEPLOYPATH/
+    - /bin/cp en-psychiatry.html    $DEPLOYPATH/
     - /bin/cp ar-rendez-vous.html   $DEPLOYPATH/
     - /bin/cp ar-glossaire.html     $DEPLOYPATH/
     - /bin/cp ar-medecins.html      $DEPLOYPATH/
@@ -79,5 +82,4 @@ deployment:
     - /bin/rm -f $DEPLOYPATH/assets/logo/README.md
     - /bin/rm -f $DEPLOYPATH/sevrage-tunisie-site.zip
     - /bin/rm -f $DEPLOYPATH/default.html
-    - /bin/rm -f $DEPLOYPATH/psychiatrie.html
     - /bin/rm -f $DEPLOYPATH/crise-psychiatrique.html

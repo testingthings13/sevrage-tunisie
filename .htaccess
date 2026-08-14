@@ -9,6 +9,13 @@ AddDefaultCharset UTF-8
 # ── Une seule adresse : https, sans www ─────────────────────
 RewriteEngine On
 
+# psychiatrie-tunisie.com — domaine sœur : 301 vers le site principal.
+# La racine mène à la page Psychiatrie, le reste garde son chemin.
+RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-tunisie\.com$ [NC]
+RewriteRule ^$ https://sevrage-tunisie.com/psychiatrie.html [L,R=301]
+RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-tunisie\.com$ [NC]
+RewriteRule ^ https://sevrage-tunisie.com%{REQUEST_URI} [L,R=301]
+
 RewriteCond %{HTTPS} !=on
 RewriteRule ^ https://sevrage-tunisie.com%{REQUEST_URI} [L,R=301]
 
@@ -19,8 +26,8 @@ RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
 RewriteRule ^ / [R=301,L]
 
-# Anciennes pages fusionnées dans l'accueil — [NE] préserve le #ancre
-RewriteRule ^psychiatrie\.html$ /#psychiatrie [R=301,NE,L]
+# L'ancienne page « crise » vit désormais sur l'accueil — [NE] préserve le #ancre.
+# (psychiatrie.html est redevenue une vraie page : ne plus la rediriger.)
 RewriteRule ^crise-psychiatrique\.html$ /#crise [R=301,NE,L]
 
 # ── Compression ─────────────────────────────────────────────
