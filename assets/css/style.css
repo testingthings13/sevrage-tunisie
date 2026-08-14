@@ -198,6 +198,8 @@ section[id], main[id]{ scroll-margin-top:96px }
 .btn:hover .ico{ transform:scale(1.08) rotate(-6deg) }
 .btn--call{ --btn-bg:var(--bleu) }
 .btn--call:hover{ --btn-bg:var(--bleu-vif) }
+.btn--wa{ --btn-bg:#25D366 }
+.btn--wa:hover{ --btn-bg:#1DA851 }
 .btn--lg{ padding:1.05em 1.7em; font-size:1.06rem }
 .btn--block{ width:100%; justify-content:center }
 .btn--ghost{
@@ -212,6 +214,8 @@ section[id], main[id]{ scroll-margin-top:96px }
 
 .ico{ width:1.15em; height:1.15em; flex:none }
 .ico--lg{ width:26px; height:26px }
+.wa-link{ white-space:nowrap }
+.wa-link svg{ display:inline-block; width:1em; height:1em; vertical-align:-.12em; margin-inline-end:.3em; fill:#25D366 }
 
 /* ── Masthead ─────────────────────────────────────────────── */
 .masthead{
