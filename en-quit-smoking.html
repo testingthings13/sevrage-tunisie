@@ -20,7 +20,7 @@
 <link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html">
 <link rel="icon" type="image/svg+xml" href="assets/logo/espoir-favicon.svg?v=16">
 <link rel="stylesheet" href="assets/fonts/fonts.css?v=16">
-<link rel="stylesheet" href="assets/css/style.css?v=30">
+<link rel="stylesheet" href="assets/css/style.css?v=32">
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"MedicalWebPage","@id":"https://sevrage-tunisie.com/en-quit-smoking.html","url":"https://sevrage-tunisie.com/en-quit-smoking.html","name":"Quit smoking in Tunisia","inLanguage":"en","about":{"@id":"https://sevrage-tunisie.com/#clinique"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sevrage-tunisie.com/en.html"},{"@type":"ListItem","position":2,"name":"Quit smoking","item":"https://sevrage-tunisie.com/en-quit-smoking.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do I need to be admitted to quit smoking?","acceptedAnswer":{"@type":"Answer","text":"No — tobacco alone is treated as an outpatient. The question changes when a stay is already planned for another substance or a disorder: quitting at the same time, or later, is then decided with the doctor, case by case."}},{"@type":"Question","name":"Is nicotine replacement dangerous?","acceptedAnswer":{"@type":"Answer","text":"No — properly dosed, it delivers nicotine without the smoke, and it is the smoke that kills. The dose is adjusted in consultation: too low, and the craving persists; that is the most common mistake of solo attempts."}},{"@type":"Question","name":"Why did my attempts alone fail?","acceptedAnswer":{"@type":"Answer","text":"Because physical withdrawal is only half the problem: the gesture, the schedule and the trigger situations outlast it. That is exactly what is worked on with a caregiver — not a question of willpower."}}]},{"@type":["MedicalClinic","LocalBusiness"],"@id":"https://sevrage-tunisie.com/#clinique","name":"Espoir Psychiatric Clinic — El Menzah 9","url":"https://sevrage-tunisie.com/","address":{"@type":"PostalAddress","streetAddress":"El Menzah 9","addressLocality":"Tunis","postalCode":"1013","addressCountry":"TN"}}]}</script>
 </head>
 <body>
@@ -47,16 +47,22 @@
         </defs>
         <rect width="800" height="340" fill="#F5F7F6"/>
         <g class="an an-rise an-slow">
-          <circle cx="648" cy="104" r="72" fill="url(#glow-tabac)"/>
+          <circle cx="648" cy="104" r="72" fill="url(#glow-tabac)" class="lp lp-pulse"/>
           <circle cx="648" cy="104" r="20" fill="#E8B84B"/>
         </g>
         <path d="M40 282h720" fill="none" stroke="#8EACC6" stroke-width="4" stroke-linecap="round"/>
         <path d="M60 240c16-22 36-22 52 0s36 22 52 0 36-22 52 0 C 300 252 430 240 560 244" pathLength="1600" fill="none" stroke="#2B4B9B" stroke-width="5"
               stroke-linecap="round" stroke-linejoin="round" class="an an-draw an-slow"/>
-        <g opacity="0" class="an an-fade an-d1">
-          <rect x="86" y="160" width="84" height="16" rx="4" fill="none" stroke="#17303F" stroke-width="5"/>
-          <path d="M154 160v16" stroke="#17303F" stroke-width="4"/>
-          <path d="M176 150c-6-12 8-18 2-32c10 10 16 22 6 32" fill="none" stroke="#17303F" stroke-width="4" stroke-linecap="round"/>
+        <g opacity=".3" class="an an-dim an-d1">
+          <g transform="rotate(-18 150 200)">
+            <rect x="88" y="192" width="118" height="20" rx="7" fill="#fff" stroke="#17303F" stroke-width="5"/>
+            <rect x="88" y="192" width="30" height="20" rx="7" fill="#E8B84B" stroke="#17303F" stroke-width="5"/>
+            <circle cx="206" cy="202" r="8" fill="#E8B84B" class="lp lp-pulse"/>
+          </g>
+        </g>
+        <g class="an an-fade an-d2" opacity="0">
+          <path class="lp lp-smoke" d="M214 168c-7-13 9-20 2-36" fill="none" stroke="#17303F" stroke-width="4" stroke-linecap="round"/>
+          <path class="lp lp-smoke lp-d1" d="M196 158c-7-13 9-20 2-36" fill="none" stroke="#17303F" stroke-width="4" stroke-linecap="round"/>
         </g>
         <g class="an an-appear an-d2">
           <g fill="none" stroke="#17303F" stroke-linecap="round" stroke-linejoin="round">
@@ -76,7 +82,6 @@
           </g>
           <rect x="712" y="278" width="34" height="5" rx="2.5" fill="#2B4B9B"/>
         </g>
-        
       </svg>
       <figcaption>The smoke drifts away; the gesture is relearned — and the breath comes back.</figcaption>
     </figure>

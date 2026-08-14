@@ -1789,6 +1789,8 @@ a:not([class]):hover::after { width: 100%; }
   box-shadow:var(--sh-1);
 }
 .doc__illu svg{ display:block; width:100%; height:auto }
+.doc__illu--card{ margin:.2rem 0 1.1rem; box-shadow:none; border:1px solid var(--trait) }
+details .doc__illu--card{ margin-top:.9rem }
 .doc__illu figcaption{
   padding:.7rem 1.1rem; font-size:.88rem; color:var(--ink-3);
   background:var(--blanc); border-top:1px solid var(--trait);
@@ -1844,7 +1846,32 @@ a:not([class]):hover::after { width: 100%; }
 .doc__illu svg .an-draw{ animation-name:an-draw }
 .doc__illu svg .an-lift{ animation-name:an-lift }
 .doc__illu svg .an-sink{ animation-name:an-sink }
+.doc__illu svg .an-dim{ animation-name:an-dim }
+@keyframes an-dim{ 0%,55%{ opacity:1 } 100%{ opacity:.3 } }
+/* boucles de vie : chaque scène garde un souffle — éteintes en reduced-motion */
+.doc__illu svg .lp{
+  animation-duration:3.6s; animation-timing-function:ease-in-out;
+  animation-iteration-count:infinite; transform-box:fill-box; transform-origin:50% 50%;
+}
+.js .doc__illu.reveal:not(.is-set) svg .lp{ animation-play-state:paused }
+.doc__illu svg .lp-d1{ animation-delay:.9s }
+.doc__illu svg .lp-d2{ animation-delay:1.8s }
+.doc__illu svg .lp-pulse{ animation-name:lp-pulse }
+@keyframes lp-pulse{ 0%,100%{ opacity:.7; transform:scale(1) } 50%{ opacity:1; transform:scale(1.12) } }
+.doc__illu svg .lp-smoke{ animation-name:lp-smoke; animation-duration:4.6s; animation-timing-function:linear }
+@keyframes lp-smoke{ 0%{ transform:translateY(6px); opacity:0 } 25%{ opacity:.75 } 100%{ transform:translateY(-30px); opacity:0 } }
+.doc__illu svg .lp-bob{ animation-name:lp-bob; animation-duration:5s }
+@keyframes lp-bob{ 0%,100%{ transform:translateY(0) } 50%{ transform:translateY(-9px) } }
+.doc__illu svg .lp-twinkle{ animation-name:lp-twinkle }
+@keyframes lp-twinkle{ 0%,100%{ opacity:.25 } 50%{ opacity:1 } }
+.doc__illu svg .lp-drip{ animation-name:lp-drip; animation-duration:2.8s; animation-timing-function:ease-in }
+@keyframes lp-drip{ 0%{ transform:translateY(0); opacity:1 } 80%{ opacity:.9 } 100%{ transform:translateY(26px); opacity:0 } }
+.doc__illu svg .lp-shiver{ animation-name:lp-shiver; animation-duration:.9s; animation-timing-function:linear }
+@keyframes lp-shiver{ 0%,100%{ transform:translateX(0) } 25%{ transform:translateX(1.6px) } 75%{ transform:translateX(-1.6px) } }
+.doc__illu svg .lp-spring{ animation-name:lp-spring; animation-duration:2.6s; transform-origin:50% 100% }
+@keyframes lp-spring{ 0%,100%{ transform:scaleY(1) } 50%{ transform:scaleY(.82) } }
 .doc__illu--flip svg{ transform:scaleX(-1) }
 @media (prefers-reduced-motion: reduce){
   .doc__illu svg .an{ animation:none }
+  .doc__illu svg .lp{ animation:none }
 }
