@@ -39,8 +39,8 @@ Le contenu médical a été rédigé pour que la page soit complète et crédibl
 |---|---|
 | **Tout le contenu clinique** | Descriptions du manque, protocoles, molécules citées (benzodiazépines, vitamine B1, méthadone, buprénorphine), durées, descriptions des troubles : rédigés pour être justes et prudents, mais **à relire et valider par un médecin** avant publication. |
 | Coordonnées | `+216 00 000 000` est le numéro provisoire fourni. L'adresse exacte (rue, numéro) manque : seul « El Menzah 9 » est indiqué. |
-| E-mail | `contact@psychiatrie-tunisie.com` est l'adresse unique du site (pages, données structurées, destinataire des formulaires). La boîte doit exister dans cPanel, sinon les demandes se perdent. |
-| Horaires | « lun–ven 8 h–18 h · sam 8 h–13 h » est une hypothèse. |
+| E-mail | `contact@psychiatrie-sevrage.com` est l'adresse unique du site (pages, données structurées, destinataire des formulaires). La boîte doit exister dans cPanel, sinon les demandes se perdent. |
+| Horaires | Le site n'affiche plus d'horaires&nbsp;: la clinique est présentée ouverte 24 h/24, 7 j/7, pour toute situation (demande du client, 2026-08-15). |
 | Durées de sevrage | Jours 1–7, semaines 1–3, suivi 3–12 mois, et les durées par substance : indicatives, à valider. |
 | Substances traitées | Vérifier que la clinique prend bien en charge chacune des sept lignes affichées. |
 | Avant / après | L'illustration `Jour 0 / Semaine 6` est un dessin, pas un patient : elle représente un profil d'évolution, et la page le dit explicitement. Ne pas la remplacer par une photo de patient. |

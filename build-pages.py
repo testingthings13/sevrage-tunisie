@@ -14,7 +14,7 @@ HERE = pathlib.Path(__file__).parent
 SITE = "https://sevrage-tunisie.com"
 V = "?v=25"
 TEL, TELH = "+216 00 000 000", "+21600000000"
-MAIL = "contact@psychiatrie-tunisie.com"
+MAIL = "contact@psychiatrie-sevrage.com"
 
 TEMPLATE = """<!doctype html>
 <html lang="fr">
@@ -291,7 +291,7 @@ PAGES = [
       <li>Dernier bilan biologique disponible</li>
       <li>Contexte familial et social, et qui est l'interlocuteur</li>
     </ul>
-    <p>Adressez-la à <a href="mailto:contact@psychiatrie-tunisie.com">contact@psychiatrie-tunisie.com</a>
+    <p>Adressez-la à <a href="mailto:contact@psychiatrie-sevrage.com">contact@psychiatrie-sevrage.com</a>
     ou remettez-la au patient.</p>
 
     <h2>Délais</h2>
@@ -309,7 +309,7 @@ PAGES = [
 
     <h2>Transmettre un document</h2>
     <p>Pour envoyer un bilan ou un compte rendu, écrivez à
-    <a href="mailto:contact@psychiatrie-tunisie.com">contact@psychiatrie-tunisie.com</a>. Un espace de
+    <a href="mailto:contact@psychiatrie-sevrage.com">contact@psychiatrie-sevrage.com</a>. Un espace de
     dépôt sécurisé est en préparation&nbsp;; en attendant, évitez d'envoyer des pièces
     identifiantes par messagerie non chiffrée.</p>
 """,

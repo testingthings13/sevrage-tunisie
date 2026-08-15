@@ -82,17 +82,22 @@ Vérifiez ensuite que `http://sevrage-tunisie.com` bascule bien sur
 
 ## 5 · L'adresse e-mail
 
-cPanel → **Email Accounts → Create** → `contact@psychiatrie-tunisie.com`.
+La boîte `contact@psychiatrie-sevrage.com` existe dans cPanel (créée le 2026-08-15),
+et le **routage e-mail du domaine est forcé en local** (Email Deliverability / Email
+Routing) : le serveur livre lui-même les demandes des formulaires dans cette boîte,
+sans dépendre des MX publics du domaine.
 
 > C'est l'adresse écrite partout sur le site : formulaire de contact, pied de page,
 > données structurées, lettres d'admission des confrères — et c'est elle qui **reçoit
-> les demandes envoyées par les formulaires** (`envoi.php`). **Tant que la boîte n'existe
-> pas dans cPanel, les messages rebondissent** — créez-la avant d'annoncer le site.
+> les demandes envoyées par les formulaires** (`envoi.php`).
 
-Le domaine `psychiatrie-tunisie.com` doit donc être présent dans le compte cPanel
-(domaine additionnel ou alias) pour que la boîte puisse y être créée. L'*expéditeur*
-des formulaires reste `contact@sevrage-tunisie.com`, le domaine qui héberge le site :
-c'est ce que le serveur est autorisé à envoyer, sinon les demandes partent en spam.
+Pour que les e-mails **venus de l'extérieur** (Gmail, confrères…) arrivent aussi,
+les MX publics de `psychiatrie-sevrage.com` doivent pointer vers l'hébergement :
+Namecheap → Domain List → `psychiatrie-sevrage.com` → nameservers
+`dns1.namecheaphosting.com` / `dns2.namecheaphosting.com` (puis vérifier que les MX
+publiés sont bien `mx*-hosting.jellyfish.systems`). L'*expéditeur* des formulaires
+reste `contact@sevrage-tunisie.com`, le domaine qui héberge le site : c'est ce que
+le serveur est autorisé à envoyer, sinon les demandes partent en spam.
 
 Pour recevoir sur Gmail : cPanel donne les réglages IMAP/SMTP dans
 **Email Accounts → Connect Devices**.

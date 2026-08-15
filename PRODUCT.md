@@ -36,8 +36,9 @@ psychiatrists who need the admission letter route and a phone number.
 - Name: Clinique Psychiatrique Espoir — Menzah 9
 - Domain: `sevrage-tunisie.com` (non-www canonical), hosted on Namecheap Stellar
 - Neighbourhood: El Menzah 9, Tunis
-- Email: `contact@psychiatrie-tunisie.com` — the single contact address everywhere on the site, and where the
-  forms deliver. Lives on the sister domain `psychiatrie-tunisie.com`; the mailbox must be created in cPanel.
+- Email: `contact@psychiatrie-sevrage.com` — the single contact address everywhere on the site, and where the
+  forms deliver. Lives on the sister domain `psychiatrie-sevrage.com` (parked on the cPanel account; mailbox
+  created 2026-08-15, mail routing forced to local so the server delivers form mail directly).
   The form's *sender* stays `contact@sevrage-tunisie.com` (the hosting domain) so mail is not flagged as spam.
 - Phone / emergency: `+216 00000000` (placeholder given by the user)
 - Real photography supplied by the user: clinic **entrance** (facade with sign) and **reception**

@@ -1,7 +1,7 @@
 <?php
 /* ============================================================
    Réception des formulaires — sevrage-tunisie.com
-   Envoie la demande à contact@psychiatrie-tunisie.com puis renvoie
+   Envoie la demande à contact@psychiatrie-sevrage.com puis renvoie
    le visiteur sur merci.html.
 
    Hébergement Namecheap Stellar (cPanel, PHP + mail()).
@@ -9,7 +9,7 @@
 
 declare(strict_types=1);
 
-const DEST    = 'contact@psychiatrie-tunisie.com';   // boîte principale : tout arrive ici
+const DEST    = 'contact@psychiatrie-sevrage.com';   // boîte principale : tout arrive ici
 const EXPED   = 'contact@sevrage-tunisie.com';       // expéditeur sur le domaine qui héberge le site, sinon spam
 const MERCI   = '/merci.html';
 const ACCUEIL = '/';
@@ -41,7 +41,9 @@ if (!empty($_POST['site'])) {
 $ip   = preg_replace('/[^0-9a-f:.]/i', '', $_SERVER['REMOTE_ADDR'] ?? 'x');
 $lock = sys_get_temp_dir() . '/rdv_' . md5($ip);
 if (is_file($lock) && (time() - filemtime($lock)) < 30) {
-    /* On garde quand même une trace : la demande n'est pas perdue. */
+    /* On garde quand même une trace : la demande n'est pas perdue.
+       Le marqueur ?envoi=doublon permet au site de le dire honnêtement
+       au visiteur, au lieu d'afficher une pleine confirmation. */
     @file_put_contents(
         __DIR__ . '/demandes.log',
         '[DOUBLON] ' . date('c') . "\n"
@@ -49,7 +51,7 @@ if (is_file($lock) && (time() - filemtime($lock)) < 30) {
             . "\n\n" . str_repeat('=', 60) . "\n\n",
         FILE_APPEND | LOCK_EX
     );
-    header('Location: ' . $merci, true, 303);
+    header('Location: ' . $merci . '?envoi=doublon', true, 303);
     exit;
 }
 

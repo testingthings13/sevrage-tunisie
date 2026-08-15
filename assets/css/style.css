@@ -50,6 +50,10 @@
 /* ── Reset ────────────────────────────────────────────────── */
 *,*::before,*::after{ box-sizing:border-box }
 html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; overflow-x:clip }
+/* les décors inclinés du héros débordent d'une trentaine de pixels sur
+   mobile : on rogne au niveau de <main> (clip, pas hidden — le sticky
+   survit), sinon la page entière s'élargit et les barres fixes suivent. */
+main{ overflow-x:clip }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto} }
 body{
   margin:0;
@@ -237,7 +241,9 @@ section[id], main[id]{ scroll-margin-top:96px }
   display:flex; align-items:center; gap:clamp(12px,2vw,28px);
 }
 
-.brand{ display:flex; align-items:center; gap:.72rem; text-decoration:none; margin-inline-end:auto; flex:none }
+/* flex:0 1 auto + min-width:0 : sur petit écran la marque cède la place
+   (la ligne d'adresse s'abrège) au lieu de pousser la page à 402 px. */
+.brand{ display:flex; align-items:center; gap:.72rem; text-decoration:none; margin-inline-end:auto; flex:0 1 auto; min-width:0 }
 /* le signe vit sur sa plaque sombre : c'est la version de référence */
 .brand__mark{
   width:46px; height:46px; flex:none;
@@ -263,13 +269,13 @@ section[id], main[id]{ scroll-margin-top:96px }
 .mark__tail{ transition:opacity .4s var(--ease) }
 .brand:hover .mark__tail{ opacity:.6 }
 
-.brand__words{ display:grid; gap:.1rem; line-height:1.04 }
+.brand__words{ display:grid; gap:.1rem; line-height:1.04; min-width:0 }
 .brand__top{ display:flex; align-items:baseline; gap:.42rem }
 .brand__fr{ font-family:var(--disp); font-weight:700; font-size:1.32rem; letter-spacing:-.038em }
 .brand__ar{ font-family:var(--ar); font-size:.78rem; color:var(--bleu); opacity:.85 }
 .brand__loc{
   font-size:.63rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-3);
-  white-space:nowrap;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
 @media (max-width:520px){
   .brand__mark{ width:38px; height:38px }
@@ -295,7 +301,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 @media (min-width:660px){ .masthead__call{ display:inline-flex } }
 
 .burger{
-  display:grid; place-items:center; width:46px; height:46px;
+  display:grid; place-items:center; width:46px; height:46px; flex:none;
   background:var(--blanc); border:1px solid var(--trait); border-radius:999px; cursor:pointer;
 }
 .burger__bars{ display:grid; gap:5px; width:18px }
@@ -633,6 +639,123 @@ section[id], main[id]{ scroll-margin-top:96px }
 .form__legal{ font-size:.95rem; color:rgba(169,188,198,.72) }
 .form .invalid{ border-color:#E08F76; box-shadow:0 0 0 4px rgba(224,143,118,.14) }
 
+/* ── Contact, version aube ─────────────────────────────────
+   Le bloc nuit devient le petit matin de la façade : pierre,
+   un souffle de bleu d'enseigne, le formulaire posé dessus
+   comme une carte. Mêmes contenus, lumière inversée. */
+.field--aube{
+  background:
+    radial-gradient(52% 58% at 10% -2%, rgba(63,107,212,.11), transparent 68%),
+    radial-gradient(40% 48% at 96% 12%, rgba(14,155,168,.08), transparent 70%),
+    linear-gradient(180deg, #FBFCFE 0%, var(--bleu-wash) 55%, #F2F5FA 100%);
+  color:var(--ink);
+}
+.field--aube::after{ content:none }
+.field--aube .h2{ color:var(--ink) }
+.field--aube .lede{ color:var(--ink-2) }
+
+.field--aube .coords{ gap:1.15rem }
+.field--aube .coords .ico{ color:var(--bleu) }
+.field--aube .coords a{ color:var(--ink); text-decoration-color:rgba(43,75,155,.4) }
+.field--aube .coords a:hover{ color:var(--bleu) }
+.field--aube .coords__sub{ color:var(--ink-2) }
+
+.field--aube .prep{
+  background:rgba(255,255,255,.74); border-color:rgba(43,75,155,.12);
+  box-shadow:0 1px 2px rgba(16,34,47,.04), 0 14px 30px -26px rgba(43,75,155,.5);
+}
+.field--aube .prep__note{ color:var(--ink-2); opacity:1 }
+
+.field--aube .map{ border-color:var(--trait); background:#fff; box-shadow:var(--sh-1) }
+.field--aube .map iframe{ filter:saturate(.86) }
+
+.field--aube .form{
+  background:#fff;
+  border-color:rgba(43,75,155,.10);
+  box-shadow:0 2px 8px rgba(16,34,47,.05), 0 36px 70px -42px rgba(43,75,155,.55);
+}
+.field--aube .form label{ color:var(--ink-2) }
+.field--aube .form input,
+.field--aube .form select,
+.field--aube .form textarea{
+  background-color:#F5F7FB;
+  border-color:#BCC8DB;
+  color:var(--ink);
+}
+.field--aube .form input::placeholder,
+.field--aube .form textarea::placeholder{ color:#5E6E78 }
+.field--aube .form input:hover,
+.field--aube .form select:hover,
+.field--aube .form textarea:hover{ border-color:#9CACC6 }
+.field--aube .form input:focus,
+.field--aube .form select:focus,
+.field--aube .form textarea:focus{
+  border-color:var(--bleu-vif); background-color:#fff;
+  box-shadow:0 0 0 4px rgba(63,107,212,.14);
+}
+.field--aube .form select{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath fill='%234E5D66' d='M6 8 0 0h12z'/%3E%3C/svg%3E");
+}
+.field--aube .check{ color:var(--ink-2)!important }
+.field--aube .form__status[data-state="ok"]{ color:var(--bleu) }
+.field--aube .form__status[data-state="err"]{ color:var(--rouge) }
+.field--aube .form__legal{ color:var(--ink-2) }
+.field--aube .form .invalid{ border-color:var(--rouge); box-shadow:0 0 0 4px rgba(192,57,47,.12) }
+.field--aube .btn--call{ --btn-bg:var(--bleu); --btn-fg:#fff; box-shadow:var(--sh-blue) }
+.field--aube .btn--call:hover{ --btn-bg:var(--bleu-vif); --btn-fg:#fff }
+
+/* ── « C'est envoyé » : la confirmation, sans quitter la page ─ */
+.envoye{
+  position:fixed; inset:0; z-index:90;
+  display:grid; place-items:center;
+  padding:max(20px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
+  background:rgba(16,34,47,.52);
+  -webkit-backdrop-filter:blur(9px) saturate(.9);
+  backdrop-filter:blur(9px) saturate(.9);
+  opacity:0; transition:opacity .3s var(--ease-soft);
+}
+.envoye.is-open{ opacity:1 }
+.envoye__card{
+  position:relative;
+  width:min(440px, 100%);
+  max-height:calc(100vh - 40px);   /* repli si dvh inconnu */
+  max-height:calc(100dvh - 40px); overflow:auto;
+  background:#fff; border-radius:var(--r);
+  padding:clamp(26px, 5vw, 38px) clamp(22px, 4.5vw, 34px);
+  text-align:center;
+  box-shadow:0 2px 10px rgba(16,34,47,.12), 0 48px 90px -40px rgba(16,34,47,.7);
+  transform:translateY(14px) scale(.97);
+  transition:transform .42s var(--ease);
+}
+.envoye.is-open .envoye__card{ transform:none }
+.envoye__mark{ width:64px; height:64px; margin:0 auto .9rem; display:block }
+.envoye__mark{ --m-ring:var(--bleu); --m-tail:var(--teal); --m-head:var(--rouge) }
+.envoye.is-open .envoye__mark{ animation:envoye-pose .6s var(--ease) both }
+@keyframes envoye-pose{
+  from{ transform:translateY(10px) scale(.86); opacity:0 }
+  to  { transform:none; opacity:1 }
+}
+.envoye__title{
+  font-family:var(--disp); font-weight:700; letter-spacing:-.02em;
+  font-size:clamp(1.45rem, 3.4vw, 1.75rem); color:var(--ink); margin:0 0 .55rem;
+}
+[lang="ar"] .envoye__title{ font-family:var(--ar); letter-spacing:0 }
+.envoye__text{ color:var(--ink-2); line-height:1.6; margin:0 0 1.1rem }
+.envoye__text strong{ color:var(--ink); white-space:nowrap }
+.envoye__note{
+  font-size:.92rem; color:var(--ink-2); line-height:1.55;
+  background:var(--bleu-wash); border-radius:var(--r-sm);
+  padding:.75rem .95rem; margin:0 0 1.3rem;
+}
+.envoye__note a{ color:var(--bleu); font-weight:600; text-underline-offset:3px; white-space:nowrap }
+.envoye__note--retard{ background:#FBF3E4; color:#6B4E1D }
+.envoye__note--retard a{ color:#8A5A00 }
+.envoye .btn{ width:100%; justify-content:center }
+@media (prefers-reduced-motion:reduce){
+  .envoye, .envoye__card{ transition:none }
+  .envoye.is-open .envoye__mark{ animation:none }
+}
+
 /* ── Footer ───────────────────────────────────────────────── */
 .foot{ background:var(--nuit); color:var(--sur-nuit); padding-block:clamp(52px,6vw,88px) 2rem }
 .foot__in{ display:grid; gap:2.4rem; grid-template-columns:minmax(0,1fr) }
@@ -877,7 +1000,8 @@ section[id], main[id]{ scroll-margin-top:96px }
   transition:transform .35s var(--ease);
 }
 .callbar[data-hidden="true"]{ transform:translateY(110%) }
-.callbar .btn{ flex:1; justify-content:center; padding-block:.95em }
+.callbar .btn{ flex:1; min-width:0; justify-content:center; padding-block:.95em }
+.callbar .btn span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
 .callbar .btn--ghost{ flex:0 0 auto; background:var(--blanc) }
 @media (max-width:759px){
   .callbar{ display:flex }

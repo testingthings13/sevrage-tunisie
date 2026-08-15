@@ -400,7 +400,7 @@
   if (alerte && /[?&]envoi=differe/.test(window.location.search)) {
     alerte.dataset.state = 'err';
     alerte.textContent = 'Votre demande a bien été enregistrée, mais notre serveur d\u2019e-mail '
-      + 'n\u2019a pas répondu. Si vous n\u2019avez pas de retour d\u2019ici deux heures, appelez le +216 00 000 000.';
+      + 'n\u2019a pas répondu. Si vous n\u2019avez pas de retour d\u2019ici deux heures, appelez le +216 52 247 043.';
   }
 
   /* ── Formulaires : on valide, le serveur envoie ──────────── */
@@ -411,24 +411,169 @@
       tel: 'Un numéro de téléphone est nécessaire : c’est par là que nous répondons.',
       consent: 'Cochez la case pour que nous puissions vous recontacter.',
       envoi: 'Envoi en cours…',
-      champs: 'Votre demande n’est pas partie : il manque le nom, le téléphone ou la case de consentement. Merci de compléter puis de renvoyer.'
+      champs: 'Votre demande n’est pas partie : il manque le nom, le téléphone ou la case de consentement. Merci de compléter puis de renvoyer.',
+      reseau: 'Impossible d’envoyer pour le moment — vérifiez votre connexion, ou appelez le +216 52 247 043.',
+      titre: 'C’est envoyé.',
+      texte: ['Merci ', '. Un soignant vous rappelle au ', ', en général dans l’heure.'],
+      urgence: 'C’est urgent maintenant ? N’attendez pas le rappel : ',
+      retard: 'Notre messagerie a un peu de retard : votre demande est bien enregistrée. Sans nouvelles d’ici deux heures, appelez le ',
+      titreDeja: 'Déjà bien reçu.',
+      deja: 'Votre demande précédente vient de nous parvenir — celle-ci n’a pas été renvoyée. Pour corriger ou compléter, appelez le ',
+      ok: 'D’accord'
     },
     ar: {
       nom: 'يرجى ذكر اسمك حتى نعرف بمن نتصل.',
       tel: 'رقم الهاتف ضروري: فهو وسيلتنا للرد عليك.',
       consent: 'يرجى تحديد الخانة حتى نتمكن من معاودة الاتصال بك.',
       envoi: 'جارٍ الإرسال…',
-      champs: 'لم يتم إرسال الطلب: الاسم أو رقم الهاتف أو خانة الموافقة ناقصة. يرجى إكمال النموذج وإعادة الإرسال.'
+      champs: 'لم يتم إرسال الطلب: الاسم أو رقم الهاتف أو خانة الموافقة ناقصة. يرجى إكمال النموذج وإعادة الإرسال.',
+      reseau: 'تعذّر الإرسال حاليًا — تحقق من اتصالك بالإنترنت، أو اتصل على ‎+216 52 247 043.',
+      titre: 'تم الإرسال.',
+      texte: ['شكرًا ', '. سيتصل بك أحد أعضاء الفريق على ', '، عادةً خلال ساعة.'],
+      urgence: 'الأمر عاجل الآن؟ لا تنتظر الاتصال: ',
+      retard: 'بريدنا متأخر قليلًا: طلبك مسجَّل لدينا. إن لم يصلك رد خلال ساعتين، اتصل على ',
+      titreDeja: 'طلبك وصلنا سابقًا.',
+      deja: 'طلبك السابق وصلنا للتو — لم يُرسَل هذا الطلب من جديد. للتصحيح أو الإضافة، اتصل على ',
+      ok: 'حسنًا'
     },
     en: {
       nom: 'Please enter your name, so we know who to call back.',
       tel: 'A phone number is required: that is how we get back to you.',
       consent: 'Please tick the box so we can call you back.',
       envoi: 'Sending…',
-      champs: 'Your request was not sent: the name, phone number or consent box is missing. Please complete the form and send it again.'
+      champs: 'Your request was not sent: the name, phone number or consent box is missing. Please complete the form and send it again.',
+      reseau: 'Could not send right now — check your connection, or call +216 52 247 043.',
+      titre: 'Request sent.',
+      texte: ['Thank you, ', '. A member of the care team will call you back on ', ', usually within the hour.'],
+      urgence: 'Urgent right now? Don’t wait for the call back: ',
+      retard: 'Our mail is running late: your request has been recorded. If you hear nothing within two hours, call ',
+      titreDeja: 'Already received.',
+      deja: 'Your previous request has just reached us — this one was not sent again. To correct or add something, call ',
+      ok: 'OK'
     }
   };
   var formMsg = FORM_MSG[(root.lang || 'fr').split('-')[0]] || FORM_MSG.fr;
+  var TEL_CLINIQUE = '+216 52 247 043';
+
+  /* La confirmation : une carte au-dessus de la page, dans la
+     langue du formulaire, avec le numéro que le visiteur a donné.
+     variante : '' (envoyé), 'retard' (mail en différé), 'deja' (doublon).
+     Tout est construit en DOM — jamais de HTML injecté. */
+  function confirmerEnvoi(form, nomVal, telVal, variante) {
+    var veil = document.createElement('div');
+    veil.className = 'envoye';
+    veil.setAttribute('role', 'dialog');
+    veil.setAttribute('aria-modal', 'true');
+    veil.setAttribute('aria-labelledby', 'envoye-titre');
+    veil.setAttribute('aria-describedby', variante === 'deja' ? 'envoye-note' : 'envoye-texte');
+
+    var card = document.createElement('div');
+    card.className = 'envoye__card';
+
+    /* L'étreinte du logo, reconstruite sur place : le pictogramme
+       existe ainsi sur toutes les pages, même sans le sprite. */
+    var SVG = 'http://www.w3.org/2000/svg';
+    var mark = document.createElementNS(SVG, 'svg');
+    mark.setAttribute('class', 'envoye__mark');
+    mark.setAttribute('viewBox', '0 0 100 100');
+    mark.setAttribute('aria-hidden', 'true');
+    var ring = document.createElementNS(SVG, 'circle');
+    ring.setAttribute('class', 'mark__ring');
+    ring.setAttribute('cx', '50'); ring.setAttribute('cy', '52'); ring.setAttribute('r', '33');
+    ring.setAttribute('fill', 'none'); ring.setAttribute('stroke-width', '12');
+    ring.setAttribute('stroke-linecap', 'round'); ring.setAttribute('stroke-dasharray', '145 63');
+    ring.setAttribute('transform', 'rotate(-58 50 52)');
+    var tail = document.createElementNS(SVG, 'path');
+    tail.setAttribute('class', 'mark__tail');
+    tail.setAttribute('d', 'M14 74a44 44 0 0 0 15 15');
+    tail.setAttribute('fill', 'none'); tail.setAttribute('stroke-width', '7');
+    tail.setAttribute('stroke-linecap', 'round');
+    var head = document.createElementNS(SVG, 'path');
+    head.setAttribute('class', 'mark__head');
+    head.setAttribute('d', 'M52 28C63 28 71 36 71 46c0 5-2 8-5 11l4 5c1 2 0 3-2 3l-4 1c0 3 1 6-2 8-4 2-10 2-14 0-9-4-14-13-14-24 0-12 8-22 18-22z');
+    mark.appendChild(ring); mark.appendChild(tail); mark.appendChild(head);
+
+    var titre = document.createElement('p');
+    titre.className = 'envoye__title';
+    titre.id = 'envoye-titre';
+    titre.textContent = variante === 'deja' ? formMsg.titreDeja : formMsg.titre;
+
+    var texte = document.createElement('p');
+    texte.className = 'envoye__text';
+    texte.id = 'envoye-texte';
+    texte.appendChild(document.createTextNode(formMsg.texte[0] + nomVal + formMsg.texte[1]));
+    var telFort = document.createElement('strong');
+    telFort.dir = 'ltr';
+    telFort.textContent = telVal;
+    texte.appendChild(telFort);
+    texte.appendChild(document.createTextNode(formMsg.texte[2]));
+
+    var note = document.createElement('p');
+    note.id = 'envoye-note';
+    note.className = variante !== '' ? 'envoye__note envoye__note--retard' : 'envoye__note';
+    note.appendChild(document.createTextNode(
+      variante === 'retard' ? formMsg.retard :
+      variante === 'deja'   ? formMsg.deja   : formMsg.urgence));
+    var lien = document.createElement('a');
+    lien.href = 'tel:+21652247043';
+    lien.dir = 'ltr';
+    lien.textContent = TEL_CLINIQUE;
+    note.appendChild(lien);
+
+    var bouton = document.createElement('button');
+    bouton.type = 'button';
+    bouton.className = 'btn btn--call';
+    bouton.textContent = formMsg.ok;
+
+    card.appendChild(mark);
+    card.appendChild(titre);
+    /* Doublon : la promesse de rappel vaudrait pour un numéro jamais
+       transmis — on s'en tient au titre et à la marche à suivre. */
+    if (variante !== 'deja') { card.appendChild(texte); }
+    card.appendChild(note);
+    card.appendChild(bouton);
+    veil.appendChild(card);
+    document.body.appendChild(veil);
+    var defilement = root.style.overflow;
+    root.style.overflow = 'hidden';   /* la page ne défile plus derrière */
+
+    /* Au moment de l'envoi le bouton a été désactivé, donc le focus
+       est déjà retombé sur <body> : on revient au bouton du formulaire. */
+    var precedent = form.querySelector('button[type="submit"]') || document.activeElement;
+    function fermer() {
+      veil.classList.remove('is-open');
+      document.removeEventListener('keydown', clavier);
+      root.style.overflow = defilement;
+      window.setTimeout(function () {
+        if (veil.parentNode) { veil.parentNode.removeChild(veil); }
+        if (precedent && precedent.focus) { precedent.focus(); }
+      }, 320);
+    }
+    function clavier(e) {
+      if (e.key === 'Escape') { return fermer(); }
+      if (e.key !== 'Tab') { return; }
+      /* Deux arrêts de tabulation : le lien d'urgence et le bouton. */
+      var focusables = [lien, bouton];
+      var i = focusables.indexOf(document.activeElement);
+      e.preventDefault();
+      var suivant = e.shiftKey
+        ? focusables[(i <= 0 ? focusables.length : i) - 1]
+        : focusables[(i + 1) % focusables.length];
+      suivant.focus();
+    }
+    bouton.addEventListener('click', fermer);
+    /* Fermer en cliquant à côté — mais pas quand une sélection de texte
+       commencée sur la carte se termine sur le voile. */
+    var presseSurVoile = false;
+    veil.addEventListener('mousedown', function (e) { presseSurVoile = e.target === veil; });
+    veil.addEventListener('click', function (e) { if (presseSurVoile && e.target === veil) { fermer(); } });
+    document.addEventListener('keydown', clavier);
+
+    window.requestAnimationFrame(function () {
+      veil.classList.add('is-open');
+      bouton.focus();
+    });
+  }
 
   Array.prototype.forEach.call(document.querySelectorAll('form[action="envoi.php"]'), function (form) {
     var status = form.querySelector('.form__status');
@@ -457,6 +602,43 @@
       if (status) { status.dataset.state = 'ok'; status.textContent = formMsg.envoi; }
       var btn = form.querySelector('button[type="submit"]');
       if (btn) { btn.disabled = true; }
+
+      /* Envoi sans quitter la page. Le serveur répond par sa
+         redirection habituelle : on la lit au lieu de la suivre.
+         Sans fetch (très vieux navigateur), l'envoi classique
+         continue : envoi.php redirige vers la page de merci. */
+      if (!window.fetch || !window.FormData) { return; }
+      e.preventDefault();
+
+      var nomVal = nom ? nom.value.trim() : '';
+      var telVal = tel ? tel.value.trim() : '';
+
+      fetch(form.getAttribute('action'), {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'text/html' }
+      }).then(function (res) {
+        if (btn) { btn.disabled = false; }
+        if (/[?&]erreur=champs/.test(res.url)) {
+          /* Le serveur a refusé : un champ requis manque. */
+          if (status) { status.dataset.state = 'err'; status.textContent = formMsg.champs; }
+          return;
+        }
+        if (res.ok && /merci/.test(res.url)) {
+          if (status) { status.dataset.state = ''; status.textContent = ''; }
+          var doublon = /[?&]envoi=doublon/.test(res.url);
+          /* Doublon : rien n'est parti, on garde la saisie du visiteur. */
+          if (!doublon) { form.reset(); }
+          confirmerEnvoi(form, nomVal, telVal,
+            doublon ? 'deja' : (/[?&]envoi=differe/.test(res.url) ? 'retard' : ''));
+          return;
+        }
+        /* Réponse inattendue : on repasse par le chemin classique. */
+        form.submit();
+      }).catch(function () {
+        if (btn) { btn.disabled = false; }
+        if (status) { status.dataset.state = 'err'; status.textContent = formMsg.reseau; }
+      });
     });
   });
 
@@ -509,25 +691,6 @@
   if (emergencyBtn && !reduce.matches) {
     emergencyBtn.classList.add('btn--call-urgent');
   }
-
-  /* Enhanced Form State Feedback */
-  Array.prototype.forEach.call(document.querySelectorAll('form[action="envoi.php"]'), function (form) {
-    var originalSubmit = form.onsubmit;
-    var status = form.querySelector('.form__status');
-
-    form.addEventListener('submit', function (e) {
-      if (status && !form.classList.contains('submitted')) {
-        form.classList.add('submitted');
-        setTimeout(function () {
-          if (status.dataset.state === 'ok') {
-            setTimeout(function () {
-              form.classList.remove('submitted');
-            }, 2000);
-          }
-        }, 3000);
-      }
-    });
-  });
 
   /* Parallax Effect on Hero Section */
   var hero = document.querySelector('.hero');
