@@ -1089,10 +1089,10 @@ def build(lang, idx):
         src = src.replace(a, b)
 
     # canonique et og:url propres à la langue
-    src = src.replace('<link rel="canonical" href="https://sevrage-tunisie.com/">',
-                      f'<link rel="canonical" href="https://sevrage-tunisie.com/{lang}.html">')
-    src = src.replace('<meta property="og:url" content="https://sevrage-tunisie.com/">',
-                      f'<meta property="og:url" content="https://sevrage-tunisie.com/{lang}.html">')
+    src = src.replace('<link rel="canonical" href="https://psychiatrie-sevrage.com/">',
+                      f'<link rel="canonical" href="https://psychiatrie-sevrage.com/{lang}.html">')
+    src = src.replace('<meta property="og:url" content="https://psychiatrie-sevrage.com/">',
+                      f'<meta property="og:url" content="https://psychiatrie-sevrage.com/{lang}.html">')
 
     # lien FR du tiroir mobile : absent de index.html (page FR courante),
     # on l'injecte pour que le français reste joignable depuis ar/en

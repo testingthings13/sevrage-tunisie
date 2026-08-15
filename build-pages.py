@@ -11,7 +11,7 @@ les métadonnées et le rappel du numéro.
 import pathlib
 
 HERE = pathlib.Path(__file__).parent
-SITE = "https://sevrage-tunisie.com"
+SITE = "https://psychiatrie-sevrage.com"
 V = "?v=25"
 TEL, TELH = "+216 00 000 000", "+21600000000"
 MAIL = "contact@psychiatrie-sevrage.com"

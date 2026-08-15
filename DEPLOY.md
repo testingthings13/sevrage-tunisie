@@ -1,7 +1,14 @@
-# Mettre le site en ligne — sevrage-tunisie.com sur Namecheap Stellar
+# Mettre le site en ligne — psychiatrie-sevrage.com sur Namecheap Stellar
 
 Le site est statique : aucun serveur, aucune base de données, aucun build à faire
 sur l'hébergeur. On copie des fichiers, on active le HTTPS, c'est tout.
+
+> **Les domaines, depuis le 2026-08-15.** L'adresse publique du site est
+> `https://psychiatrie-sevrage.com`. Le compte d'hébergement, lui, reste sous
+> `sevrage-tunisie.com` (domaine principal cPanel, dossier `public_html`) —
+> les étapes 1 et 2 ci-dessous décrivent cette installation d'origine.
+> `sevrage-tunisie.com` et `psychiatrie-tunisie.com` font une redirection 301
+> vers le site : c'est le `.htaccess` qui s'en charge.
 
 Comptez **une heure**, plus le temps de propagation DNS (de 30 minutes à 24 heures).
 
@@ -78,7 +85,7 @@ Attendez que la pastille passe au vert (quelques minutes). Le certificat est gra
 et se renouvelle seul.
 
 Vérifiez ensuite que `http://sevrage-tunisie.com` bascule bien sur
-`https://sevrage-tunisie.com` — c'est le `.htaccess` qui s'en charge.
+`https://psychiatrie-sevrage.com` — c'est le `.htaccess` qui s'en charge.
 
 ## 5 · L'adresse e-mail
 
@@ -106,17 +113,17 @@ Pour recevoir sur Gmail : cPanel donne les réglages IMAP/SMTP dans
 
 Dans l'ordre, sur votre téléphone et sur un ordinateur :
 
-- [ ] `https://sevrage-tunisie.com` s'affiche, cadenas vert
+- [ ] `https://psychiatrie-sevrage.com` s'affiche, cadenas vert
 - [ ] `http://` et `www.` redirigent bien vers l'adresse unique
-- [ ] `https://sevrage-tunisie.com/ar.html` s'affiche de droite à gauche
-- [ ] `https://sevrage-tunisie.com/en.html` s'affiche en anglais
-- [ ] `https://sevrage-tunisie.com/robots.txt` et `/sitemap.xml` répondent
+- [ ] `https://psychiatrie-sevrage.com/ar.html` s'affiche de droite à gauche
+- [ ] `https://psychiatrie-sevrage.com/en.html` s'affiche en anglais
+- [ ] `https://psychiatrie-sevrage.com/robots.txt` et `/sitemap.xml` répondent
 - [ ] une adresse inventée (`/nimportequoi`) affiche la page 404 du site
 - [ ] le bouton **Appeler** compose bien le numéro depuis un téléphone
 
 ## 7 · Déclarer le site à Google
 
-1. **Google Search Console** → *Add property* → **Domain** → `sevrage-tunisie.com`.
+1. **Google Search Console** → *Add property* → **Domain** → `psychiatrie-sevrage.com`.
    La validation demande un enregistrement TXT : Namecheap → **Domain List → Manage →
    Advanced DNS → Add New Record → TXT Record**, hôte `@`, valeur fournie par Google.
 2. Une fois validé : **Sitemaps** → soumettez `sitemap.xml`.
@@ -128,7 +135,7 @@ Dans l'ordre, sur votre téléphone et sur un ordinateur :
 Créez la **fiche d'établissement Google** de la clinique :
 nom réel, adresse exacte à El Menzah 9, catégorie *Centre de désintoxication* ou
 *Hôpital psychiatrique*, horaires **ouvert 24 h/24**, téléphone, photos (l'entrée et la
-réception sont déjà dans `assets/img/`), et le site `https://sevrage-tunisie.com`.
+réception sont déjà dans `assets/img/`), et le site `https://psychiatrie-sevrage.com`.
 
 Google vérifie l'adresse par courrier ou par téléphone. Pour les recherches locales du
 type « clinique psychiatrique Tunis », c'est cette fiche qui décide du classement —

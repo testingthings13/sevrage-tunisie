@@ -1,28 +1,29 @@
 # ============================================================
-#  sevrage-tunisie.com — hébergement Namecheap Stellar (cPanel)
+#  psychiatrie-sevrage.com — hébergement Namecheap Stellar (cPanel)
+#  (compte hébergé sous sevrage-tunisie.com ; le site vit sur
+#   psychiatrie-sevrage.com, l'adresse canonique unique)
 # ============================================================
 
 DirectoryIndex index.html
 ErrorDocument 404 /404.html
 AddDefaultCharset UTF-8
 
-# ── Une seule adresse : https, sans www ─────────────────────
+# ── Une seule adresse : https://psychiatrie-sevrage.com, sans www ──
 RewriteEngine On
 
 # psychiatrie-tunisie.com — domaine sœur : 301 vers le site principal.
 # La racine mène à la page Psychiatrie, le reste garde son chemin.
 RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-tunisie\.com$ [NC]
-RewriteRule ^$ https://sevrage-tunisie.com/psychiatrie.html [L,R=301]
+RewriteRule ^$ https://psychiatrie-sevrage.com/psychiatrie.html [L,R=301]
 RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-tunisie\.com$ [NC]
-RewriteRule ^ https://sevrage-tunisie.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://psychiatrie-sevrage.com%{REQUEST_URI} [L,R=301]
 
-# psychiatrie-sevrage.com — même famille : la racine mène à l'accueil
-# (le nom couvre les deux métiers), le reste garde son chemin.
-RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-sevrage\.com$ [NC]
-RewriteRule ^ https://sevrage-tunisie.com%{REQUEST_URI} [L,R=301]
+# sevrage-tunisie.com — l'ancien nom : 301, le chemin est conservé.
+RewriteCond %{HTTP_HOST} ^(www\.)?sevrage-tunisie\.com$ [NC]
+RewriteRule ^ https://psychiatrie-sevrage.com%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://sevrage-tunisie.com%{REQUEST_URI} [L,R=301]
+RewriteRule ^ https://psychiatrie-sevrage.com%{REQUEST_URI} [L,R=301]
 
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]

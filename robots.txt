@@ -3,4 +3,4 @@ Allow: /
 Disallow: /logos.html
 Disallow: /logo-derive.html
 
-Sitemap: https://sevrage-tunisie.com/sitemap.xml
+Sitemap: https://psychiatrie-sevrage.com/sitemap.xml

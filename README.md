@@ -67,9 +67,10 @@ Le contenu médical a été rédigé pour que la page soit complète et crédibl
 
 ### ⚠️ À faire avant que ça serve à quelque chose
 
-1. **Remplacer le domaine.** Tout le SEO pointe vers `https://sevrage-tunisie.com`, qui est un
-   nom provisoire. Cherchez-le et remplacez-le dans `index.html`, `build-langs.py`, `robots.txt`
-   et `sitemap.xml`, puis relancez `python3 build-langs.py`.
+1. ~~Remplacer le domaine.~~ **Fait (2026-08-15).** L'adresse canonique du site est
+   `https://psychiatrie-sevrage.com` — canonical, hreflang, Open Graph, JSON-LD, sitemap et
+   robots.txt pointent tous vers elle. `sevrage-tunisie.com` (domaine principal du compte
+   cPanel) et `psychiatrie-tunisie.com` font une 301 vers le site (`.htaccess`).
 2. **Créer la fiche Google Business Profile** de la clinique (adresse exacte, horaires 24 h/24,
    photos, catégorie « hôpital psychiatrique » ou « centre de désintoxication »). Pour les
    requêtes locales du type « clinique psychiatrique Tunis », c'est la fiche qui décide du

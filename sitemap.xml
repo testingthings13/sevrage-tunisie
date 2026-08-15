@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
 <!-- ============================================================
-     Plan du site — sevrage-tunisie.com
+     Plan du site — psychiatrie-sevrage.com
      Clinique psychiatrique Espoir, El Menzah 9, Tunis
      Ouvert dans un navigateur, ce fichier s'affiche en tableau
      lisible (sitemap.xsl) ; les moteurs lisent le XML brut.
@@ -11,541 +11,541 @@
 
   <!-- ── Accueil (fr · ar · en) ─────────────────────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/</loc>
+    <loc>https://psychiatrie-sevrage.com/</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar.html</loc>
+    <loc>https://psychiatrie-sevrage.com/ar.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en.html</loc>
+    <loc>https://psychiatrie-sevrage.com/en.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/"/>
   </url>
 
   <!-- ── Conversion (fr · ar · en) ──────────────────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/rendez-vous.html</loc>
+    <loc>https://psychiatrie-sevrage.com/rendez-vous.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/rendez-vous.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rendez-vous.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-appointment.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-appointment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/rendez-vous.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-rendez-vous.html</loc>
+    <loc>https://psychiatrie-sevrage.com/ar-rendez-vous.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/rendez-vous.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rendez-vous.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-appointment.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-appointment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/rendez-vous.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-appointment.html</loc>
+    <loc>https://psychiatrie-sevrage.com/en-appointment.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/rendez-vous.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rendez-vous.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-appointment.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-rendez-vous.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-appointment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/rendez-vous.html"/>
   </url>
 
   <!-- ── Sevrage, substance par substance (fr · ar · en) ────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-alcool.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-alcool.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-alcool.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-alcohol-detox.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-alcohol-detox.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-alcool.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-alcool.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-alcool.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-alcool.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-alcohol-detox.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-alcohol-detox.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-alcool.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-alcohol-detox.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-alcohol-detox.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-alcool.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-alcohol-detox.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-alcool.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-alcohol-detox.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-alcool.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-benzodiazepines.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-benzodiazepine-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-benzodiazepine-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-benzodiazepines.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-benzodiazepine-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-benzodiazepine-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-benzodiazepine-withdrawal.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-benzodiazepine-withdrawal.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-benzodiazepines.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-benzodiazepine-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-benzodiazepines.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-benzodiazepine-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-benzodiazepines.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-opiaces.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-opiaces.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-opiaces.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-opiate-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-opiate-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-opiaces.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-opiaces.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-opiaces.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-opiaces.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-opiate-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-opiate-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-opiaces.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-opiate-withdrawal.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-opiate-withdrawal.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-opiaces.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-opiate-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-opiaces.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-opiate-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-opiaces.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-cannabis.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-cannabis.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cannabis.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-cannabis-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-cannabis-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-cannabis.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-cannabis.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-cannabis.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cannabis.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-cannabis-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-cannabis-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-cannabis.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-cannabis-withdrawal.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-cannabis-withdrawal.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cannabis.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-cannabis-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-cannabis.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-cannabis-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-cannabis.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-cocaine.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-cocaine.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cocaine.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-cocaine-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-cocaine-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-cocaine.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-cocaine.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-cocaine.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cocaine.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-cocaine-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-cocaine-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-cocaine.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-cocaine-withdrawal.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-cocaine-withdrawal.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-cocaine.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-cocaine-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-cocaine.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-cocaine-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-cocaine.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-pregabaline.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-pregabaline.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-pregabaline.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-pregabalin-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-pregabalin-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-pregabaline.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-pregabaline.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-pregabaline.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-pregabaline.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-pregabalin-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-pregabalin-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-pregabaline.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-pregabalin-withdrawal.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-pregabalin-withdrawal.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-pregabaline.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-pregabalin-withdrawal.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-pregabaline.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-pregabalin-withdrawal.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-pregabaline.html"/>
   </url>
 
   <!-- ── Psychiatrie (fr · ar · en) ─────────────────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/psychiatrie.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/psychiatrie.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/psychiatrie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-psychiatrie.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-psychiatry.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-psychiatry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/psychiatrie.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-psychiatrie.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-psychiatrie.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/psychiatrie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-psychiatrie.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-psychiatry.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-psychiatry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/psychiatrie.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-psychiatry.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-psychiatry.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/psychiatrie.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-psychiatrie.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-psychiatry.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-psychiatrie.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-psychiatry.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/psychiatrie.html"/>
   </url>
 
   <!-- ── Tarifs (fr · ar · en) ──────────────────────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/tarifs.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/tarifs.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-pricing.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/tarifs.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-tarifs.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-tarifs.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-pricing.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/tarifs.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-pricing.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-pricing.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tarifs.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-pricing.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-tarifs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-pricing.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/tarifs.html"/>
   </url>
 
   <!-- ── Dépression, bipolarité, tabac, jeu, étranger (fr · ar · en) ── -->
   <url>
-    <loc>https://sevrage-tunisie.com/depression.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/depression.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/depression.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/depression.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-depression.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-depression.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/depression.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/depression.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-depression.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-depression.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/depression.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-depression.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/depression.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-depression.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/depression.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/trouble-bipolaire.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/trouble-bipolaire.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-trouble-bipolaire.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-bipolar-disorder.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-bipolar-disorder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/trouble-bipolaire.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-trouble-bipolaire.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-trouble-bipolaire.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-trouble-bipolaire.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-bipolar-disorder.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-bipolar-disorder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/trouble-bipolaire.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-bipolar-disorder.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-bipolar-disorder.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-trouble-bipolaire.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-bipolar-disorder.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-trouble-bipolaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-bipolar-disorder.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/trouble-bipolaire.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/sevrage-tabac.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/sevrage-tabac.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-tabac.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-quit-smoking.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-quit-smoking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-tabac.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-sevrage-tabac.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-sevrage-tabac.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-tabac.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-quit-smoking.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-quit-smoking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-tabac.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-quit-smoking.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-quit-smoking.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-sevrage-tabac.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-quit-smoking.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-sevrage-tabac.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-quit-smoking.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/sevrage-tabac.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/addiction-jeu-ecrans.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-behavioural-addictions.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-behavioural-addictions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-addiction-jeu-ecrans.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-behavioural-addictions.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-behavioural-addictions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-behavioural-addictions.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-behavioural-addictions.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-addiction-jeu-ecrans.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-behavioural-addictions.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-addiction-jeu-ecrans.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-behavioural-addictions.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/addiction-jeu-ecrans.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/venir-de-letranger.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/venir-de-letranger.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-coming-from-abroad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-alqudum-min-alkharij.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-coming-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/venir-de-letranger.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/ar-alqudum-min-alkharij.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-coming-from-abroad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-alqudum-min-alkharij.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-coming-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/venir-de-letranger.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-coming-from-abroad.html</loc>
-    <lastmod>2026-08-14</lastmod>
+    <loc>https://psychiatrie-sevrage.com/en-coming-from-abroad.html</loc>
+    <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-alqudum-min-alkharij.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-coming-from-abroad.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/venir-de-letranger.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-alqudum-min-alkharij.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-coming-from-abroad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/venir-de-letranger.html"/>
   </url>
 
   <!-- ── Guides pour les familles (fr · ar · en) ────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/il-refuse-de-venir.html</loc>
+    <loc>https://psychiatrie-sevrage.com/il-refuse-de-venir.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rafd-al-ilaj.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-they-refuse-treatment.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-rafd-al-ilaj.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-they-refuse-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/il-refuse-de-venir.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-rafd-al-ilaj.html</loc>
+    <loc>https://psychiatrie-sevrage.com/ar-rafd-al-ilaj.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rafd-al-ilaj.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-they-refuse-treatment.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-rafd-al-ilaj.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-they-refuse-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/il-refuse-de-venir.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-they-refuse-treatment.html</loc>
+    <loc>https://psychiatrie-sevrage.com/en-they-refuse-treatment.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-rafd-al-ilaj.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-they-refuse-treatment.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/il-refuse-de-venir.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-rafd-al-ilaj.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-they-refuse-treatment.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/il-refuse-de-venir.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/preparer-le-sejour.html</loc>
+    <loc>https://psychiatrie-sevrage.com/preparer-le-sejour.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tahdir-al-iqama.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-preparing-your-stay.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-tahdir-al-iqama.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-preparing-your-stay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/preparer-le-sejour.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-tahdir-al-iqama.html</loc>
+    <loc>https://psychiatrie-sevrage.com/ar-tahdir-al-iqama.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tahdir-al-iqama.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-preparing-your-stay.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-tahdir-al-iqama.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-preparing-your-stay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/preparer-le-sejour.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-preparing-your-stay.html</loc>
+    <loc>https://psychiatrie-sevrage.com/en-preparing-your-stay.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-tahdir-al-iqama.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-preparing-your-stay.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/preparer-le-sejour.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-tahdir-al-iqama.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-preparing-your-stay.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/preparer-le-sejour.html"/>
   </url>
 
   <!-- ── Ressources (fr · ar · en) ──────────────────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/glossaire.html</loc>
+    <loc>https://psychiatrie-sevrage.com/glossaire.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/glossaire.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-glossaire.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/glossaire.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-glossaire.html</loc>
+    <loc>https://psychiatrie-sevrage.com/ar-glossaire.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/glossaire.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-glossaire.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/glossaire.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-glossary.html</loc>
+    <loc>https://psychiatrie-sevrage.com/en-glossary.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/glossaire.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-glossaire.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-glossary.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-glossaire.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-glossary.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/glossaire.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/medecins.html</loc>
+    <loc>https://psychiatrie-sevrage.com/medecins.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/medecins.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-medecins.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-refer-a-patient.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-refer-a-patient.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/medecins.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/ar-medecins.html</loc>
+    <loc>https://psychiatrie-sevrage.com/ar-medecins.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/medecins.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-medecins.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-refer-a-patient.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-refer-a-patient.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/medecins.html"/>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/en-refer-a-patient.html</loc>
+    <loc>https://psychiatrie-sevrage.com/en-refer-a-patient.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://sevrage-tunisie.com/medecins.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://sevrage-tunisie.com/ar-medecins.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sevrage-tunisie.com/en-refer-a-patient.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sevrage-tunisie.com/medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-medecins.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-refer-a-patient.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/medecins.html"/>
   </url>
 
   <!-- ── Pages légales ──────────────────────────────────────── -->
   <url>
-    <loc>https://sevrage-tunisie.com/mentions-legales.html</loc>
+    <loc>https://psychiatrie-sevrage.com/mentions-legales.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://sevrage-tunisie.com/confidentialite.html</loc>
+    <loc>https://psychiatrie-sevrage.com/confidentialite.html</loc>
     <lastmod>2026-08-15</lastmod>
     <priority>0.3</priority>
   </url>

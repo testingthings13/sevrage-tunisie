@@ -1,5 +1,5 @@
 ---
-# Déploiement automatique cPanel — sevrage-tunisie.com
+# Déploiement automatique cPanel — psychiatrie-sevrage.com (hébergé sur le compte sevrage-tunisie.com)
 #
 # cPanel lit ce fichier après chaque « Deploy HEAD Commit » et copie
 # les fichiers du dépôt vers public_html. Les sources (scripts de

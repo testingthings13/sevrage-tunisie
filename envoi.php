@@ -1,6 +1,6 @@
 <?php
 /* ============================================================
-   Réception des formulaires — sevrage-tunisie.com
+   Réception des formulaires — psychiatrie-sevrage.com
    Envoie la demande à contact@psychiatrie-sevrage.com puis renvoie
    le visiteur sur merci.html.
 
@@ -239,7 +239,7 @@ $frontiere = 'bnd_' . bin2hex(random_bytes(12));
 
 $headers = [
     'MIME-Version: 1.0',
-    'From: Site sevrage-tunisie.com <' . EXPED . '>',
+    'From: Site psychiatrie-sevrage.com <' . EXPED . '>',
     'Reply-To: ' . $repondre,
     'Content-Type: multipart/alternative; boundary="' . $frontiere . '"',
     'X-Mailer: PHP/' . phpversion(),
