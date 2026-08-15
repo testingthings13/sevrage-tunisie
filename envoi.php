@@ -1,7 +1,7 @@
 <?php
 /* ============================================================
    Réception des formulaires — sevrage-tunisie.com
-   Envoie la demande à contact@sevrage-tunisie.com puis renvoie
+   Envoie la demande à contact@psychiatrie-tunisie.com puis renvoie
    le visiteur sur merci.html.
 
    Hébergement Namecheap Stellar (cPanel, PHP + mail()).
@@ -9,8 +9,8 @@
 
 declare(strict_types=1);
 
-const DEST    = 'contact@sevrage-tunisie.com';
-const EXPED   = 'contact@sevrage-tunisie.com';   // doit être sur le domaine, sinon spam
+const DEST    = 'contact@psychiatrie-tunisie.com';   // boîte principale : tout arrive ici
+const EXPED   = 'contact@sevrage-tunisie.com';       // expéditeur sur le domaine qui héberge le site, sinon spam
 const MERCI   = '/merci.html';
 const ACCUEIL = '/';
 
@@ -78,6 +78,7 @@ $med_nom     = clean('medecin_nom', 120);
 $med_spec    = clean('medecin_specialite', 120);
 $med_contact = clean('medecin_contact', 160);
 $message = bloc('message');
+$page    = clean('page', 200);
 $consent = !empty($_POST['consent']);
 
 /* ── Validation minimale ────────────────────────────────── */
@@ -124,25 +125,140 @@ $lignes[] = $message !== '' ? $message : '(aucun)';
 $lignes[] = '';
 $lignes[] = str_repeat('-', 46);
 $lignes[] = 'Reçu le ' . date('d/m/Y à H:i');
-$lignes[] = 'Page   : ' . clean('page', 200);
+$lignes[] = 'Page   : ' . ($page !== '' ? $page : '—');
 $lignes[] = 'IP     : ' . $ip;
 
 $corps = implode("\n", $lignes);
-$sujet = sprintf('[%s] %s — %s', $type, $nom, $motif !== '' ? $motif : 'sans motif');
+
+/* Objet lisible dans la liste des messages : de quoi rappeler sans ouvrir.
+   « Rendez-vous — Amine Ben Salah — +216 52 247 043 — Sevrage alcool ». */
+$sujet = $type . ' — ' . $nom . ' — ' . $tel . ($motif !== '' ? ' — ' . $motif : '');
+
+/* Un objet accentué se transporte encodé, et chaque morceau encodé doit tenir
+   dans 75 caractères (RFC 2047) : au-delà, certaines boîtes affichent la
+   suite en clair, illisible. On coupe donc sur les caractères, jamais au
+   milieu d'une lettre accentuée, et on plie avec un retour + espace. */
+function objet_mime(string $s): string {
+    $lettres = preg_split('//u', $s, -1, PREG_SPLIT_NO_EMPTY);
+    if ($lettres === false) { $lettres = [$s]; }
+
+    $morceaux = [];
+    $courant  = '';
+    foreach ($lettres as $lettre) {
+        if (strlen($courant) + strlen($lettre) > 39) {   /* 39 octets → 52 caractères une fois encodés */
+            $morceaux[] = $courant;
+            $courant    = '';
+        }
+        $courant .= $lettre;
+    }
+    if ($courant !== '') { $morceaux[] = $courant; }
+
+    $encodes = [];
+    foreach ($morceaux as $morceau) {
+        $encodes[] = '=?UTF-8?B?' . base64_encode($morceau) . '?=';
+    }
+    return implode("\r\n ", $encodes);
+}
+
+/* ── La même demande, mise en page ──────────────────────── */
+function esc(string $v): string {
+    return htmlspecialchars($v, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+}
+
+/* Une ligne du tableau : intitulé discret à gauche, réponse en gras à droite.
+   $valeur arrive déjà échappée (elle contient parfois un lien). */
+function ligne(string $intitule, string $valeur): string {
+    return '<tr>'
+        . '<td style="padding:7px 16px 7px 0;color:#5B6472;font-size:13px;white-space:nowrap;vertical-align:top;">'
+        . esc($intitule) . '</td>'
+        . '<td style="padding:7px 0;color:#12203A;font-size:15px;font-weight:bold;vertical-align:top;">'
+        . $valeur . '</td>'
+        . '</tr>';
+}
+
+$tel_href = preg_replace('/[^0-9+]/', '', $tel);
+$rappel   = '<a href="tel:' . esc((string) $tel_href) . '" style="color:#12203A;text-decoration:none;">'
+          . esc($tel) . '</a>';
+
+$rangs  = ligne('Nom', esc($nom));
+$rangs .= ligne('Téléphone', $rappel);
+$rangs .= ligne(
+    'E-mail',
+    $email !== ''
+        ? '<a href="mailto:' . esc($email) . '" style="color:#2B4B9B;">' . esc($email) . '</a>'
+        : '<span style="color:#8A93A0;font-weight:normal;">non communiqué</span>'
+);
+if ($pour    !== '') { $rangs .= ligne('Pour',    esc($pour)); }
+if ($motif   !== '') { $rangs .= ligne('Demande', esc($motif)); }
+if ($jours   !== '') { $rangs .= ligne('Jours',   esc($jours)); }
+if ($creneau !== '') { $rangs .= ligne('Créneau', esc($creneau)); }
+if ($delai   !== '') { $rangs .= ligne('Délai',   esc($delai)); }
+if ($med_nom !== '' || $med_spec !== '' || $med_contact !== '') {
+    $rangs .= ligne('Médecin réf.', esc(implode(' — ', array_filter([$med_nom, $med_spec, $med_contact]))));
+}
+
+$bloc_message = $message !== ''
+    ? '<div style="margin:22px 0 0;padding:14px 16px;background:#F4F6FB;border-left:3px solid #2B4B9B;'
+        . 'border-radius:0 6px 6px 0;color:#12203A;font-size:15px;line-height:1.55;white-space:pre-wrap;">'
+        . esc($message) . '</div>'
+    : '';
+
+$html = '<!doctype html><html lang="fr"><head><meta charset="utf-8">'
+    . '<meta name="viewport" content="width=device-width,initial-scale=1"></head>'
+    . '<body style="margin:0;padding:24px 12px;background:#EEF1F7;'
+        . 'font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;">'
+    /* Aperçu affiché par la boîte mail avant l'ouverture. */
+    . '<div style="display:none;max-height:0;overflow:hidden;opacity:0;">'
+        . esc($nom . ' — ' . $tel . ($motif !== '' ? ' — ' . $motif : '')) . '</div>'
+    . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" '
+        . 'style="max-width:560px;margin:0 auto;background:#FFFFFF;border-radius:10px;'
+        . 'overflow:hidden;border:1px solid #DDE3EF;"><tr><td>'
+    . '<div style="padding:16px 24px;background:#2B4B9B;color:#FFFFFF;font-size:15px;font-weight:bold;">'
+        . esc($type) . '</div>'
+    . '<div style="padding:22px 24px 26px;">'
+    . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;">'
+        . $rangs . '</table>'
+    . $bloc_message
+    . '<div style="margin:24px 0 0;padding-top:14px;border-top:1px solid #E6EAF3;'
+        . 'color:#8A93A0;font-size:12px;line-height:1.7;">'
+        . 'Reçu le ' . esc(date('d/m/Y à H:i')) . '<br>'
+        . 'Page : ' . esc($page !== '' ? $page : '—') . '<br>'
+        . 'IP : ' . esc($ip)
+        . '</div>'
+    . '</div></td></tr></table></body></html>';
 
 /* ── En-têtes ───────────────────────────────────────────── */
+/* Le nom du visiteur peut porter des accents ou de l'arabe : on l'encode. */
+$repondre = $email !== ''
+    ? '=?UTF-8?B?' . base64_encode($nom) . '?= <' . $email . '>'
+    : EXPED;
+
+$frontiere = 'bnd_' . bin2hex(random_bytes(12));
+
 $headers = [
+    'MIME-Version: 1.0',
     'From: Site sevrage-tunisie.com <' . EXPED . '>',
-    'Reply-To: ' . ($email !== '' ? $nom . ' <' . $email . '>' : EXPED),
-    'Content-Type: text/plain; charset=UTF-8',
-    'Content-Transfer-Encoding: 8bit',
+    'Reply-To: ' . $repondre,
+    'Content-Type: multipart/alternative; boundary="' . $frontiere . '"',
     'X-Mailer: PHP/' . phpversion(),
 ];
 
+/* Deux versions du même message : le texte pour les boîtes qui refusent
+   le HTML, la mise en page pour les autres. La dernière l'emporte. */
+$corps_mime = '--' . $frontiere . "\r\n"
+    . "Content-Type: text/plain; charset=UTF-8\r\n"
+    . "Content-Transfer-Encoding: base64\r\n\r\n"
+    . chunk_split(base64_encode($corps)) . "\r\n"
+    . '--' . $frontiere . "\r\n"
+    . "Content-Type: text/html; charset=UTF-8\r\n"
+    . "Content-Transfer-Encoding: base64\r\n\r\n"
+    . chunk_split(base64_encode($html)) . "\r\n"
+    . '--' . $frontiere . "--\r\n";
+
 $ok = @mail(
     DEST,
-    '=?UTF-8?B?' . base64_encode($sujet) . '?=',
-    $corps,
+    objet_mime($sujet),
+    $corps_mime,
     implode("\r\n", $headers),
     '-f' . EXPED
 );

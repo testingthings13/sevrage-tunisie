@@ -82,11 +82,17 @@ Vérifiez ensuite que `http://sevrage-tunisie.com` bascule bien sur
 
 ## 5 · L'adresse e-mail
 
-cPanel → **Email Accounts → Create** → `contact@sevrage-tunisie.com`.
+cPanel → **Email Accounts → Create** → `contact@psychiatrie-tunisie.com`.
 
 > C'est l'adresse écrite partout sur le site : formulaire de contact, pied de page,
-> données structurées, lettres d'admission des confrères. **Tant que la boîte n'existe
+> données structurées, lettres d'admission des confrères — et c'est elle qui **reçoit
+> les demandes envoyées par les formulaires** (`envoi.php`). **Tant que la boîte n'existe
 > pas dans cPanel, les messages rebondissent** — créez-la avant d'annoncer le site.
+
+Le domaine `psychiatrie-tunisie.com` doit donc être présent dans le compte cPanel
+(domaine additionnel ou alias) pour que la boîte puisse y être créée. L'*expéditeur*
+des formulaires reste `contact@sevrage-tunisie.com`, le domaine qui héberge le site :
+c'est ce que le serveur est autorisé à envoyer, sinon les demandes partent en spam.
 
 Pour recevoir sur Gmail : cPanel donne les réglages IMAP/SMTP dans
 **Email Accounts → Connect Devices**.

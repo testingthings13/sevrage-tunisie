@@ -166,6 +166,6 @@ cat <<'NEXT'
 
 Ensuite, dans cPanel :
   1. SSL/TLS Status → Run AutoSSL
-  2. Email Accounts → Create → contact@sevrage-tunisie.com
+  2. Email Accounts → Create → contact@psychiatrie-tunisie.com
   3. Ouvrir https://sevrage-tunisie.com
 NEXT
