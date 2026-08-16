@@ -17,8 +17,10 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 : "${CPANEL_TOKEN:?CPANEL_TOKEN manquant dans .deploy.env}"
 : "${CPANEL_HOST:=server173-3.web-hosting.com}"
 
-[ $# -ge 1 ] || { echo "Usage : $0 'Module/fonction?param=...'"; exit 1; }
+[ $# -ge 1 ] || { echo "Usage : $0 'Module/fonction?param=...' [options curl supplémentaires]"; exit 1; }
 
-curl --silent --show-error --max-time 60 \
+ENDPOINT="$1"; shift
+curl --silent --show-error --max-time 120 \
      -H "Authorization: cpanel ${CPANEL_USER}:${CPANEL_TOKEN}" \
-     "https://${CPANEL_HOST}:2083/execute/$1"
+     "$@" \
+     "https://${CPANEL_HOST}:2083/execute/$ENDPOINT"
