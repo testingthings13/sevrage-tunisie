@@ -12,7 +12,7 @@
   <!-- ── Accueil (fr · ar · en) ─────────────────────────────── -->
   <url>
     <loc>https://psychiatrie-sevrage.com/</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar.html"/>
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://psychiatrie-sevrage.com/ar.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar.html"/>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://psychiatrie-sevrage.com/en.html</loc>
-    <lastmod>2026-08-15</lastmod>
+    <lastmod>2026-08-16</lastmod>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar.html"/>
