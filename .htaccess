@@ -18,10 +18,10 @@ RewriteRule ^\.well-known/acme-challenge/ - [L]
 # est servi tel quel, sans redirection, quel que soit le domaine appelé.
 RewriteRule ^googlee08894d3466a510f\.html$ - [L]
 
-# psychiatrie-tunisie.com — domaine sœur : 301 vers le site principal.
-# La racine mène à la page Psychiatrie, le reste garde son chemin.
-RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-tunisie\.com$ [NC]
-RewriteRule ^$ https://psychiatrie-sevrage.com/psychiatrie.html [L,R=301]
+# psychiatrie-tunisie.com — domaine sœur : 301 vers le site principal,
+# chemin conservé (la racine mène à l'accueil, qui porte désormais la
+# psychiatrie dans son titre — et Google exige accueil → accueil pour
+# le changement d'adresse Search Console).
 RewriteCond %{HTTP_HOST} ^(www\.)?psychiatrie-tunisie\.com$ [NC]
 RewriteRule ^ https://psychiatrie-sevrage.com%{REQUEST_URI} [L,R=301]
 
