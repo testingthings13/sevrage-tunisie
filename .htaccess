@@ -11,6 +11,9 @@ AddDefaultCharset UTF-8
 # ── Une seule adresse : https://psychiatrie-sevrage.com, sans www ──
 RewriteEngine On
 
+# Défis ACME (Let's Encrypt) : servis tels quels, sans aucune redirection.
+RewriteRule ^\.well-known/acme-challenge/ - [L]
+
 # Vérification Google Search Console de psychiatrie-tunisie.com : ce fichier
 # est servi tel quel, sans redirection, quel que soit le domaine appelé.
 RewriteRule ^googlee08894d3466a510f\.html$ - [L]
