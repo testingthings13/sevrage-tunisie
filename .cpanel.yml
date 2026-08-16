@@ -85,6 +85,7 @@ deployment:
 
     # ── configuration serveur et référencement ─────────────────
     - /bin/cp .htaccess             $DEPLOYPATH/
+    - /bin/cp googlee08894d3466a510f.html $DEPLOYPATH/
     - /bin/cp robots.txt            $DEPLOYPATH/
     - /bin/cp sitemap.xml           $DEPLOYPATH/
     - /bin/cp sitemap.xsl           $DEPLOYPATH/
