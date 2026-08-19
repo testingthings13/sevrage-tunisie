@@ -55,6 +55,22 @@ if (is_file($lock) && (time() - filemtime($lock)) < 30) {
     exit;
 }
 
+/* ── Et une limite de rafale : cinq demandes par heure et par
+   adresse. Au-delà, même politique que le doublon : on garde la
+   trace, on remercie, la boîte de la clinique reste respirable. ── */
+$rafale = sys_get_temp_dir() . '/rdv_h_' . md5($ip) . '_' . date('YmdH');
+if ((int) @file_get_contents($rafale) >= 5) {
+    @file_put_contents(
+        __DIR__ . '/demandes.log',
+        '[RAFALE] ' . date('c') . "\n"
+            . mb_substr((string) json_encode($_POST, JSON_UNESCAPED_UNICODE), 0, 4000, 'UTF-8')
+            . "\n\n" . str_repeat('=', 60) . "\n\n",
+        FILE_APPEND | LOCK_EX
+    );
+    header('Location: ' . $merci . '?envoi=doublon', true, 303);
+    exit;
+}
+
 /* ── Nettoyage ──────────────────────────────────────────── */
 function clean(string $k, int $max = 500): string {
     $v = $_POST[$k] ?? '';
@@ -76,6 +92,7 @@ $pour    = clean('pour', 80);
 $jours   = clean('jours', 160);
 $creneau = clean('creneau', 40);
 $delai   = clean('delai', 60);
+$rappel_pref = clean('rappel', 60);
 $med_nom     = clean('medecin_nom', 120);
 $med_spec    = clean('medecin_specialite', 120);
 $med_contact = clean('medecin_contact', 160);
@@ -100,6 +117,7 @@ if ($nom === '' || $tel === '' || !$consent) {
     exit;
 }
 @touch($lock);   /* la limite de débit ne s'arme qu'après une demande valide */
+@file_put_contents($rafale, (string) ((int) @file_get_contents($rafale) + 1), LOCK_EX);
 if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $email = '';
 }
@@ -117,6 +135,7 @@ if ($motif   !== '') { $lignes[] = 'Motif         : ' . $motif; }
 if ($jours   !== '') { $lignes[] = 'Jours         : ' . $jours; }
 if ($creneau !== '') { $lignes[] = 'Créneau       : ' . $creneau; }
 if ($delai   !== '') { $lignes[] = 'Délai         : ' . $delai; }
+if ($rappel_pref !== '') { $lignes[] = 'Rappel        : ' . $rappel_pref; }
 if ($med_nom !== '' || $med_spec !== '' || $med_contact !== '') {
     $lignes[] = 'Médecin réf.  : ' . implode(' — ', array_filter([$med_nom, $med_spec, $med_contact]));
 }
@@ -195,6 +214,7 @@ if ($motif   !== '') { $rangs .= ligne('Demande', esc($motif)); }
 if ($jours   !== '') { $rangs .= ligne('Jours',   esc($jours)); }
 if ($creneau !== '') { $rangs .= ligne('Créneau', esc($creneau)); }
 if ($delai   !== '') { $rangs .= ligne('Délai',   esc($delai)); }
+if ($rappel_pref !== '') { $rangs .= ligne('Rappel', esc($rappel_pref)); }
 if ($med_nom !== '' || $med_spec !== '' || $med_contact !== '') {
     $rangs .= ligne('Médecin réf.', esc(implode(' — ', array_filter([$med_nom, $med_spec, $med_contact]))));
 }
