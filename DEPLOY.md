@@ -71,7 +71,7 @@ assets/      (css, js, fonts, img, logo)
 ```
 logos.html   logo-derive.html   ref-logo.png     ← pages de travail
 build-langs.py   README.md   DEPLOY.md   PRODUCT.md   IMAGE-CREDITS.md
-.claude/   .git/
+.git/
 ```
 
 > Le File Manager masque les fichiers commençant par un point. Pour voir `.htaccess` :
