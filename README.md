@@ -45,6 +45,7 @@ Le contenu médical a été rédigé pour que la page soit complète et crédibl
 | Substances traitées | Vérifier que la clinique prend bien en charge chacune des sept lignes affichées. |
 | Avant / après | L'illustration `Jour 0 / Semaine 6` est un dessin, pas un patient : elle représente un profil d'évolution, et la page le dit explicitement. Ne pas la remplacer par une photo de patient. |
 | Questions fréquentes | La réponse sur l'admission à la demande d'un tiers renvoie au cadre légal tunisien sans le citer : à faire relire. |
+| Page « cure de désintoxication » | `cure-de-desintoxication.html` (+ ar/en, 2026-08-19) réutilise uniquement des affirmations déjà publiées ailleurs sur le site (durées du protocole, FAQ) — à relire avec le reste du contenu clinique. |
 | Tarifs | Aucun tarif n'est affiché — c'est volontaire. |
 | Photos | Seules l'entrée et la réception sont les vraies photos. Voir `IMAGE-CREDITS.md`. |
 | Plan | Le marqueur OpenStreetMap est centré sur El Menzah 9, pas sur l'adresse exacte. |

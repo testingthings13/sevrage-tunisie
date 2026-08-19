@@ -550,4 +550,33 @@
     <priority>0.3</priority>
   </url>
 
+
+  <!-- ── La cure de désintoxication (fr · ar · en) ─────────── -->
+  <url>
+    <loc>https://psychiatrie-sevrage.com/cure-de-desintoxication.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/cure-de-desintoxication.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-cure-desintoxication.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-detox-rehab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/cure-de-desintoxication.html"/>
+  </url>
+  <url>
+    <loc>https://psychiatrie-sevrage.com/ar-cure-desintoxication.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/cure-de-desintoxication.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-cure-desintoxication.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-detox-rehab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/cure-de-desintoxication.html"/>
+  </url>
+  <url>
+    <loc>https://psychiatrie-sevrage.com/en-detox-rehab.html</loc>
+    <lastmod>2026-08-19</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://psychiatrie-sevrage.com/cure-de-desintoxication.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://psychiatrie-sevrage.com/ar-cure-desintoxication.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://psychiatrie-sevrage.com/en-detox-rehab.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://psychiatrie-sevrage.com/cure-de-desintoxication.html"/>
+  </url>
 </urlset>
