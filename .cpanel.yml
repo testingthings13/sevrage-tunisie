@@ -32,6 +32,9 @@ deployment:
     - /bin/cp cure-de-desintoxication.html $DEPLOYPATH/
     - /bin/cp ar-cure-desintoxication.html $DEPLOYPATH/
     - /bin/cp en-detox-rehab.html   $DEPLOYPATH/
+    - /bin/cp urgences-psychiatriques.html $DEPLOYPATH/
+    - /bin/cp ar-urgences-psychiatriques.html $DEPLOYPATH/
+    - /bin/cp en-psychiatric-emergency.html $DEPLOYPATH/
     - /bin/cp tarifs.html           $DEPLOYPATH/
     - /bin/cp ar-tarifs.html        $DEPLOYPATH/
     - /bin/cp en-pricing.html       $DEPLOYPATH/
