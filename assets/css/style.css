@@ -1000,7 +1000,7 @@ section[id], main[id]{ scroll-margin-top:96px }
   transition:transform .35s var(--ease);
 }
 .callbar[data-hidden="true"]{ transform:translateY(110%) }
-.callbar .btn{ flex:1; min-width:0; justify-content:center; padding-block:.95em }
+.callbar .btn{ flex:1; min-width:0; justify-content:center; padding:.95em .9em }
 .callbar .btn span{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap }
 .callbar .btn--ghost{ flex:0 0 auto; background:var(--blanc) }
 @media (max-width:759px){
@@ -1298,8 +1298,16 @@ html[lang="ar"] .glaze__t h3{ letter-spacing:0; line-height:1.5 }
 .doc__call p{ color:var(--sur-nuit-2); max-width:none }
 .doc__call strong{ color:#fff }
 .doc__call .btn{ margin-top:1rem; --btn-bg:#fff; --btn-fg:var(--bleu) }
+.doc__call-acts{ display:flex; flex-wrap:wrap; align-items:center; gap:.8rem }
+.doc__call-acts .btn{ margin-top:1rem }
+.doc__call .btn--wa{ --btn-bg:#25D366; --btn-fg:#fff }
+.doc__call .btn--wa:hover{ --btn-bg:#1DA851 }
 .doc__call-alt{ margin-top:1rem; font-size:.92rem }
 .doc__call a:not(.btn){ color:var(--bleu-pale) }
+@media (max-width:560px){
+  .doc__call-acts{ display:grid; gap:.7rem; margin-top:1rem }
+  .doc__call-acts .btn{ width:100%; justify-content:center; margin-top:0 }
+}
 .doc__cta{ margin-top:2.4rem; font-family:var(--disp); font-weight:600; font-size:1.08rem; letter-spacing:-.02em }
 .doc__next{ font-size:.95rem }
 .doc__nav{ margin-top:2.4rem }
