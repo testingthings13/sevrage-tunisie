@@ -204,6 +204,8 @@ section[id], main[id]{ scroll-margin-top:96px }
 .btn--call:hover{ --btn-bg:var(--bleu-vif) }
 .btn--wa{ --btn-bg:#25D366 }
 .btn--wa:hover{ --btn-bg:#1DA851 }
+.btn--wa-call{ --btn-bg:transparent; --btn-fg:#1DA851; border-color:#25D366 }
+.btn--wa-call:hover{ --btn-bg:#1DA851; --btn-fg:#fff; border-color:#1DA851 }
 .btn--lg{ padding:1.05em 1.7em; font-size:1.06rem }
 .btn--block{ width:100%; justify-content:center }
 .btn--ghost{
@@ -1012,6 +1014,7 @@ section[id], main[id]{ scroll-margin-top:96px }
 @media (max-width:560px){
   .hero__acts{ display:grid; gap:.7rem }
   .hero__acts .btn{ width:100%; justify-content:center }
+  .hero__acts .btn--wa-call{ display:none }
   .path{ padding-inline-start:34px }
   .path__step::before{ inset-inline-start:-34px }
 }
